@@ -210,7 +210,7 @@ const UpcomingTrip = () => {
             price={trip.price}
             days={trip.days}
             nights={trip.nights}
-            onClick={() => handleCardClick(trip.id, trip.loc)}
+            onclick={() => handleCardClick(trip.id, trip.loc)}
           />
         ))}
       </div>
@@ -227,6 +227,7 @@ const UpcomingTrip = () => {
             price={trip.price}
             days={trip.days}
             nights={trip.nights}
+            onclick={() => handleCardClick(trip.id, trip.loc)}
           />
         ))}
       </div>
