@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* globals.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+
+  @font-face {
+    font-family: 'trip-m';
+    src: url('/font/title-md.otf') format('opentype');
+    font-weight:normal ;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'autography';
+    src: url('/font/Autography.otf') format('opentype');
+    font-weight:normal ;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'title-light';
+    src: url('/font/title-light.otf') format('opentype');
+    font-weight:normal ;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('/fonts/title-bold.otf') format('opentype');
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'trip-m','SB Mac Font', sans-serif;
+  }
+  

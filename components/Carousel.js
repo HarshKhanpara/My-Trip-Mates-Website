@@ -1,77 +1,103 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import Image from 'next/image';
+import styles from './Carousel.module.css'; // Corrected the filename
+import { useEffect, useState } from 'react';
 
 const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const slides = ["/slide5.png", "/slide5.png", "/slide5.png", "/slide4.png", "/slide5.png"];
+  const [viewportWidth, setViewportWidth] = useState(0);
+  const [containerHeight, setContainerHeight] = useState('auto'); // State variable for dynamic height
 
-  const images = [
-    '/assets/images/banner.jpeg',
-    '/assets/images/banner.jpeg',
-    '/assets/images/banner.jpeg',
-  ];
+  useEffect(() => {
+    const updateWidth = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', updateWidth);
+    updateWidth(); // Initial call to set width
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
 
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
+  // Dynamically adjust the container height based on viewport width
+  useEffect(() => {
+    if (viewportWidth < 640) {
+      setContainerHeight('300px'); // Adjust these values as needed
+    } else if (viewportWidth < 768) {
+      setContainerHeight('400px');
+    } else {
+      setContainerHeight('500px');
+    }
+  }, [viewportWidth]); // Re-run this effect when viewportWidth changes
 
-  const goToNext = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);
-  };
+  // Determine slidesPerView and spaceBetween dynamically based on viewport width
+  const slidesPerView = viewportWidth < 640 ? 1.5 : viewportWidth < 1024 ? 2 : 3;
+  const spaceBetween = viewportWidth < 640 ? 10 : 20;
 
   return (
-    <div className="flex flex-col items-center p-20 h-screen text-white" style={{backgroundColor:"#15191D"}}>
-      <h1 className="text-4xl font-bold mb-4">EXPLORE TOP DESTINATIONS</h1>
-      <p className="text-lg mb-8">AT MY TRIP MATES AND CREATE LIFETIME MEMORIES</p>
-      <div className="relative w-full max-w-4xl overflow-hidden">
-        <div className="flex justify-center gap-4 transition-transform duration-300 ease-in-out">
-          {images.map((image, index) => {
-            const isCurrent = index === currentIndex;
-            const isPrevious = index === (currentIndex - 1 + images.length) % images.length;
-            const isNext = index === (currentIndex + 1) % images.length;
+    <div className="relative">
+      {/* Blurred background */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{ backgroundColor: "#ED8C99", filter: 'blur(100px)', opacity: 0.6 }}
+      ></div>
 
-            return (
-              <div
-                key={index}
-                className={`w-1/3 transform transition-transform duration-300 ease-in-out ${
-                  isCurrent ? 'scale-100' : 'scale-90'
-                } ${isPrevious ? '-translate-x-full' : ''} ${isNext ? 'translate-x-full' : ''}`}
-                style={{
-                  visibility: isCurrent || isPrevious || isNext ? 'visible' : 'hidden',
-                }}
-              >
-                <img
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                  className="rounded-lg shadow-lg w-full"
-                />
-              </div>
-            );
-          })}
-        </div>
-        <div className="flex justify-center mt-4 space-x-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full ${
-                index === currentIndex ? 'bg-purple-600' : 'bg-gray-400'
-              }`}
-            ></button>
-          ))}
-        </div>
-        <button
-          onClick={goToPrevious}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-700 rounded-full"
+      {/* Main content */}
+      <div className="relative z-10 max-w-full w-full flex flex-col items-center p-0 pb-7 opacity-100">    
+        <h1 className="text-3xl md:text-5xl font-bold text-black mb-4 mt-8 md:mt-11 text-center"
+        style={{fontFamily:'title-light'}}
         >
-          &lt;
-        </button>
-        <button
-          onClick={goToNext}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-700 rounded-full"
-        >
-          &gt;
-        </button>
+          Explore Top Destinations
+        </h1>
+        <p className="text-black text-sm md:text-lg mb-6 md:mb-11 text-center">
+          At My Trip Mates and Create Lifetime Memories
+        </p>
+        <div className="relative w-full overflow-hidden rounded-lg mx-auto" style={{ height: containerHeight, maxWidth: '95%' }}>
+          <div className={styles.carouselContainer}>
+            <Swiper
+              effect={'coverflow'}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={slidesPerView} // Dynamically adjust slides per view
+              spaceBetween={spaceBetween}  // Add space between slides
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 1000,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              pagination={{ clickable: true }}
+              navigation={true}
+              modules={[EffectCoverflow, Pagination, Navigation]}
+              className={styles.mySwiper}
+            >
+              {slides.map((slide, index) => (
+                <SwiperSlide key={index}>
+                  <div className={styles.slideContent}>
+                    <Image
+                      src={slide}
+                      alt={`Slide ${index + 1}`}
+                      layout="fill"
+                      objectFit="cover"
+                      className={`${styles.image} rounded-3xl`}
+                    />
+                    <div className={styles.textOverlay}>
+                      <h2 className="text-lg font-bold text-white">{"Destination Title"}</h2>
+                      <p className="text-white">{"Description of the destination."}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
       </div>
     </div>
   );
