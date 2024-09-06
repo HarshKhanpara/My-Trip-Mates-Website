@@ -146,6 +146,7 @@ const Navbar = ({
             href="#trips"
             className="block hover:underline px-4 py-2"
             style={{ color: dropdownTextColor }}
+            onClick={() => router.push('/upcoming-trips')}
           >
             Upcoming Trips
           </a>
