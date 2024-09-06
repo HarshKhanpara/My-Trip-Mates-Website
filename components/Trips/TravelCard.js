@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import Slideshow from "../SlideShow";
+import { useRouter } from "next/navigation";
 
 
 export default function TravelCard({
@@ -13,7 +16,16 @@ export default function TravelCard({
   bgColor = "white",
   textColor = "text-black",
   dividerColor = "bg-gray-300",
-}) {
+}) 
+
+{
+
+  const router = useRouter();
+
+const handleViewMore = () => {
+  router.push('/gallery');
+};
+
   return (
     <div
       className={`w-full pt-20 pb-11 flex sm:pt-14`}
@@ -96,7 +108,9 @@ export default function TravelCard({
 
           {/* See All Photos Button */}
           <div className="flex justify-end mt-4">
-            <button className="border-2 border-black bg-white text-black font-bold py-1 px-2 sm:px-4 text-xs sm:text-base rounded-lg hover:bg-[#FF6A3D] hover:text-white hover:border-none transition duration-200 mr-1 h-[32px] sm:h-[40px] min-w-32 flex items-center justify-center">
+            <button className="border-2 border-black bg-white text-black font-bold py-1 px-2 sm:px-4 text-xs sm:text-base rounded-lg hover:bg-[#FF6A3D] hover:text-white hover:border-none transition duration-200 mr-1 h-[32px] sm:h-[40px] min-w-32 flex items-center justify-center"
+            onClick={handleViewMore}
+            >
               <span className="flex items-center">
                 See all photos
                 <FaArrowRight size={16} className="ml-2" />

@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation,Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import styles from './Carousel.module.css'; // Corrected the filename
 import { useEffect, useState } from 'react';
@@ -75,7 +75,12 @@ const Carousel = () => {
               }}
               pagination={{ clickable: true }}
               navigation={true}
-              modules={[EffectCoverflow, Pagination, Navigation]}
+              modules={[EffectCoverflow, Pagination, Navigation,Autoplay]}
+              autoplay={{
+                delay: 1000, // 3 seconds delay between slides
+                disableOnInteraction: false, // Keeps autoplay running even after manual interaction
+              }}
+
               className={styles.mySwiper}
             >
               {slides.map((slide, index) => (

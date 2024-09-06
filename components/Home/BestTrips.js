@@ -3,23 +3,55 @@
 import React, { useState } from 'react';
 import { Parallax } from 'react-parallax';
 import Card from '../Card';
-import RecentSearches from './RecentSearches';
-
+import { useRouter } from 'next/navigation';
 const BestTrips = ({
   backgroundColor = '#ffffff', // Default white background
   textColor = '#000000', // Default black text
 }) => {
-  const [visibleCount, setVisibleCount] = useState(4);
-
-  const destinations = [
-    { id: 1, imageUrl: '/assets/images/bali.jpg', destination: 'Bali, Indonesia' },
-    { id: 2, imageUrl: '/assets/images/maldives.jpg', destination: 'Maldives' },
-    { id: 3, imageUrl: '/assets/images/hawaii.jpg', destination: 'Hawaii, USA' },
-    { id: 4, imageUrl: '/assets/images/greece.jpg', destination: 'Santorini, Greece' },
+  const newTripsData = [
+    {
+      imageUrl: '/bali/card2.jpg',
+      destination: 'Bali Adventure',
+      location: 'Bali, Indonesia',
+      duration: '20th Oct - 26th Oct (7 days)',
+      price: '320000 per person',
+      days: 7,
+      nights: 6,
+      id: 2,
+      loc: 'bali',
+    },
+    {
+      imageUrl: '/vietnam/card1.jpg',
+      destination: 'Vietnam Beach Relaxation',
+      location: 'Vietnam, Southeast Asia',
+      duration: '15th Oct - 21st Oct (7 days)',
+      price: '290000 per person',
+      days: 7,
+      nights: 6,
+      id: 1,
+      loc: 'vietnam',
+    },
+    {
+      imageUrl: '/thailand/card1.jpg',
+      destination: 'Thailand Beach Bliss',
+      location: 'Thailand, Southeast Asia',
+      duration: '10th Nov - 16th Nov (7 days)',
+      price: '310000 per person',
+      days: 7,
+      nights: 6,
+      id: 1,
+      loc: 'thailand',
+    }
   ];
+  
 
+  const router = useRouter();
   const handleViewMore = () => {
-    setVisibleCount(destinations.length);
+    router.push('/upcoming-trips');
+  };
+
+  const handleCardClick = (id, loc) => {
+    router.push(`/${loc}/${id}`);
   };
 
   // Determine button styles based on the background color
@@ -57,19 +89,24 @@ const BestTrips = ({
                 borderColor : buttonBackgroundColor, // Dynamic background color based on light or dark background
               }}
               onClick={handleViewMore}
-              disabled={visibleCount >= destinations.length}
             >
-              {visibleCount >= destinations.length ? 'No More Destinations' : 'View All'}
+              View All Trips
             </button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-            {destinations.slice(0, visibleCount).map((destination) => (
-              <Card
-                key={destination.id}
-                imageUrl={destination.imageUrl}
-                destination={destination.destination}
-              />
-            ))}
+          {newTripsData.map((trip, index) => (
+          <Card
+            key={index}
+            imageUrl={trip.imageUrl}
+            destination={trip.destination}
+            location={trip.location}
+            duration={trip.duration}
+            price={trip.price}
+            days={trip.days}
+            nights={trip.nights}
+            onclick={() => handleCardClick(trip.id, trip.loc)}
+          />
+        ))}
           </div>
         </div>
       </Parallax>

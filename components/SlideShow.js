@@ -38,7 +38,7 @@ const Slideshow = ({ images, autoplay = true, interval = 1500 }) => {
           objectFit="cover"
           className="transition-transform duration-500 ease-in-out"
         />
-        <button
+        {/* <button
           className="slideshow-button absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300"
           onClick={prevSlide}
         >
@@ -49,7 +49,7 @@ const Slideshow = ({ images, autoplay = true, interval = 1500 }) => {
           onClick={nextSlide}
         >
           &#9654;
-        </button>
+        </button> */}
       </div>
       <div className="flex justify-center mt-2">
         {images.map((_, index) => (
