@@ -8,13 +8,10 @@ const Hero = () => {
   const images = ['/banner1.png', '/banner2.png', '/banner3.png'];
 
   const [displayedText, setDisplayedText] = useState('');
-  const [subText, setSubText] = useState('');
+  const [subText, setSubText] = useState('Group Trips for 18-32 years old'); // Set static subtext directly
   
   const fullText = 'Find your travel friends!';
-  const subFullText = 'Group Trips for 18-32 years old';
-  
   const typingSpeed = 100; // Speed for main text
-  const subTypingSpeed = 150; // Speed for sub text
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,23 +38,6 @@ const Hero = () => {
         return nextText;
       });
     }, typingSpeed);
-
-    return () => clearInterval(typingInterval); // Cleanup interval on unmount
-  }, []);
-
-  useEffect(() => {
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      setSubText((prevText) => {
-        // Append the next character from subFullText
-        const nextText = subFullText.slice(0, index + 1);
-        index += 1;
-        if (index >= subFullText.length) {
-          clearInterval(typingInterval);
-        }
-        return nextText;
-      });
-    }, subTypingSpeed);
 
     return () => clearInterval(typingInterval); // Cleanup interval on unmount
   }, []);
