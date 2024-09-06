@@ -36,38 +36,38 @@ const Navbar = ({
       </div>
 
       {/* Center - Navigation Links */}
-      <div className="hidden md:flex justify-center flex-grow space-x-6">
+      <div className="hidden md:flex justify-center flex-grow space-x-6 ">
         <a
           href="#about"
-          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out"
+          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
           style={{ color: textColor }}
         >
           About us
         </a>
         <a
           href="#blogs"
-          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out"
+          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
           style={{ color: textColor }}
         >
           Blogs
         </a>
         <a
           href="#gallery"
-          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out"
+          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
           style={{ color: textColor }}
         >
           Gallery
         </a>
         <a
           href="#reviews"
-          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out"
+          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
           style={{ color: textColor }}
         >
           Reviews
         </a>
         <a
           href="#trips"
-          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out"
+          className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
           style={{ color: textColor }}
           onClick={() => router.push('/upcoming-trips')}
         >
