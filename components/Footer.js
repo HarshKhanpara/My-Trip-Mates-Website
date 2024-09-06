@@ -23,7 +23,7 @@ const Footer = ({
             <div className="space-y-2">
               <h5 className="font-semibold" style={{ color: textColor }}>Company</h5>
               <p style={{ color: textColor }}>Mumbai</p>
-              <p style={{ color: textColor }}>Phone: 123-456-7890</p>
+              <p style={{ color: textColor }}>Phone: +91 9356614841</p>
               <p style={{ color: textColor }}>Website: mytripmates.co</p>
             </div>
             <div className="space-y-2">
