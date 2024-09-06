@@ -27,7 +27,7 @@ const Navbar = ({
       {/* Left Side - Logo */}
       <div className="flex items-center space-x-4">
         <div
-          className="pl-2 text-5xl cursor-pointer"
+          className="pl-2 text-3xl md:text-5xl cursor-pointer"
           style={{ color: textColor, fontFamily: 'autography' }}
           onClick={redirectToHome}
         >
