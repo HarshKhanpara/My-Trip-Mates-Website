@@ -2,19 +2,22 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState('/banner1.png');
   const images = ['/banner1.png', '/banner2.png', '/banner3.png'];
 
-  const [displayedText, setDisplayedText] = useState('');
-  const [subText, setSubText] = useState('Group Trips for 18-32 years old'); // Set static subtext directly
-  
-  const fullText = 'Find your travel friends!';
-  const typingSpeed = 100; // Speed for main text
+  const [subText, setSubText] = useState('Group Trips for 18-32 years old');
+  const subTexts = [
+    'Group Trips for 18-32 years old',
+    'Adventure Awaits You!',
+    'Explore New Destinations',
+    'Find Your Travel Tribe'
+  ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const imageInterval = setInterval(() => {
       setCurrentImage((prevImage) => {
         const currentIndex = images.indexOf(prevImage);
         const nextIndex = (currentIndex + 1) % images.length;
@@ -22,24 +25,19 @@ const Hero = () => {
       });
     }, 5000); // Change image every 5 seconds
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    return () => clearInterval(imageInterval); // Cleanup interval on unmount
   }, []);
 
   useEffect(() => {
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      setDisplayedText((prevText) => {
-        // Append the next character from fullText
-        const nextText = fullText.slice(0, index + 1);
-        index += 1;
-        if (index >= fullText.length) {
-          clearInterval(typingInterval);
-        }
-        return nextText;
+    const textInterval = setInterval(() => {
+      setSubText((prevSubText) => {
+        const currentIndex = subTexts.indexOf(prevSubText);
+        const nextIndex = (currentIndex + 1) % subTexts.length;
+        return subTexts[nextIndex];
       });
-    }, typingSpeed);
+    }, 2000); // Change subtext every 2 seconds
 
-    return () => clearInterval(typingInterval); // Cleanup interval on unmount
+    return () => clearInterval(textInterval); // Cleanup interval on unmount
   }, []);
 
   return (
@@ -58,12 +56,22 @@ const Hero = () => {
 
       <div className="relative z-10 pl-8 px-11 sm:px-8 md:px-10">
         <div className="w-full text-white flex flex-col items-center lg:justify-center">
-          <h1 className="w-full md:max-w-2xl text-[40px] font-light mt-6 md:mt-12 lg:text-7xl mb-5 sm:text-3xl md:text-7xl text-center opacity-75"
-            style={{ lineHeight: '120%' }}
-          >
-            {displayedText}
-          </h1>
-          <h2 className="w-full md:max-w-2xl text-[20px] font-light mt-2 md:mt-4 lg:text-4xl sm:text-2xl text-center opacity-75"
+          <div className="w-full md:max-w-2xl text-center">
+            <h1 className="text-[40px] font-light mt-6 md:mt-12 lg:text-7xl mb-5 sm:text-3xl md:text-7xl text-center opacity-75"
+              style={{ lineHeight: '120%' }}
+            >
+              <Typewriter
+                words={['Find your travel friends!']} // Array of words to type
+                loop={true} // Loop indefinitely
+                cursor
+                cursorStyle='_'
+                typeSpeed={100} // Speed for typing
+                deleteSpeed={50} // Speed for deleting
+                delaySpeed={1500} // Delay before starting next loop
+              />
+            </h1>
+          </div>
+          <h2 className="w-full md:max-w-2xl text-[20px] font-light mt-2 md:mt-20 lg:text-4xl sm:text-2xl text-center opacity-75"
             style={{ lineHeight: '120%' }}
           >
             {subText}

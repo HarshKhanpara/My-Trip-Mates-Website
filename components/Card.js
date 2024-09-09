@@ -3,8 +3,7 @@
 
 import Image from 'next/image';
 import { CalendarIcon, LocationMarkerIcon, ClockIcon, TagIcon } from '@heroicons/react/outline';
-import { useSpring, animated } from '@react-spring/web';
-import { useInView } from 'react-intersection-observer';
+import {  animated } from '@react-spring/web';
 
 const Card = ({
   imageUrl,
@@ -14,10 +13,9 @@ const Card = ({
   price = "190000 per person",
   days = 4,
   nights = 3,
+  fillingFast = true,
   onclick = () => {},
 }) => {
-
-
 
   return (
     <animated.div
@@ -27,9 +25,18 @@ const Card = ({
       {/* Image Section */}
       <div className="relative min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px]">
         <Image src={imageUrl} alt={destination} layout="fill" objectFit="cover" />
+
+                    {/* "Filling Fast" Label */}
+                    {fillingFast && (
+                      <div className="absolute top-3 right-3 bg-gradient-to-r from-green-400 to-green-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-3 py-2 rounded-md z-10 shadow-lg animate-pulse">
+                        Filling Fast
+                      </div>
+                    )}
+
+
         {/* Overlay Text */}
         <animated.div
-          className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black to-transparent text-white sm:p-5 md:p-6 lg:p-8"
+          className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black to-transparent text-white sm:p-5 md:p-6 lg:p-8 z-0"
           style={{
             transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
           }}
@@ -51,7 +58,7 @@ const Card = ({
           </p>
           <p className="font-bold mt-2 flex items-center sm:mt-1 md:mt-1 lg:mt-1">
             <TagIcon className="w-5 h-5 mr-2 sm:w-6 sm:h-6 sm:mr-3 md:w-7 md:h-7 md:mr-3 lg:w-8 lg:h-8 lg:mr-4" />
-            ${price}
+            &#x20B9; {price}
           </p>
         </animated.div>
       </div>

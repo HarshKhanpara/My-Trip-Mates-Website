@@ -1,20 +1,22 @@
 "use client";
 
-import Footer from '@/components/Footer'
-import BestTrips from '@/components/Home/BestTrips'
-import TravelStories from '@/components/Home/TravelStories'
-import Navbar from '@/components/Navbar'
-import TravelCard from '@/components/Trips/TravelCard'
-import Itinerary from '@/components/Trips/TripDetail'
+import Footer from '@/components/Footer';
+import BestTrips from '@/components/Home/BestTrips';
+import TravelStories from '@/components/Home/TravelStories';
+import Navbar from '@/components/Navbar';
+import TravelCard from '@/components/Trips/TravelCard';
+import Itinerary from '@/components/Trips/TripDetail';
 import { getTripByIdAndLocation } from '@/utils/getTrip';
-import { useRouter } from 'next/navigation'
-import React from 'react'
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
-const Trip_Vietnam = ({params}) => {
+
+const Trip_Vietnam = ({ params }) => {
   const router = useRouter();
   let { id } = params; // Get the dynamic parameters from the URL
   const location = 'vietnam';
   console.log(id);
+  
   // Convert id to a number (if necessary) and fetch the trip details
   const trip = id && location ? getTripByIdAndLocation(parseInt(id, 10), location) : null;
 
@@ -22,20 +24,15 @@ const Trip_Vietnam = ({params}) => {
     return <div>Trip not found</div>;
   }
 
-
-
-      
-      
-
   return (
     <>
       <Navbar
-        backgroundColor='white'  // Light background color
-        textColor='black'        // Dark text color for contrast
-        buttonColor='#E15E2E'    // Color for buttons
-        hoverColor='#E15E2E'     // Hover color for links
-        dropdownBgColor='white'  // Light dropdown background
-        dropdownTextColor='black' // Dark dropdown text color
+        backgroundColor="white"  // Light background color
+        textColor="black"        // Dark text color for contrast
+        buttonColor="#E15E2E"    // Color for buttons
+        hoverColor="#E15E2E"     // Hover color for links
+        dropdownBgColor="white"  // Light dropdown background
+        dropdownTextColor="black" // Dark dropdown text color
       />
       <TravelCard
         destination={trip.title}
@@ -63,7 +60,7 @@ const Trip_Vietnam = ({params}) => {
       <TravelStories />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Trip_Vietnam
+export default Trip_Vietnam;
