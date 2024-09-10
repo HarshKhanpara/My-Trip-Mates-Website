@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import WhatsAppChat from "@/components/WhatsappChat";
 
 // Import Poppins font
 const poppins = Poppins({
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         {children}
-        <a 
+        {/* <a 
   href="https://wa.me/message/4JNUATXAUKPVN1" 
   target="_blank" 
   style={{
@@ -47,8 +48,8 @@ export default function RootLayout({ children }) {
       layout="fill"
     />
   </div>
-</a>
-
+</a> */}
+          <WhatsAppChat />
       </body>
     </html>
   );
