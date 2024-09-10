@@ -58,7 +58,7 @@ const Navbar = ({
         </div>
 
         {/* Center - Navigation Links */}
-        <div className="hidden md:flex justify-center flex-grow space-x-6 ">
+        <div className="hidden md:flex justify-center flex-grow space-x-6 cursor-pointer">
           <a
             className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
             style={{ color: textColor }}
@@ -67,21 +67,21 @@ const Navbar = ({
             About us
           </a>
           <a
-            className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
+            className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2 cursor-pointer"
             style={{ color: textColor }}
             onClick={handlePageUnderDevelopment} // Trigger the toaster here
           >
             Blogs
           </a>
           <a
-            className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
+            className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2 cursor-pointer"
             style={{ color: textColor }}
             onClick={handleGalleryClick}
           >
             Gallery
           </a>
           <a
-            className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
+            className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2 cursor-pointer"
             style={{ color: textColor }}
             onClick={handlePageUnderDevelopment}
           >
@@ -99,7 +99,7 @@ const Navbar = ({
         {/* Right Side - Contact Us Button */}
         <div className="flex items-center">
           <button
-            className="hidden md:flex text-white md:px-6 md:py-2 rounded-full font-semibold"
+            className="hidden md:flex text-white md:px-6 md:py-2 rounded-full font-semibold cursor-pointer"
             style={{ backgroundColor: buttonColor }}
             onClick={handleScroll}
             >
