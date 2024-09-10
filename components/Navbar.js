@@ -60,7 +60,6 @@ const Navbar = ({
         {/* Center - Navigation Links */}
         <div className="hidden md:flex justify-center flex-grow space-x-6 ">
           <a
-            href="about"
             className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
             style={{ color: textColor }}
             onClick={handlePageUnderDevelopment}
@@ -68,7 +67,6 @@ const Navbar = ({
             About us
           </a>
           <a
-            href="blogs"
             className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
             style={{ color: textColor }}
             onClick={handlePageUnderDevelopment} // Trigger the toaster here
@@ -76,7 +74,6 @@ const Navbar = ({
             Blogs
           </a>
           <a
-            href="gallery"
             className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
             style={{ color: textColor }}
             onClick={handleGalleryClick}
@@ -84,7 +81,6 @@ const Navbar = ({
             Gallery
           </a>
           <a
-            href="reviews"
             className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
             style={{ color: textColor }}
             onClick={handlePageUnderDevelopment}
