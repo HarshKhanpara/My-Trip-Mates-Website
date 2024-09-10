@@ -11,7 +11,7 @@ import styles from './Carousel.module.css'; // Corrected the filename
 import { useEffect, useState } from 'react';
 
 const Carousel = () => {
-  const slides = ["/slide5.png", "/slide5.png", "/slide5.png", "/slide4.png", "/slide5.png"];
+  const slides = ["/slide1.png", "/slide2.png", "/slide3.png", "/slide4.png", "/slide5.png","/slide6.png","/slide7.png","/slide8.png"];
   const [viewportWidth, setViewportWidth] = useState(0);
   const [containerHeight, setContainerHeight] = useState('auto'); // State variable for dynamic height
 
