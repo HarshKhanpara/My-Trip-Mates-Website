@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 
 // Import Poppins font
 const poppins = Poppins({
@@ -19,6 +20,35 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         {children}
+        <a 
+  href="https://wa.me/message/4JNUATXAUKPVN1" 
+  target="_blank" 
+  style={{
+            position: 'fixed',
+            width: '60px',
+            height: '60px',
+            bottom: '40px',
+            right: '20px',
+            backgroundColor: '#25d366',
+            color: '#FFF',
+            borderRadius: '50px',
+            textAlign: 'center',
+            fontSize: '30px',
+            boxShadow: '2px 2px 3px #999',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          className="z-30"
+>
+  <div className="mt-[16px]">
+    <Image
+      src="/social-wa.png"
+      layout="fill"
+    />
+  </div>
+</a>
+
       </body>
     </html>
   );

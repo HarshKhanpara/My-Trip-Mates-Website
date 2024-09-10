@@ -2,7 +2,7 @@ export const baliTrips = [
   {
     id: 1,
     title: 'Bali Adventure',
-    date: '15th-23rd November',
+    date: '15th November - 23rd November',
     pricing: 'Rs 36,900 per person',
     tripLength: '9 days',
     groupSize: '15 person avg',
@@ -28,8 +28,8 @@ export const baliTrips = [
       'Personal expenses',
     ],
     pricingDetails: [
-      'INR 36,900 + GST(5%) until 9th July',
-      'INR 42,900 + GST(5%) until 30th July',
+      'INR 36,900 + GST(5%) until 9th October',
+      'INR 42,900 + GST(5%) until spots are available',
     ],
     groupData: [
       {
@@ -87,7 +87,7 @@ export const baliTrips = [
   {
     id: 2,
     title: 'Bali Adventure',
-    date: '3rd-11th December',
+    date: '3rd December - 11th December',
     pricing: 'Rs 49,900 per person',
     tripLength: '8 days',
     groupSize: '15 person avg',
@@ -113,8 +113,8 @@ export const baliTrips = [
       'Personal expenses',
     ],
     pricingDetails: [
-      'INR 49,900 + GST(5%) until 9th July',
-      'INR 55,900 + GST(5%) until 30th July',
+      'INR 49,900 + GST(5%) until 3rd November',
+      'INR 55,900 + GST(5%) until spots are available',
     ],
     groupData: [
       {
@@ -202,7 +202,7 @@ export const baliTrips = [
   {
     id: 3,
     title: 'Bali Adventure',
-    date: '29th December-6th January',
+    date: '29th December - 6th January',
     pricing: 'Rs 46,900 per person',
     tripLength: '9 days',
     groupSize: '15 person avg',
@@ -228,8 +228,8 @@ export const baliTrips = [
       'Personal expenses',
     ],
     pricingDetails: [
-      'INR 46,900 + GST(5%) until 9th July',
-      'INR 52,900 + GST(5%) until 30th July',
+      'INR 46,900 + GST(5%) until 29th November',
+      'INR 52,900 + GST(5%) until spots are available',
     ],
     groupData: [
       {

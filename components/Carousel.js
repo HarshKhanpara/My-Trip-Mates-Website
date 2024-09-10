@@ -74,7 +74,7 @@ const Carousel = () => {
                 slideShadows: true,
               }}
               pagination={{ clickable: true }}
-              navigation={true}
+              // navigation={true}
               modules={[EffectCoverflow, Pagination, Navigation,Autoplay]}
               autoplay={{
                 delay: 1000, // 3 seconds delay between slides

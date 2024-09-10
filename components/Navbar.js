@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const Navbar = ({
   backgroundColor = 'transparent',
@@ -23,11 +25,16 @@ const Navbar = ({
   };
 
   const handlePageUnderDevelopment = () => {
-    alert('This feature is under development.\nPlease check back later.');
-  };
+    toast('Page coming soon!', {
+      icon: '🚀',
+      position:'bottom-center'
+    },
+  );
+      };
 
   return (
     <>
+     <Toaster />
       <nav
         className="flex justify-between items-center p-6 absolute w-full z-20"
         style={{ backgroundColor, color: textColor }}

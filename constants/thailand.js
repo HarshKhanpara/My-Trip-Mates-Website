@@ -2,7 +2,7 @@ export const thailandTrips = [
   {
     id: 1,
     title: 'Thailand Adventure',
-    date: '15th-22nd October',
+    date: '15th October - 22nd October',
     pricing: 'INR 36,900 per person',
     tripLength: '8 days',
     groupSize: '15 person avg',
@@ -29,7 +29,7 @@ export const thailandTrips = [
     ],
     pricingDetails: [
       'INR 36,900 + GST(5%) until 15th September',
-      'INR 42,900 + GST(5%) until 14th October',
+      'INR 42,900 + GST(5%) until spots are available',
     ],
     groupData: [
       {
@@ -122,7 +122,7 @@ export const thailandTrips = [
   {
     id: 2,
     title: 'Thailand Adventure',
-    date: '13th-20th November',
+    date: '13th November - 20th November',
     pricing: 'INR 40,900 per person',
     tripLength: '7 days',
     groupSize: '15 person avg',
@@ -149,7 +149,7 @@ export const thailandTrips = [
     ],
     pricingDetails: [
       'INR 40,900 + GST(5%) until 13th October',
-      'INR 46,900 + GST(5%) until 13th November',
+      'INR 46,900 + GST(5%) until spots are available',
     ],
     groupData: [
       {

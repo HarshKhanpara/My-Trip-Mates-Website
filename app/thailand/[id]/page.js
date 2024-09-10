@@ -9,7 +9,6 @@ import Itinerary from '@/components/Trips/TripDetail';
 import { getTripByIdAndLocation } from '@/utils/getTrip';
 import { useRouter } from 'next/navigation';
 import React from 'react';
-import Head from 'next/head'; // Import Head for SEO metadata
 
 const Trip_Thailand = ({ params }) => {
   const router = useRouter();
@@ -37,7 +36,7 @@ const Trip_Thailand = ({ params }) => {
       <TravelCard
         destination={trip.title}
         duration={trip.tripLength}
-        price={trip.pricingDetails[0]} // Assuming the first pricing detail is used
+        price={trip.pricing} // Assuming the first pricing detail is used
         description={trip.description}
         mainImage="/thailand.png" // Update if necessary
         galleryImages={trip.galleryImages.map(item => item.imageSrc)}

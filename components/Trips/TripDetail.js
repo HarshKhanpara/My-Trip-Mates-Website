@@ -94,14 +94,18 @@ export default function Itinerary({
               </ul>
             </div>
           </div>
-          <h2 className="text-xl md:text-2xl font-bold mb-4"
-                    style={{ fontFamily: 'title-light'}}
-                    >Pricing Details</h2>
-          <ul className="list-none space-y-2">
-            {pricingDetails.map((price, index) => (
-              <li key={index}>{price}</li>
-            ))}
-          </ul>
+          <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ fontFamily: 'title-light'}}>
+  Pricing Details
+</h2>
+<ul className="list-none space-y-2">
+  <p className='bg-gradient-to-r from-green-400 to-green-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-4 py-3 rounded-md shadow-lg animate-pulse w-full sm:w-auto text-center'>
+    Booking Amount: ₹15,000 to reserve your slot.
+  </p>
+  {pricingDetails.map((price, index) => (
+    <li key={index} className="text-sm md:text-base lg:text-lg">{price}</li>
+  ))}
+</ul>
+
         </div>
 
         {/* Right Side - Meet Our Group */}
@@ -127,6 +131,7 @@ export default function Itinerary({
             ))}
           </div>
           {/* Placeholder for group photos */}
+          <h1 className='text-2xl md:text-3xl font-bold mb-6'>Recent Trip Gallery</h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto">
             {groupDataTrip.slice(0, 3).map(({ imageSrc }, idx) => (
               <div key={idx} className="w-[250px] h-[250px] relative mb-4 sm:mb-0 mx-auto">
