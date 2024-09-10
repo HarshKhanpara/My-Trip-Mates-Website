@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import ScrollIndicator from './Scroll';
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState('/banner1.png');
@@ -94,10 +95,12 @@ const Hero = () => {
           </h2>
         </div>
       </div>
+      <ScrollIndicator />
 
       <button className="absolute bottom-10 right-10 bg-[#F1E08F] text-[#1C2B3E] rounded-full w-12 h-12 flex items-center justify-center font-bold text-2xl">
         +
       </button>
+      
     </section>
   );
 };

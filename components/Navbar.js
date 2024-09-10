@@ -32,6 +32,13 @@ const Navbar = ({
   );
       };
 
+      const handleScroll = () => {
+        const targetElement = document.getElementById('contact-section');
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
   return (
     <>
      <Toaster />
@@ -98,8 +105,8 @@ const Navbar = ({
           <button
             className="hidden md:flex text-white md:px-6 md:py-2 rounded-full font-semibold"
             style={{ backgroundColor: buttonColor }}
-            onClick={() => router.push('/contact')}
-          >
+            onClick={handleScroll}
+            >
             Contact Us
           </button>
 

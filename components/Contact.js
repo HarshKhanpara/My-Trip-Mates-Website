@@ -9,6 +9,7 @@ export default function Contact({
       style={{
         backgroundColor, // Apply configurable background color
       }}
+      id="contact-section"
     >
       <div className="p-4 md:p-8 rounded-md shadow-lg w-full max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-6xl font-extralight text-center mb-6"

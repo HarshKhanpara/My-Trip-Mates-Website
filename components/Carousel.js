@@ -40,7 +40,7 @@ const Carousel = () => {
   const spaceBetween = viewportWidth < 640 ? 10 : 20;
 
   return (
-    <div className="relative">
+    <div className="relative" id='target-section'>
       {/* Blurred background */}
       <div 
         className="absolute inset-0 z-0" 
