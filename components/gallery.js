@@ -5,7 +5,7 @@ const Gallery = ({subtitle,images}) => {
     <>
           {/* Gallery Section */}
           <div className="py-12 ">
-          <h2 className="text-center pt-5 text-8xl sm:text-4xl font-serif italic mb-8">
+          <h2 className="text-center pt-5 text-4xl sm:text-4xl font-serif italic mb-8">
             {subtitle}
           </h2>
           <div className="grid grid-cols-1 pt-10 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
