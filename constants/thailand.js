@@ -59,7 +59,7 @@ export const thailandTrips = [
       },
       {
         imageSrc: '/thailand/6.png',
-        name: 'Priya Sharma',
+        name: 'Advait Sahni',
         location: 'Hyderabad, Telangana',
       },
       {
@@ -113,6 +113,11 @@ export const thailandTrips = [
       { imageSrc: '/thailand/group-photo2.png' },
       { imageSrc: '/thailand/group-photo3.png' },
     ],
+    galleryImages: [
+      {imageSrc:'/thailand/gallery-1.png'},
+      {imageSrc:'/thailand/gallery-2.png'},
+      {imageSrc:'/thailand/gallery-3.png'},
+    ]
   },
   {
     id: 2,
@@ -183,5 +188,10 @@ export const thailandTrips = [
       { imageSrc: '/thailand/group-photo2.png' },
       { imageSrc: '/thailand/group-photo3.png' },
     ],
+    galleryImages: [
+      {imageSrc:'/thailand/gallery-1.png'},
+      {imageSrc:'/thailand/gallery-2.png'},
+      {imageSrc:'/thailand/gallery-3.png'},
+    ]
   },
 ];

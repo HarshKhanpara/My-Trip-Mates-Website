@@ -34,7 +34,7 @@ export const baliTrips = [
     groupData: [
       {
         imageSrc: '/bali/1.png',
-        name: 'Karan Shah',
+        name: 'Gaurav Shah',
         location: 'Pune, Maharashtra',
       },
       {
@@ -77,6 +77,11 @@ export const baliTrips = [
       { imageSrc: '/bali/group-1.png' },
       { imageSrc: '/bali/group-2.png' },
       { imageSrc: '/bali/group-3.png' }
+    ],
+    galleryImages: [
+      {imageSrc:'/bali/gallery-1.png'},
+      {imageSrc:'/bali/gallery-2.png'},
+      {imageSrc:'/bali/gallery-3.png'},
     ]
   },
   {
@@ -119,7 +124,7 @@ export const baliTrips = [
       },
       {
         imageSrc: '/bali/14.png',
-        name: 'Vikram Thakur',
+        name: 'Neha Desai',
         location: 'Mumbai, Maharashtra',
       },
       {
@@ -129,7 +134,7 @@ export const baliTrips = [
       },
       {
         imageSrc: '/bali/16.png',
-        name: 'Neha Desai',
+        name: 'Vikram Thakur',
         location: 'Bangalore, Karnataka',
       },
       {
@@ -187,6 +192,11 @@ export const baliTrips = [
       { imageSrc: '/bali/group-1.png' },
       { imageSrc: '/bali/group-2.png' },
       { imageSrc: '/bali/group-3.png' }
+    ],
+    galleryImages: [
+      {imageSrc:'/bali/gallery-1.png'},
+      {imageSrc:'/bali/gallery-2.png'},
+      {imageSrc:'/bali/gallery-3.png'},
     ]
   },
   {
@@ -224,7 +234,7 @@ export const baliTrips = [
     groupData: [
       {
         imageSrc: '/bali/23.png',
-        name: 'Gaurav Shah',
+        name: 'Mohit Kamal',
         location: 'Pune, Maharashtra',
       },
       {
@@ -239,7 +249,7 @@ export const baliTrips = [
       },
       {
         imageSrc: '/bali/26.png',
-        name: 'Shreya Singh',
+        name: 'Sandeep Rajan',
         location: 'Bangalore, Karnataka',
       },
       {
@@ -267,6 +277,11 @@ export const baliTrips = [
       { imageSrc: '/bali/group-1.png' },
       { imageSrc: '/bali/group-2.png' },
       { imageSrc: '/bali/group-3.png' }
+    ],
+    galleryImages: [
+      {imageSrc:'/bali/gallery-1.png'},
+      {imageSrc:'/bali/gallery-2.png'},
+      {imageSrc:'/bali/gallery-3.png'},
     ]
   }
 ];

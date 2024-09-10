@@ -20,6 +20,18 @@ const upcomingTripsData = [
     fillingFast: true                                               
   },
   {
+    imageUrl: '/thailand/card1.jpg',
+    destination: 'Thailand Beach Bliss',
+    location: 'Thailand, Southeast Asia',
+    duration: '15th Nov - 22th Oct (7 days)',
+    price: '36,900 per person',
+    days: 8,
+    nights: 7,
+    id: 1,
+    loc: 'thailand',
+    fillingFast: true
+  },
+  {
     imageUrl: '/bali/card2.jpg',
     destination: 'Bali Adventure',
     location: 'Bali, Indonesia',
@@ -29,6 +41,18 @@ const upcomingTripsData = [
     nights: 8,
     id: 2,
     loc: 'bali',
+    fillingFast: false
+  },
+  {
+    imageUrl: '/thailand/card2.jpg',
+    destination: 'Thailand Adventure',
+    location: 'Thailand, Southeast Asia',
+    duration: '13th - 20th Nov (7 days)',
+    price: '40,900 per person',
+    days: 8,
+    nights: 7,
+    id: 2,
+    loc: 'thailand',
     fillingFast: false
   },
   {
@@ -54,30 +78,6 @@ const upcomingTripsData = [
   //   id: 3,
   //   loc: 'vietnam',
   // },
-  {
-    imageUrl: '/thailand/card1.jpg',
-    destination: 'Thailand Beach Bliss',
-    location: 'Thailand, Southeast Asia',
-    duration: '15th Nov - 22th Oct (7 days)',
-    price: '36,900 per person',
-    days: 8,
-    nights: 7,
-    id: 1,
-    loc: 'thailand',
-    fillingFast: true
-  },
-  {
-    imageUrl: '/thailand/card2.jpg',
-    destination: 'Thailand Adventure',
-    location: 'Thailand, Southeast Asia',
-    duration: '13th - 20th Nov (7 days)',
-    price: '40,900 per person',
-    days: 8,
-    nights: 7,
-    id: 2,
-    loc: 'thailand',
-    fillingFast: false
-  },
 ];
 
 const newTripsData = [
