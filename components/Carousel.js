@@ -57,7 +57,7 @@ const Carousel = () => {
         <p className="text-black text-sm md:text-lg mb-6 md:mb-11 text-center">
           At My Trip Mates and Create Lifetime Memories
         </p>
-        <div className="relative w-full overflow-hidden rounded-lg mx-auto" style={{ height: containerHeight, maxWidth: '95%' }}>
+        <div className="relative w-full overflow-hidden rounded-lg mx-auto" style={{ minHeight: containerHeight, maxWidth: '95%' }}>
           <div className={styles.carouselContainer}>
             <Swiper
               effect={'coverflow'}
