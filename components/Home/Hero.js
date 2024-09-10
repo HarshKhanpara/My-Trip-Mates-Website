@@ -63,7 +63,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center lg:justify-center overflow-hidden" style={{ minHeight: '85vh' }}>
+    <section className="relative h-screen flex items-center justify-center lg:justify-center overflow-hidden" style={{ minHeight: '85vh' }}>
       <div className="absolute z-10 inset-0">
         <Image
           src={currentImage} // Use the state for the background image
