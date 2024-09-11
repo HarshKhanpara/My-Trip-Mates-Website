@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
@@ -50,6 +52,7 @@ export default function RootLayout({ children }) {
   </div>
 </a> */}
           <WhatsAppChat />
+          <GoogleAnalytics gaId="G-N0922Y6259" />
       </body>
     </html>
   );
