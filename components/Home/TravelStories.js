@@ -2,8 +2,9 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { useSpring, animated } from '@react-spring/web';
 import { stories } from '@/constants/blogs';
+import { useRouter } from 'next/navigation';
+
 
 const TravelStories = ({
   backgroundColor = '#ffffff', // Default white background
@@ -13,19 +14,10 @@ const TravelStories = ({
 
 
   const [showAll, setShowAll] = useState(false);
-
-  // Spring animation for bouncy effect
-  const bounceProps = useSpring({
-    transform: showAll ? 'scale(1)' : 'scale(1)',
-    opacity: showAll ? 0 : 1,
-    config: {
-      tension: 170,
-      friction: 12,
-    },
-  });
-
+    const router = useRouter();
+  
   return (
-    <section className="p-8" style={{ backgroundColor }}>
+    <section className="p-8" style={{ backgroundColor }} id='blog-section'>
          {/* Blurred background */}
 
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
@@ -52,10 +44,10 @@ const TravelStories = ({
 
       <div className="mt-12 grid md:grid-cols-2 gap-14 max-w-7xl mx-auto justify-items-center">
         {stories.slice(0, showAll ? stories.length : 4).map((story, index) => (
-          <animated.div
+          <div
             key={index}
-            className="shadow-md rounded-lg overflow-hidden border-[#C4C4C4] border-2"
-            style={bounceProps}
+            className="shadow-md rounded-lg overflow-hidden border-[#C4C4C4] border-2 cursor-pointer"
+            onClick={() => router.push(story.link)}
           >
             <Image
               src={story.image}
@@ -80,7 +72,7 @@ const TravelStories = ({
                 Read More
               </a>
             </div>
-          </animated.div>
+          </div>
         ))}
       </div>
     </section>

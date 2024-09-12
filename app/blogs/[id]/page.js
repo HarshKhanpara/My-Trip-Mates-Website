@@ -1,24 +1,73 @@
+import Footer from '@/components/Footer';
+import TravelStories from '@/components/Home/TravelStories';
+import Navbar from '@/components/Navbar';
 import { stories } from '@/constants/blogs';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
 const BlogPost = ({ params }) => {
     const { id } = params;
-    const post = stories.find((p) => p.id === parseInt(params.id));
-    if(!post) {
+    const post = stories.find((p) => p.id === parseInt(id));
+    if (!post) {
         redirect('/not-found');
     }
-  return (
-    <>
-    <div className=" mx-auto p-8">
-      <h1 className="text-3xl font-bold my-4 text-center">{post.title}</h1>
-      <Image src={post.image} alt={post.title} width={800} height={500} className='mx-auto mt-7 mb-7'/>
-      <p className="text-gray-600">{post.date} • {post.readTime}</p>
-      <div className="mt-4 text-gray-800">{post.description}</div>
-    </div>
-    </>
-  );
-};
 
+    // Split blog content by new lines
+    const paragraphs = post.fullBlog.split('\n');
+
+    return (
+        <>
+              <Navbar
+        backgroundColor='white'  // Light background color
+        textColor='black'        // Dark text color for contrast
+        buttonColor='#E15E2E'    // Color for buttons
+        hoverColor='#E15E2E'     // Hover color for links
+        dropdownBgColor='white'  // Light dropdown background
+        dropdownTextColor='black' // Dark dropdown text color
+      />
+            <div className="relative mx-auto p-8 pt-24">
+                <p
+                    className="text-orange-500 text-6xl md:text-6xl absolute left-1/2 transform -translate-x-1/2 translate-y-1 -rotate-6 font-extrabold text-center"
+                    style={{ fontFamily: 'autography' }}
+                >
+                    {post.loc}
+                </p>
+
+                {/* Title text overlapping below the location */}
+                <h1 className="text-3xl font-bold my-11 text-center relative z-10">
+                    {post.title}
+                </h1>
+
+                {/* Image */}
+                <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={800}
+                    height={500}
+                    className="mx-auto mt-7 mb-7"
+                />
+
+                <p className="text-2xl text-blue-500 text-center">{post.subtext}</p>
+                
+                {/* Render each paragraph separately */}
+                <div className="mt-4 text-gray-800 p-2 md:p-6 text-left">
+                    {paragraphs.map((para, index) => (
+                        <p key={index} className="mb-4">
+                            {para}
+                        </p>
+                    ))}
+                </div>
+                <div
+            className="pl-2 text-right text-3xl md:text-5xl cursor-pointer"
+            style={{ color: '#000', fontFamily: 'autography' }}
+          >
+            my trip mates
+          </div>
+            </div>
+            <TravelStories />
+            <Footer />
+        </>
+    );
+};
 
 export default BlogPost;

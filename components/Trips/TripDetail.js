@@ -112,7 +112,7 @@ export default function Itinerary({
         <div className="space-y-8" style={{ backgroundColor }}>
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center"
           style={{ fontFamily: 'title-light'}}
-          >MEET OUR GROUP</h1>
+          >Travelers in this trip</h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
             {groupData.map(({ imageSrc, name, location }, idx) => (
               <div key={idx} className="flex flex-col items-center text-center">

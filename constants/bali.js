@@ -6,7 +6,7 @@ export const baliTrips = [
     pricing: 'Rs 36,900 per person',
     tripLength: '9 days',
     groupSize: '15 person avg',
-    description: `Thailand, located in Southeast Asia, is celebrated for its stunning beaches, rich cultural heritage, and lively cities. Thailand's diverse landscapes include tropical islands, lush jungles, and mountainous regions. The country is also famous for its delicious cuisine, such as pad Thai and green curry, and its colorful festivals like Songkran (Thai New Year) and Loy Krathong. Thailand's friendly locals and unique blend of tradition and modernity make it a popular travel destination`,
+    description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
     highlights: [
       'Surfing lessons',
       'Beach Clubs',
@@ -91,7 +91,7 @@ export const baliTrips = [
     pricing: 'Rs 49,900 per person',
     tripLength: '8 days',
     groupSize: '15 person avg',
-    description: `Thailand, located in Southeast Asia, is celebrated for its stunning beaches, rich cultural heritage, and lively cities. Thailand's diverse landscapes include tropical islands, lush jungles, and mountainous regions. The country is also famous for its delicious cuisine, such as pad Thai and green curry, and its colorful festivals like Songkran (Thai New Year) and Loy Krathong. Thailand's friendly locals and unique blend of tradition and modernity make it a popular travel destination`,
+    description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
     highlights: [
       'Surfing lessons',
       'Beach Clubs',
@@ -206,7 +206,7 @@ export const baliTrips = [
     pricing: 'Rs 46,900 per person',
     tripLength: '9 days',
     groupSize: '15 person avg',
-    description: `Thailand, located in Southeast Asia, is celebrated for its stunning beaches, rich cultural heritage, and lively cities. Thailand's diverse landscapes include tropical islands, lush jungles, and mountainous regions. The country is also famous for its delicious cuisine, such as pad Thai and green curry, and its colorful festivals like Songkran (Thai New Year) and Loy Krathong. Thailand's friendly locals and unique blend of tradition and modernity make it a popular travel destination`,
+    description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
     highlights: [
       'Surfing lessons',
       'Beach Clubs',

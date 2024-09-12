@@ -32,8 +32,15 @@ const Navbar = ({
   );
       };
 
-      const handleScroll = () => {
+      const handleScrollToContact = () => {
         const targetElement = document.getElementById('contact-section');
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      const handleScrollToBlogs = () => {
+        const targetElement = document.getElementById('blog-section');
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
         }
@@ -69,7 +76,7 @@ const Navbar = ({
           <a
             className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2 cursor-pointer"
             style={{ color: textColor }}
-            onClick={handlePageUnderDevelopment} // Trigger the toaster here
+            onClick={handleScrollToBlogs} // Trigger the toaster here
           >
             Blogs
           </a>
@@ -101,7 +108,7 @@ const Navbar = ({
           <button
             className="hidden md:flex text-white md:px-6 md:py-2 rounded-full font-semibold cursor-pointer"
             style={{ backgroundColor: buttonColor }}
-            onClick={handleScroll}
+            onClick={handleScrollToContact}
             >
             Contact Us
           </button>
@@ -145,7 +152,7 @@ const Navbar = ({
             <a
               className="block hover:underline px-4 py-2"
               style={{ color: dropdownTextColor }}
-              onClick={handlePageUnderDevelopment}
+              onClick={handleScrollToBlogs}
             >
               Blogs
             </a>

@@ -26,6 +26,15 @@ const handleViewMore = () => {
   router.push('/gallery');
 };
 
+const handleEnquireNow = () => {
+  const message = `Hello, I'm interested in the trip to ${destination}. Could you please provide more details about this trip?`;
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/message/4JNUATXAUKPVN1?text=${encodedMessage}`;
+  window.open(whatsappUrl, '_blank');
+};
+
+
+
   return (
     <div
       className={`w-full pt-20 pb-11 flex sm:pt-14`}
@@ -81,8 +90,10 @@ const handleViewMore = () => {
           ></div>
 
           <p className={`mb-6 ${textColor}`}>{description}</p>
-          <button className="bg-[#FF6A3D] text-white font-bold py-3 px-4 rounded hover:bg-[#e55c2c] transition duration-200 w-full lg:max-w-32">
-            BOOK NOW
+          <button className="bg-[#FF6A3D] text-white font-bold py-3 px-4 rounded hover:bg-[#e55c2c] transition duration-200 w-full md:max-w-36"
+          onClick={handleEnquireNow}
+          >
+            Enquire Now
           </button>
 
           {/* Image Gallery */}
