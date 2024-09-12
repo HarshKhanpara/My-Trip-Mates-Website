@@ -28,10 +28,10 @@ export default function Contact({
 
     try {
       const result = await emailjs.send(
-        'process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID',       // Replace with your EmailJS service ID
-        'your_template_id',      // Replace with your EmailJS template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,       // Replace with your EmailJS service ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,      // Replace with your EmailJS template ID
         formData,
-        'your_user_id'           // Replace with your EmailJS user ID
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID           // Replace with your EmailJS user ID
       );
 
       console.log(result.text);
