@@ -83,7 +83,7 @@ const Navbar = ({
           <a
             className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2 cursor-pointer"
             style={{ color: textColor }}
-            onClick={handlePageUnderDevelopment}
+            onClick={() => router.push('/reviews')}
           >
             Reviews
           </a>
@@ -136,7 +136,6 @@ const Navbar = ({
             style={{ backgroundColor: dropdownBgColor }}
           >
             <a
-              href="#about"
               className="block hover:underline px-4 py-2"
               style={{ color: dropdownTextColor }}
               onClick={handlePageUnderDevelopment}
@@ -144,7 +143,6 @@ const Navbar = ({
               About us
             </a>
             <a
-              href="#blogs"
               className="block hover:underline px-4 py-2"
               style={{ color: dropdownTextColor }}
               onClick={handlePageUnderDevelopment}
@@ -152,7 +150,6 @@ const Navbar = ({
               Blogs
             </a>
             <a
-              href="#gallery"
               className="block hover:underline px-4 py-2"
               style={{ color: dropdownTextColor }}
               onClick={handleGalleryClick}
@@ -160,15 +157,13 @@ const Navbar = ({
               Gallery
             </a>
             <a
-              href="#reviews"
               className="block hover:underline px-4 py-2"
               style={{ color: dropdownTextColor }}
-              onClick={handlePageUnderDevelopment}
+              onClick={() => router.push('/reviews')}
             >
               Reviews
             </a>
             <a
-              href="#trips"
               className="block hover:underline px-4 py-2"
               style={{ color: dropdownTextColor }}
               onClick={() => router.push('/upcoming-trips')}
