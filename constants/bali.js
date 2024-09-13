@@ -3,7 +3,7 @@ export const baliTrips = [
     id: 1,
     title: 'Bali Adventure',
     date: '15th November - 23rd November',
-    pricing: 'Rs 36,900 per person',
+    pricing: 'Rs 40,900 per person',
     tripLength: '9 days',
     groupSize: '15 person avg',
     description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
@@ -26,14 +26,8 @@ export const baliTrips = [
       'Transportation and Boat tickets in Bali',
       'All activities under professional guidance',
     ],
-    exclusions: [
-      'Flight tickets',
-      'Alcoholic beverages',
-    ],
-    pricingDetails: [
-      'INR 36,900 + GST(5%) until 9th October',
-      'INR 42,900 + GST(5%) until spots are available',
-    ],
+    exclusions: ['Flight tickets', 'Alcoholic beverages'],
+    pricingDetails: ['INR 40,900 + GST(5%) until 9th October', 'INR 46,900 + GST(5%) until spots are available'],
     groupData: [
       {
         imageSrc: '/bali/1.png',
@@ -79,13 +73,13 @@ export const baliTrips = [
     groupDataTrip: [
       { imageSrc: '/bali/group-1.png' },
       { imageSrc: '/bali/group-2.png' },
-      { imageSrc: '/bali/group-3.png' }
+      { imageSrc: '/bali/group-3.png' },
     ],
     galleryImages: [
-      {imageSrc:'/bali/gallery-1.png'},
-      {imageSrc:'/bali/gallery-2.png'},
-      {imageSrc:'/bali/gallery-3.png'},
-    ]
+      { imageSrc: '/bali/gallery-1.png' },
+      { imageSrc: '/bali/gallery-2.png' },
+      { imageSrc: '/bali/gallery-3.png' },
+    ],
   },
   {
     id: 2,
@@ -114,14 +108,8 @@ export const baliTrips = [
       'Transportation and Boat tickets in Bali',
       'All activities under professional guidance',
     ],
-    exclusions: [
-      'Flight tickets',
-      'Alcoholic beverages',
-    ],
-    pricingDetails: [
-      'INR 49,900 + GST(5%) until 3rd November',
-      'INR 55,900 + GST(5%) until spots are available',
-    ],
+    exclusions: ['Flight tickets', 'Alcoholic beverages'],
+    pricingDetails: ['INR 49,900 + GST(5%) until 3rd November', 'INR 55,900 + GST(5%) until spots are available'],
     groupData: [
       {
         imageSrc: '/bali/13.png',
@@ -186,24 +174,24 @@ export const baliTrips = [
       {
         imageSrc: '/bali/21.png',
         name: 'Ashutosh Verma',
-        location: 'Lucknow, Uttar Pradesh'
+        location: 'Lucknow, Uttar Pradesh',
       },
       {
         imageSrc: '/bali/22.png',
         name: 'Abhishek Chopra',
-        location: 'Delhi, India'
-      }
+        location: 'Delhi, India',
+      },
     ],
     groupDataTrip: [
       { imageSrc: '/bali/group-1.png' },
       { imageSrc: '/bali/group-2.png' },
-      { imageSrc: '/bali/group-3.png' }
+      { imageSrc: '/bali/group-3.png' },
     ],
     galleryImages: [
-      {imageSrc:'/bali/gallery-1.png'},
-      {imageSrc:'/bali/gallery-2.png'},
-      {imageSrc:'/bali/gallery-3.png'},
-    ]
+      { imageSrc: '/bali/gallery-1.png' },
+      { imageSrc: '/bali/gallery-2.png' },
+      { imageSrc: '/bali/gallery-3.png' },
+    ],
   },
   {
     id: 3,
@@ -232,14 +220,8 @@ export const baliTrips = [
       'Transportation and Boat tickets in Bali',
       'All activities under professional guidance',
     ],
-    exclusions: [
-      'Flight tickets',
-      'Alcoholic beverages',
-    ],
-    pricingDetails: [
-      'INR 46,900 + GST(5%) until 29th November',
-      'INR 52,900 + GST(5%) until spots are available',
-    ],
+    exclusions: ['Flight tickets', 'Alcoholic beverages'],
+    pricingDetails: ['INR 46,900 + GST(5%) until 29th November', 'INR 52,900 + GST(5%) until spots are available'],
     groupData: [
       {
         imageSrc: '/bali/23.png',
@@ -280,17 +262,17 @@ export const baliTrips = [
         imageSrc: '/bali/30.png',
         name: 'Rohan Singh',
         location: 'Amritsar, Punjab',
-      }
+      },
     ],
     groupDataTrip: [
       { imageSrc: '/bali/group-1.png' },
       { imageSrc: '/bali/group-2.png' },
-      { imageSrc: '/bali/group-3.png' }
+      { imageSrc: '/bali/group-3.png' },
     ],
     galleryImages: [
-      {imageSrc:'/bali/gallery-1.png'},
-      {imageSrc:'/bali/gallery-2.png'},
-      {imageSrc:'/bali/gallery-3.png'},
-    ]
-  }
+      { imageSrc: '/bali/gallery-1.png' },
+      { imageSrc: '/bali/gallery-2.png' },
+      { imageSrc: '/bali/gallery-3.png' },
+    ],
+  },
 ];

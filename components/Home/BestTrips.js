@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 import { Parallax } from 'react-parallax';
@@ -15,7 +15,7 @@ const BestTrips = ({
       destination: 'Bali Beach Escape',
       location: 'Bali, Indonesia',
       duration: '15th Nov - 23rd Nov (8 days)',
-      price: '36,900 per person',
+      price: '40,900 per person',
       days: 9,
       nights: 8,
       id: 1,

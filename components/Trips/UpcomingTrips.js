@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 import Card from '../Card';
@@ -12,12 +12,12 @@ const upcomingTripsData = [
     destination: 'Bali Beach Escape',
     location: 'Bali, Indonesia',
     duration: '15th Nov - 23rd Nov (8 days)',
-    price: '36,900 per person',
+    price: '40,900 per person',
     days: 9,
     nights: 8,
     id: 1,
     loc: 'bali',
-    fillingFast: true                                               
+    fillingFast: true,
   },
   {
     imageUrl: '/thailand/card1.jpg',
@@ -29,7 +29,7 @@ const upcomingTripsData = [
     nights: 7,
     id: 1,
     loc: 'thailand',
-    fillingFast: true
+    fillingFast: true,
   },
   {
     imageUrl: '/bali/card2.jpg',
@@ -41,7 +41,7 @@ const upcomingTripsData = [
     nights: 8,
     id: 2,
     loc: 'bali',
-    fillingFast: false
+    fillingFast: false,
   },
   {
     imageUrl: '/thailand/card2.jpg',
@@ -53,7 +53,7 @@ const upcomingTripsData = [
     nights: 7,
     id: 2,
     loc: 'thailand',
-    fillingFast: false
+    fillingFast: false,
   },
   {
     imageUrl: '/bali/card3.jpg',
@@ -65,7 +65,7 @@ const upcomingTripsData = [
     nights: 8,
     id: 3,
     loc: 'bali',
-    fillingFast: true
+    fillingFast: true,
   },
   // {
   //   imageUrl: '/vietnam/card3.jpg',
@@ -139,7 +139,7 @@ const baliTripsData = [
     nights: 8,
     id: 1,
     loc: 'bali',
-    fillingFast: true
+    fillingFast: true,
   },
   {
     imageUrl: '/bali/card2.jpg',
@@ -151,7 +151,7 @@ const baliTripsData = [
     nights: 8,
     id: 2,
     loc: 'bali',
-    fillingFast: false
+    fillingFast: false,
   },
   {
     imageUrl: '/bali/card3.jpg',
@@ -163,7 +163,7 @@ const baliTripsData = [
     nights: 8,
     id: 3,
     loc: 'bali',
-    fillingFast: true
+    fillingFast: true,
   },
 ];
 
@@ -216,7 +216,7 @@ const thailandTripsData = [
     nights: 7,
     id: 1,
     loc: 'thailand',
-    fillingFast: true
+    fillingFast: true,
   },
   {
     imageUrl: '/thailand/card2.jpg',
@@ -228,7 +228,7 @@ const thailandTripsData = [
     nights: 7,
     id: 2,
     loc: 'thailand',
-    fillingFast: false
+    fillingFast: false,
   },
   // {
   //   imageUrl: '/thailand/card3.jpg',
@@ -251,10 +251,12 @@ const UpcomingTrip = () => {
   };
 
   return (
-    <div className='pt-20 px-4 md:px-8'>
+    <div className="pt-20 px-4 md:px-8">
       {upcomingTripsData.length > 0 && (
         <>
-          <h1 className='pt-16 text-3xl md:text-5xl font-bold text-center' style={{ fontFamily: 'title-light' }}>UPCOMING TRIPS</h1>
+          <h1 className="pt-16 text-3xl md:text-5xl font-bold text-center" style={{ fontFamily: 'title-light' }}>
+            UPCOMING TRIPS
+          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-12">
             {upcomingTripsData.map((trip, index) => (
               <Card
@@ -276,7 +278,9 @@ const UpcomingTrip = () => {
 
       {newTripsData.length > 0 && (
         <>
-          <h1 className='pt-16 text-3xl md:text-5xl font-bold text-center' style={{ fontFamily: 'title-light' }}>NEW YEAR TRIPS</h1>
+          <h1 className="pt-16 text-3xl md:text-5xl font-bold text-center" style={{ fontFamily: 'title-light' }}>
+            NEW YEAR TRIPS
+          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-12">
             {newTripsData.map((trip, index) => (
               <Card
@@ -298,7 +302,9 @@ const UpcomingTrip = () => {
 
       {baliTripsData.length > 0 && (
         <>
-          <h1 className='pt-16 text-3xl md:text-5xl font-bold text-center' style={{ fontFamily: 'title-light' }}>BALI TRIPS</h1>
+          <h1 className="pt-16 text-3xl md:text-5xl font-bold text-center" style={{ fontFamily: 'title-light' }}>
+            BALI TRIPS
+          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-12">
             {baliTripsData.map((trip) => (
               <Card
@@ -320,7 +326,9 @@ const UpcomingTrip = () => {
 
       {vietnamTripsData.length > 0 && (
         <>
-          <h1 className='pt-16 text-3xl md:text-5xl font-bold text-center' style={{ fontFamily: 'title-light' }}>VIETNAM TRIPS</h1>
+          <h1 className="pt-16 text-3xl md:text-5xl font-bold text-center" style={{ fontFamily: 'title-light' }}>
+            VIETNAM TRIPS
+          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-12">
             {vietnamTripsData.map((trip) => (
               <Card
@@ -342,7 +350,9 @@ const UpcomingTrip = () => {
 
       {thailandTripsData.length > 0 && (
         <>
-          <h1 className='pt-16 text-3xl md:text-5xl font-bold text-center' style={{ fontFamily: 'title-light' }}>THAILAND TRIPS</h1>
+          <h1 className="pt-16 text-3xl md:text-5xl font-bold text-center" style={{ fontFamily: 'title-light' }}>
+            THAILAND TRIPS
+          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-12">
             {thailandTripsData.map((trip) => (
               <Card
@@ -363,6 +373,6 @@ const UpcomingTrip = () => {
       )}
     </div>
   );
-}
+};
 
 export default UpcomingTrip;
