@@ -5,20 +5,16 @@ import { useState } from 'react';
 import { stories } from '@/constants/blogs';
 import { useRouter } from 'next/navigation';
 
-
 const TravelStories = ({
   backgroundColor = '#ffffff', // Default white background
   textColor = '#000000', // Default black text
 }) => {
-
-
-
   const [showAll, setShowAll] = useState(false);
-    const router = useRouter();
-  
+  const router = useRouter();
+
   return (
-    <section className="p-8" style={{ backgroundColor }} id='blog-section'>
-         {/* Blurred background */}
+    <section className="p-8" style={{ backgroundColor }} id="blog-section">
+      {/* Blurred background */}
 
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
         <div className="text-center md:text-left mb-4 md:mb-0">
@@ -30,20 +26,23 @@ const TravelStories = ({
           </p>
         </div>
         <button
-          className="text-sm md:text-base font-semibold py-3 px-4 md:py-2 md:px-4 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out"
-          style={{
-            color: textColor,
-            borderColor: textColor,
-            borderColor: backgroundColor === '#ffffff' ? '#000000' : 'transparent', // Inverse button color
-          }}
-          onClick={() => setShowAll(!showAll)}
-        >
-          {showAll ? 'Show Less' : 'View All Stories'}
-        </button>
+  className="text-sm md:text-base font-semibold py-3 px-4 md:py-2 md:px-4 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out"
+  style={{
+    color: textColor,
+    borderColor: textColor,
+    borderColor: backgroundColor === '#ffffff' ? '#000000' : 'transparent', // Inverse button color
+  }}
+  onClick={() => {
+      router.push('/blogs');  
+  }}
+>
+  {'View All Stories'}
+</button>
+
       </div>
 
-      <div className="mt-12 grid md:grid-cols-2 gap-14 max-w-7xl mx-auto justify-items-center">
-        {stories.slice(0, showAll ? stories.length : 4).map((story, index) => (
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 mx-auto justify-items-center">
+        {stories.slice(0,  3).map((story, index) => (
           <div
             key={index}
             className="shadow-md rounded-lg overflow-hidden border-[#C4C4C4] border-2 cursor-pointer"

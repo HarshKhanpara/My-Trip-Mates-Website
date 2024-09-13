@@ -69,7 +69,7 @@ const Navbar = ({
           <a
             className="px-4 py-2 hover:text-opacity-80 transition ease-in-out hover:-translate-y-2"
             style={{ color: textColor }}
-            onClick={handlePageUnderDevelopment}
+            onClick={() => router.push('/about')}
           >
             About us
           </a>
@@ -145,7 +145,7 @@ const Navbar = ({
             <a
               className="block hover:underline px-4 py-2"
               style={{ color: dropdownTextColor }}
-              onClick={handlePageUnderDevelopment}
+              onClick={() => router.push('/about')}
             >
               About us
             </a>

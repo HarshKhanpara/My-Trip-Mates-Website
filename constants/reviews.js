@@ -19,7 +19,7 @@ export const reviews = [
       name: "Yashvi Porwal",
       location: "Spain - 2023",                                                                                                                                     
       text: "Loved my Vietnam trip with My Trip Mates! The itinerary was fantastic, covering all the highlights. The people in our group were wonderful, and we quickly became friends. The organizers were so helpful and made everything easy. Highly recommend for a solo adventure!",
-      avatar: "/reviews/.avatar3.png",
+      avatar: "/reviews/avatar3.png",
       icon: "🛕",
       heartIcon: "❤️‍🔥",
     },
