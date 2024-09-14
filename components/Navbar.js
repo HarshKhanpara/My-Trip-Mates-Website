@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
+import { FaInfoCircle, FaBlog, FaImages, FaStar, FaCalendarAlt, FaPhone, FaTimes, FaBars } from 'react-icons/fa';
+
 
 const Navbar = ({
   backgroundColor = 'transparent',
@@ -113,70 +115,54 @@ const Navbar = ({
             Contact Us
           </button>
 
-          {/* Hamburger Icon for Mobile View */}
+          {/* Hamburger / Cross Icon for Mobile View */}
           <button
-            className="md:hidden px-4 py-2"
+            className="md:hidden px-4 py-2 transform transition-transform hover:scale-110 duration-300"
             style={{ color: textColor }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
+            {isMenuOpen ? (
+              <FaTimes className="w-8 h-8" />
+            ) : (
+              <FaBars className="w-8 h-8" />
+            )}
           </button>
         </div>
 
         {/* Dropdown Menu */}
         {isMenuOpen && (
           <div
-            className="absolute top-full left-0 w-full md:hidden"
+            className="absolute top-full left-1/2 transform -translate-x-1/2 w-[95%] md:hidden shadow-lg rounded-lg overflow-hidden transition-all duration-500 ease-in-out translate-y-2"
             style={{ backgroundColor: dropdownBgColor }}
           >
-            <a
-              className="block hover:underline px-4 py-2"
-              style={{ color: dropdownTextColor }}
-              onClick={() => router.push('/about')}
-            >
-              About us
-            </a>
-            <a
-              className="block hover:underline px-4 py-2"
-              style={{ color: dropdownTextColor }}
-              onClick={handleScrollToBlogs}
-            >
-              Blogs
-            </a>
-            <a
-              className="block hover:underline px-4 py-2"
-              style={{ color: dropdownTextColor }}
-              onClick={handleGalleryClick}
-            >
-              Gallery
-            </a>
-            <a
-              className="block hover:underline px-4 py-2"
-              style={{ color: dropdownTextColor }}
-              onClick={() => router.push('/reviews')}
-            >
-              Reviews
-            </a>
-            <a
-              className="block hover:underline px-4 py-2"
-              style={{ color: dropdownTextColor }}
-              onClick={() => router.push('/upcoming-trips')}
-            >
-              Upcoming Trips
-            </a>
+            {[
+              { label: 'About us', icon: <FaInfoCircle />, action: () => router.push('/about') },
+              { label: 'Blogs', icon: <FaBlog />, action: handleScrollToBlogs },
+              { label: 'Gallery', icon: <FaImages />, action: handleGalleryClick },
+              { label: 'Reviews', icon: <FaStar />, action: () => router.push('/reviews') },
+              { label: 'Upcoming Trips', icon: <FaCalendarAlt />, action: () => router.push('/upcoming-trips') },
+            ].map(({ label, icon, action }, idx) => (
+              <a
+                key={idx}
+                className="flex items-center px-4 py-4 border-b border-gray-700 hover:bg-gray-800 transition-colors duration-300"
+                style={{ color: dropdownTextColor }}
+                onClick={action}
+              >
+                <span style={{ color: textColor }}>{icon}</span>
+                <span className="ml-2">{label}</span>
+              </a>
+            ))}
+
+            {/* Contact Us Button */}
+            <div className="flex justify-center p-4">
+              <button
+                className="w-full text-white px-6 py-2 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-transform duration-300"
+                style={{ backgroundColor: buttonColor }}
+                onClick={handleScrollToContact}
+              >
+                Contact Us
+              </button>
+            </div>
           </div>
         )}
       </nav>
