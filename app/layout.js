@@ -56,10 +56,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         {children}
+        {/* Uncomment this if needed */}
         {/* <a 
-  href="https://wa.me/message/4JNUATXAUKPVN1" 
-  target="_blank" 
-  style={{
+          href="https://wa.me/message/4JNUATXAUKPVN1" 
+          target="_blank" 
+          style={{
             position: 'fixed',
             width: '60px',
             height: '60px',
@@ -76,23 +77,25 @@ export default function RootLayout({ children }) {
             justifyContent: 'center',
           }}
           className="z-30"
->
-  <div className="mt-[16px]">
-    <Image
-      src="/social-wa.png"
-      layout="fill"
-    />
-  </div>
-</a> */}
+        >
+          <div className="mt-[16px]">
+            <Image
+              src="/social-wa.png"
+              layout="fill"
+            />
+          </div>
+        </a> */}
         <WhatsAppChat />
         <GoogleAnalytics gaId="G-N0922Y6259" />
-        <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "o1wm791t0v");
-</script>
+        <Script id="clarity-script" strategy="afterInteractive">
+          {`
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "o1wm791t0v");
+          `}
+        </Script>
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
           !function(f,b,e,v,n,t,s)
@@ -105,14 +108,14 @@ export default function RootLayout({ children }) {
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
           fbq('track', 'PageView');
-        `}
+          `}
         </Script>
         <noscript>
           <img
             height="1"
             width="1"
             style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1`}
+            src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1`}
           />
         </noscript>
       </body>
