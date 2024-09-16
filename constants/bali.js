@@ -69,6 +69,56 @@ export const baliTrips = [
         name: 'Rohan Desai',
         location: 'Amritsar, Punjab',
       },
+      {
+        imageSrc: '/bali/33.png',
+        name: 'Harsh Jain',
+        location: 'Mumbai, Maharashtra',
+      },
+      {
+        imageSrc: '/bali/34.png',
+        name: 'Jayesh Kothari',
+        location: 'Mumbai, Maharashtra',
+      },
+      {
+        imageSrc: '/bali/35.png',
+        name: 'Vishal Dubey',
+        location: 'Mumbai, Maharashtra',
+      },
+      {
+        imageSrc: '/bali/36.png',
+        name: 'Ankit Agarwal',
+        location: 'Mumbai, Maharashtra',
+      },
+      {
+        imageSrc: '/bali/37.png',
+        name: 'Sakshi Agarwal',
+        location: 'Mumbai, Maharashtra',
+      },
+      {
+        imageSrc: '/bali/38.png',
+        name: 'Rahul Bansal',
+        location: 'Pune, Maharashtra',
+      },
+      {
+        imageSrc: '/bali/39.png',                           
+        name: 'Neha Desai',
+        location: 'Mumbai, Maharashtra',
+      },
+      {
+        imageSrc: '/bali/40.png',
+        name: 'Meera Gupta',
+        location: 'Delhi, India',
+      },
+      {
+        imageSrc: '/bali/41.png',
+        name: 'Rohit Dubey',
+        location: 'Mumbai, Maharashtra',
+      },
+      {
+        imageSrc: '/bali/42.png',
+        name: 'Aditi Nair',
+        location: 'Mumbai, Maharashtra',
+      }
     ],
     groupDataTrip: [
       { imageSrc: '/bali/group-1.png' },
