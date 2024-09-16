@@ -17,6 +17,36 @@ const poppins = Poppins({
 export const metadata = {
   title: "My trip Mates",
   description: "My trip mates is a platform for finding travel buddies and planning trips together.",
+  siteName: "My Trip Mates",
+  openGraph: {
+    title: "My trip Mates",
+    description: "My trip mates is a platform for finding travel buddies and planning trips together.",
+    images: [
+      {
+        url: "/gallery/slide1.png",
+        width: 800,
+        height: 600,
+        alt: "Group Trip",
+      },
+    ],
+    url: "https://mytripmates.com",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "My trip Mates",
+    description: "My trip mates is a platform for finding travel buddies and planning trips together.",
+    image: "/gallery/slide1.png",
+    imageAlt: "Background Image of Our Travel Experiences",
+    site: "@mytripmates",
+  },
+
+  meta: {
+    robots: "index, follow",
+    keywords: "travel, experiences, sustainability, customer satisfaction, authentic journeys",
+    author: "My Trip Mates",
+  },
+  
 };
 
 export default function RootLayout({ children }) {
