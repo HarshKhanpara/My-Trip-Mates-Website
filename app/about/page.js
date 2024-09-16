@@ -5,22 +5,25 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { UserIcon, GlobeAltIcon, BeakerIcon, BadgeCheckIcon } from "@heroicons/react/solid"; // Importing icons
 import Gallery from "@/components/gallery"; // Importing Gallery component
-import Head from 'next/head'; // Importing Head for metadata
 import { useRouter } from "next/navigation";
+
+
+export const metadata = {
+  title: 'About Us - Crafting Travel Experiences',
+  description: 'Learn about our passion for crafting extraordinary travel experiences. Discover our beliefs and commitment to customer satisfaction, sustainability, and authenticity.',
+  openGraph: {
+    title: 'About Us - Crafting Travel Experiences',
+    description: 'Discover our mission and values. We are committed to creating memorable travel experiences while prioritizing sustainability, authenticity, and customer satisfaction.',
+    images: '/gallery/background.jpg',
+  },
+};
+
 
 const AboutUs = () => {
     const router = useRouter();
   return (
     <>
-      <Head>
-        <title>About Us - Crafting Travel Experiences</title>
-        <meta name="description" content="Learn about our passion for crafting extraordinary travel experiences. Discover our beliefs and commitment to customer satisfaction, sustainability, and authenticity." />
-        <meta property="og:title" content="About Us - Crafting Travel Experiences" />
-        <meta property="og:description" content="Discover our mission and values. We are committed to creating memorable travel experiences while prioritizing sustainability, authenticity, and customer satisfaction." />
-        <meta property="og:image" content="/gallery/background.jpg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      
+
 <Navbar/>
       <div className="relative w-full">
       
