@@ -1,7 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
@@ -16,11 +15,13 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "My trip Mates",
-  description: "My trip mates is a platform for finding travel buddies and planning trips together.",
+  description:
+    "My trip mates is a platform for finding travel buddies and planning trips together.",
   siteName: "My Trip Mates",
   openGraph: {
     title: "My trip Mates",
-    description: "My trip mates is a platform for finding travel buddies and planning trips together.",
+    description:
+      "My trip mates is a platform for finding travel buddies and planning trips together.",
     images: [
       {
         url: "/gallery/slide1.png",
@@ -35,7 +36,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "My trip Mates",
-    description: "My trip mates is a platform for finding travel buddies and planning trips together.",
+    description:
+      "My trip mates is a platform for finding travel buddies and planning trips together.",
     image: "/gallery/slide1.png",
     imageAlt: "Background Image of Our Travel Experiences",
     site: "@mytripmates",
@@ -43,10 +45,10 @@ export const metadata = {
 
   meta: {
     robots: "index, follow",
-    keywords: "travel, experiences, sustainability, customer satisfaction, authentic journeys",
+    keywords:
+      "travel, experiences, sustainability, customer satisfaction, authentic journeys",
     author: "My Trip Mates",
   },
-  
 };
 
 export default function RootLayout({ children }) {
@@ -82,22 +84,17 @@ export default function RootLayout({ children }) {
     />
   </div>
 </a> */}
-          <WhatsAppChat />
-          <GoogleAnalytics gaId="G-N0922Y6259" />
-          <Script id="clarity-script" strategy="afterInteractive">
+        <WhatsAppChat />
+        <GoogleAnalytics gaId="G-N0922Y6259" />
+        <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "o1wm791t0v");
+</script>
+        <Script id="facebook-pixel" strategy="afterInteractive">
           {`
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID}");
-          `}
-        </Script>
-        <Script
-        id="facebook-pixel"
-        strategy="afterInteractive"
-      >
-        {`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -109,16 +106,15 @@ export default function RootLayout({ children }) {
           fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
           fbq('track', 'PageView');
         `}
-      </Script>
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: "none" }}
-          src={`https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1`}
-        />
-      </noscript>
-
+        </Script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1`}
+          />
+        </noscript>
       </body>
     </html>
   );
