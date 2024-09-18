@@ -26,7 +26,7 @@ const TravelStories = ({
           </p>
         </div>
         <button
-  className="text-sm md:text-base font-semibold py-3 px-4 md:py-2 md:px-4 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out"
+  className="text-sm md:text-base font-semibold py-3 px-4 md:py-2 md:px-4 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out z-50"
   style={{
     color: textColor,
     borderColor: textColor,
@@ -45,7 +45,7 @@ const TravelStories = ({
         {stories.slice(0,  3).map((story, index) => (
           <div
             key={index}
-            className="shadow-md rounded-lg overflow-hidden border-[#C4C4C4] border-2 cursor-pointer"
+            className="shadow-md z-50 rounded-lg overflow-hidden border-[#C4C4C4] border-2 cursor-pointer"
             onClick={() => router.push(story.link)}
           >
             <Image

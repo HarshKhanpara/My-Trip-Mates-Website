@@ -71,7 +71,7 @@ export default function TravelCard({
 
           <p className={`mb-6 ${themeStyles.text}`}>{description}</p>
           <button 
-            className="bg-[#FF6A3D] text-white font-bold py-3 px-4 rounded hover:bg-[#e55c2c] transition duration-200 w-full md:max-w-36"
+            className="bg-[#FF6A3D] z-50  text-white font-bold py-3 px-4 rounded hover:bg-[#e55c2c] transition duration-200 w-full md:max-w-36"
             onClick={handleEnquireNow}
           >
             Enquire Now
@@ -99,7 +99,7 @@ export default function TravelCard({
               className={`border-2 ${isDarkMode ? 'border-white bg-gray-800 text-white' : 'border-black bg-white text-black'} font-bold py-1 px-2 sm:px-4 text-xs sm:text-base rounded-lg hover:bg-[#FF6A3D] hover:text-white hover:border-none transition duration-200 mr-1 h-[32px] sm:h-[40px] min-w-32 flex items-center justify-center`}
               onClick={handleViewMore}
             >
-              <span className="flex items-center">
+              <span className="flex items-center z-50">
                 See all photos
                 <FaArrowRight size={16} className="ml-2" />
               </span>

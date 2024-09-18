@@ -24,9 +24,8 @@ export function ExclusiveTrip() {
           top: 0,
           left: 0,
           width: '100%',
-          height: '50%',
+          height: '100%',
           position: 'fixed',
-          zIndex: 1
         }}
       />
     </>
