@@ -89,6 +89,7 @@ const Footer = ({
                 width={24}
                 height={24}
                 alt="Contact us on Twitter"
+                style={{ color: textColor,backgroundColor: 'white' }}
               />
             </a>
             <a

@@ -1,11 +1,10 @@
 import Image from 'next/image';
 
 export default function Itinerary({
-  backgroundColor = '#0E2433',
-  textColor = 'white',
   itineraryData = {},
   groupData = [],
-  groupDataTrip=[]
+  groupDataTrip = [],
+  isDarkMode = false // New prop to control theme
 }) {
   const {
     title = 'ITINERARY',
@@ -22,14 +21,22 @@ export default function Itinerary({
   const firstFiveHighlights = highlights.slice(0, 5);
   const remainingHighlights = highlights.slice(5);
 
-  
+  // Theme-based styles
+  const themeStyles = {
+    background: isDarkMode ? 'bg-black' : 'bg-white',
+    text: isDarkMode ? 'text-white' : 'text-black',
+    subText: isDarkMode ? 'text-gray-300' : 'text-gray-600',
+    border: isDarkMode ? 'border-gray-600' : 'border-gray-300',
+    highlight: isDarkMode ? 'bg-gray-700' : 'bg-gray-100',
+  };
+
   return (
-    <div className={`p-6 md:p-10`} style={{ backgroundColor, color: textColor }}>
+    <div className={`p-6 md:p-10 ${themeStyles.background} ${themeStyles.text}`}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {/* Left Side - Itinerary Details */}
-        <div className="space-y-8" style={{ backgroundColor }}>
+        <div className="space-y-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-left"
-          style={{ fontFamily: 'title-light'}}
+            style={{ fontFamily: 'title-light' }}
           >{title}</h1>
           <div className="grid grid-cols-3 gap-4 mb-6">
             <div className="text-center">
@@ -49,9 +56,9 @@ export default function Itinerary({
             {description}
           </p>
           <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-            <div className="w-full md:w-1/2 mb-6 md:mb-0 md:pr-4" style={{ backgroundColor }}>
+            <div className="w-full md:w-1/2 mb-6 md:mb-0 md:pr-4">
               <h2 className="text-xl md:text-2xl font-bold mb-4"
-                        style={{ fontFamily: 'title-light'}}
+                style={{ fontFamily: 'title-light' }}
               >Highlights</h2>
               <ul className="list-disc list-inside space-y-2">
                 {firstFiveHighlights.map((highlight, index) => (
@@ -59,10 +66,9 @@ export default function Itinerary({
                 ))}
               </ul>
             </div>
-            <div className="w-full md:w-1/2 md:pl-4" style={{ backgroundColor }}>
+            <div className="w-full md:w-1/2 md:pl-4">
               <h2 className="text-xl md:text-2xl font-bold mb-4"
-                        style={{ fontFamily: 'title-light'}}
-
+                style={{ fontFamily: 'title-light' }}
               >Additional Highlights</h2>
               <ul className="list-disc list-inside space-y-2">
                 {remainingHighlights.map((highlight, index) => (
@@ -72,10 +78,9 @@ export default function Itinerary({
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-            <div className="w-full md:w-1/2 mb-6 md:mb-0 md:pr-4" style={{ backgroundColor }}>
+            <div className="w-full md:w-1/2 mb-6 md:mb-0 md:pr-4">
               <h2 className="text-xl md:text-2xl font-bold mb-4"
-                        style={{ fontFamily: 'title-light'}}
-
+                style={{ fontFamily: 'title-light' }}
               >Inclusions</h2>
               <ul className="list-disc list-inside space-y-2">
                 {inclusions.map((inclusion, index) => (
@@ -83,10 +88,9 @@ export default function Itinerary({
                 ))}
               </ul>
             </div>
-            <div className="w-full md:w-1/2 md:pl-4" style={{ backgroundColor }}>
+            <div className="w-full md:w-1/2 md:pl-4">
               <h2 className="text-xl md:text-2xl font-bold mb-4"
-                        style={{ fontFamily: 'title-light'}}
-
+                style={{ fontFamily: 'title-light' }}
               >Exclusions</h2>
               <ul className="list-disc list-inside space-y-2">
                 {exclusions.map((exclusion, index) => (
@@ -95,31 +99,30 @@ export default function Itinerary({
               </ul>
             </div>
           </div>
-          <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ fontFamily: 'title-light'}}>
-  Pricing Details
-</h2>
-<ul className="list-none space-y-2">
-  <p className='bg-gradient-to-r from-green-400 to-green-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-4 py-3 rounded-md shadow-lg animate-pulse w-full sm:w-auto text-center'>
-    Booking Amount: ₹15,000 to reserve your slot.
-  </p>
-  {pricingDetails.map((price, index) => (
-    <li key={index} className="text-sm md:text-base lg:text-lg">{price}</li>
-  ))}
-</ul>
-
+          <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ fontFamily: 'title-light' }}>
+            Pricing Details
+          </h2>
+          <ul className="list-none space-y-2">
+            <p className='bg-gradient-to-r from-green-400 to-green-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-4 py-3 rounded-md shadow-lg animate-pulse w-full sm:w-auto text-center'>
+              Booking Amount: ₹15,000 to reserve your slot.
+            </p>
+            {pricingDetails.map((price, index) => (
+              <li key={index} className="text-sm md:text-base lg:text-lg">{price}</li>
+            ))}
+          </ul>
         </div>
 
         {/* Right Side - Meet Our Group */}
-        <div className="space-y-8" style={{ backgroundColor }} id='group'>
+        <div className="space-y-8" id='group'>
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center"
-          style={{ fontFamily: 'title-light'}}
+            style={{ fontFamily: 'title-light' }}
           >Travelers in this trip</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6" >
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
             {groupData.map(({ imageSrc, name, location }, idx) => (
               <div key={idx} className="flex flex-col items-center text-center">
                 <div className="w-36 h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 relative rounded-full overflow-hidden">
                   <Image
-                    src={imageSrc} // Replace with actual image path
+                    src={imageSrc}
                     alt={`${name}'s Image`}
                     layout="fill"
                     objectFit="cover"
@@ -127,17 +130,16 @@ export default function Itinerary({
                   />
                 </div>
                 <p className="mt-2 text-sm md:text-base">{name}</p>
-                <p className="text-xs md:text-sm text-gray-400">{location}</p>
+                <p className={`text-xs md:text-sm ${themeStyles.subText}`}>{location}</p>
               </div>
             ))}
           </div>
-          {/* Placeholder for group photos */}
           <h1 className='text-2xl md:text-3xl font-bold mb-6'>Recent Trip Gallery</h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto">
             {groupDataTrip.slice(0, 3).map(({ imageSrc }, idx) => (
               <div key={idx} className="w-[250px] h-[250px] relative mb-4 sm:mb-0 mx-auto">
                 <Image
-                  src={imageSrc} // Replace with actual image path
+                  src={imageSrc}
                   alt={`Group Photo ${idx + 1}`}
                   layout="fill"
                   objectFit="cover"

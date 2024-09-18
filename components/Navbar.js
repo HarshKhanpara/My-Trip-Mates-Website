@@ -48,6 +48,9 @@ const Navbar = ({
         }
       };
 
+  const isDarkBackground = backgroundColor === 'black' || backgroundColor === '#000'; // Add logic for dark backgrounds
+  const adjustedButtonColor = isDarkBackground ? '#FFFFFF' : buttonColor; // Adjust button color for better visibility
+
   return (
     <>
      <Toaster />
@@ -109,7 +112,7 @@ const Navbar = ({
         <div className="flex items-center">
           <button
             className="hidden md:flex text-white md:px-6 md:py-2 rounded-full font-semibold cursor-pointer"
-            style={{ backgroundColor: buttonColor }}
+            style={{ backgroundColor: adjustedButtonColor, color: isDarkBackground ? 'black' : 'white' }}  // Adjusted styling
             onClick={handleScrollToContact}
             >
             Contact Us
@@ -157,7 +160,7 @@ const Navbar = ({
             <div className="flex justify-center p-4">
               <button
                 className="w-full text-white px-6 py-2 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-transform duration-300"
-                style={{ backgroundColor: buttonColor }}
+                style={{ backgroundColor: adjustedButtonColor, color: isDarkBackground ? 'black' : 'white' }}
                 onClick={handleScrollToContact}
               >
                 Contact Us

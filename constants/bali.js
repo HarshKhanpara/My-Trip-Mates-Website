@@ -2,6 +2,7 @@ export const baliTrips = [
   {
     id: 1,
     title: 'Bali Adventure',
+    isExclusive: false,
     date: '15th November - 23rd November',
     pricing: 'Rs 40,900 per person',
     tripLength: '9 days',
@@ -134,6 +135,7 @@ export const baliTrips = [
   {
     id: 2,
     title: 'Bali Adventure',
+    isExclusive: false,
     date: '3rd December - 11th December',
     pricing: 'Rs 49,900 per person',
     tripLength: '8 days',
@@ -246,6 +248,7 @@ export const baliTrips = [
   {
     id: 3,
     title: 'Bali Adventure',
+    isExclusive: 'nyt',
     date: '29th December - 6th January',
     pricing: 'Rs 46,900 per person',
     tripLength: '9 days',

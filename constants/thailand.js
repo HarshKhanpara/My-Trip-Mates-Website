@@ -2,6 +2,7 @@ export const thailandTrips = [
   {
     id: 1,
     title: 'Thailand Adventure',
+    isExclusive: false,
     date: '15th October - 22nd October',
     pricing: 'INR 36,900 per person',
     tripLength: '8 days',
@@ -123,6 +124,7 @@ export const thailandTrips = [
   {
     id: 2,
     title: 'Thailand Adventure',
+    isExclusive: false,
     date: '13th November - 20th November',
     pricing: 'INR 40,900 per person',
     tripLength: '7 days',
