@@ -22,6 +22,7 @@ export default function Itinerary({
   const firstFiveHighlights = highlights.slice(0, 5);
   const remainingHighlights = highlights.slice(5);
 
+  
   return (
     <div className={`p-6 md:p-10`} style={{ backgroundColor, color: textColor }}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -109,11 +110,11 @@ export default function Itinerary({
         </div>
 
         {/* Right Side - Meet Our Group */}
-        <div className="space-y-8" style={{ backgroundColor }}>
+        <div className="space-y-8" style={{ backgroundColor }} id='group'>
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center"
           style={{ fontFamily: 'title-light'}}
           >Travelers in this trip</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6" >
             {groupData.map(({ imageSrc, name, location }, idx) => (
               <div key={idx} className="flex flex-col items-center text-center">
                 <div className="w-36 h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 relative rounded-full overflow-hidden">

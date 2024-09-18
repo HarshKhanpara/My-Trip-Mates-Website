@@ -4,73 +4,12 @@ import React from 'react';
 import { Parallax } from 'react-parallax';
 import Card from '../Card';
 import { useRouter } from 'next/navigation';
+import { upcomingTripsData } from '@/constants/cards';
 
 const BestTrips = ({
   backgroundColor = '#ffffff', // Default white background
   textColor = '#000000', // Default black text
 }) => {
-  const newTripsData = [
-    {
-      imageUrl: '/bali/card1.jpg',
-      destination: 'Bali Beach Escape',
-      location: 'Bali, Indonesia',
-      duration: '15th Nov - 23rd Nov (8 days)',
-      price: '40,900 per person',
-      days: 9,
-      nights: 8,
-      id: 1,
-      loc: 'bali',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/thailand/card1.jpg',
-      destination: 'Thailand Beach Bliss',
-      location: 'Thailand, Southeast Asia',
-      duration: '15th Oct - 22th Oct (7 days)',
-      price: '36,900 per person',
-      days: 9,
-      nights: 8,
-      id: 1,
-      loc: 'thailand',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/bali/card2.jpg',
-      destination: 'Bali Adventure',
-      location: 'Bali, Indonesia',
-      duration: '3rd Dec - 11th Dec (8 days)',
-      price: '49,900 per person',
-      days: 9,
-      nights: 8,
-      id: 2,
-      loc: 'bali',
-      fillingFast: false,
-    },
-    {
-      imageUrl: '/thailand/card2.jpg',
-      destination: 'Thailand Adventure',
-      location: 'Thailand, Southeast Asia',
-      duration: '13th Nov - 20th Nov (7 days)',
-      price: '40,900 per person',
-      days: 9,
-      nights: 8,
-      id: 2,
-      loc: 'thailand',
-      fillingFast: false,
-    },
-    {
-      imageUrl: '/bali/card3.jpg',
-      destination: 'Bali Cultural Experience',
-      location: 'Bali, Indonesia',
-      duration: '29th Dec - 6th Jan (9 days)',
-      price: '46,900 per person',
-      days: 9,
-      nights: 8,
-      id: 3,
-      loc: 'bali',
-      fillingFast: true,
-    },
-  ];
 
   const router = useRouter();
   const handleViewMore = () => {
@@ -118,7 +57,7 @@ const BestTrips = ({
             </button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {newTripsData.slice(0, 4).map((trip, index) => (
+            {upcomingTripsData.slice(0, 4).map((trip, index) => (
               <Card
                 key={index}
                 imageUrl={trip.imageUrl}

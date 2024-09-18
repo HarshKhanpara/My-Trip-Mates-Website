@@ -31,6 +31,4 @@ export const getTripByIdAndLocation = (id, location) => {
   return trip || null;
 };
 
-// Example usage:
-// const trip = getTripByIdAndLocation(1, 'Thailand');
-// console.log(trip);
+

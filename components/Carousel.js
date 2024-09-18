@@ -5,37 +5,48 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation,Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
-import styles from './Carousel.module.css'; // Corrected the filename
 import { useEffect, useState } from 'react';
+// import { debounce } from 'lodash';
+import styles from './Carousel.module.css'; 
+// import Spinner from './Spinner';
 
 const Carousel = () => {
   const slides = ["/slide1.png", "/slide2.png", "/slide3.png", "/slide4.png", "/slide5.png"];
   const [viewportWidth, setViewportWidth] = useState(0);
-  const [containerHeight, setContainerHeight] = useState('auto'); // State variable for dynamic height
+  const [containerHeight, setContainerHeight] = useState('auto');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const updateWidth = () => {
       setViewportWidth(window.innerWidth);
     };
     window.addEventListener('resize', updateWidth);
-    updateWidth(); // Initial call to set width
+    updateWidth();
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
-  // Dynamically adjust the container height based on viewport width
   useEffect(() => {
     if (viewportWidth < 640) {
-      setContainerHeight('300px'); // Adjust these values as needed
+      setContainerHeight('300px');
     } else if (viewportWidth < 768) {
       setContainerHeight('400px');
     } else {
       setContainerHeight('500px');
     }
-  }, [viewportWidth]); // Re-run this effect when viewportWidth changes
+  }, [viewportWidth]);
 
-  // Determine slidesPerView and spaceBetween dynamically based on viewport width
+  // Simulate loading for 1.5 seconds using lodash debounce
+  // useEffect(() => {
+  //   const delayedLoader = debounce(() => setIsLoading(false), 1500);
+  //   delayedLoader(); 
+
+  //   return () => {
+  //     delayedLoader.cancel();
+  //   };
+  // }, []);
+
   const slidesPerView = viewportWidth < 640 ? 1.5 : viewportWidth < 1024 ? 2 : 3;
   const spaceBetween = viewportWidth < 640 ? 10 : 20;
 
@@ -57,51 +68,54 @@ const Carousel = () => {
         <p className="text-black text-sm md:text-lg mb-6 md:mb-11 text-center">
           At My Trip Mates and Create Lifetime Memories
         </p>
-        <div className="relative w-full overflow-hidden rounded-lg mx-auto" style={{ minHeight: containerHeight, maxWidth: '95%' }}>
-          <div className={styles.carouselContainer}>
-            <Swiper
-              effect={'coverflow'}
-              grabCursor={true}
-              centeredSlides={true}
-              loop={true}
-              slidesPerView={slidesPerView} // Dynamically adjust slides per view
-              spaceBetween={spaceBetween}  // Add space between slides
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 1000,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              pagination={{ clickable: true }}
-              // navigation={true}
-              modules={[EffectCoverflow, Pagination, Navigation,Autoplay]}
-              autoplay={{
-                delay: 1000, // 3 seconds delay between slides
-                disableOnInteraction: false, // Keeps autoplay running even after manual interaction
-              }}
-
-              className={styles.mySwiper}
-            >
-              {slides.map((slide, index) => (
-                <SwiperSlide key={index}>
-                  <div className={styles.slideContent}>
-                    <Image
-                      src={slide}
-                      alt={`Slide ${index + 1}`}
-                      layout="fill"
-                      objectFit="cover"
-                      className={`${styles.image} rounded-3xl`}
-                    />
-                    <div className={styles.textOverlay}>
-                      <h2 className="text-lg font-bold text-white">{"Destination Title"}</h2>
-                      <p className="text-white">{"Description of the destination."}</p>
+        <div className="relative overflow-hidden rounded-lg mx-auto" style={{ minHeight: containerHeight, maxWidth: '95%' }}>
+          {/* Spinner */}
+          {/* {isLoading ? (
+            <Spinner loading={true} />
+          ) : ( */}
+            <div className={styles.carouselContainer}>
+              <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                loop={true}
+                slidesPerView={slidesPerView}
+                spaceBetween={spaceBetween}
+                coverflowEffect={{
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 1000,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                pagination={{ clickable: true }}
+                modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+                autoplay={{
+                  delay: 1000, 
+                  disableOnInteraction: false,
+                }}
+                className={styles.mySwiper}
+              >
+                {slides.map((slide, index) => (
+                  <SwiperSlide key={index}>
+                    <div className={styles.slideContent}>
+                      <Image
+                        src={slide}
+                        alt={`Slide ${index + 1}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className={`${styles.image} rounded-3xl`}
+                      />
+                      <div className={styles.textOverlay}>
+                        <h2 className="text-lg font-bold text-white">{"Destination Title"}</h2>
+                        <p className="text-white">{"Description of the destination."}</p>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          {/* )} */}
         </div>
       </div>
     </div>

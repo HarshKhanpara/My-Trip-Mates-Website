@@ -43,8 +43,8 @@ const BlogPost = ({ params }) => {
                     src={post.image}
                     alt={post.title}
                     width={800}
-                    height={500}
-                    className="mx-auto mt-7 mb-7"
+                    height={400}
+                    className="mx-auto mt-7 mb-7 max-h-[400px] max-w-[800px]"
                 />
 
                 <p className="text-2xl text-blue-500 text-center">{post.subtext}</p>
