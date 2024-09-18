@@ -30,6 +30,7 @@ const Trip_Bali = ({ params }) => {
       {trip.isExclusive === "nyt" ? (
         <div className='bg-black'>
           <ExclusiveTrip />
+          <div className='z-10'>
           <Navbar
         backgroundColor='black'  // Light background color
         textColor='white'        // Dark text color for contrast
@@ -66,6 +67,7 @@ const Trip_Bali = ({ params }) => {
             textColor='#fff'
             backgroundColor='#000'
           />
+          </div>
         </div>
       ) : (
         <>
