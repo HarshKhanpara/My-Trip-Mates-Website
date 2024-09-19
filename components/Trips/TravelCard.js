@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Slideshow from "../SlideShow";
 import { useRouter } from "next/navigation";
 
+
 export default function TravelCard({
   destination,
   duration,
@@ -14,6 +15,21 @@ export default function TravelCard({
   galleryImages,
   isDarkMode = false, // New prop to control theme
 }) {
+ * @prop {boolean} isDarkMode - A boolean indicating whether to use dark mode or not
+ *
+ * @example
+ * <TravelCard
+ *   destination="Bali, Indonesia"
+ *   duration="7th-15th September"
+ *   price="190000 per person"
+ *   description="Experience the beautiful island of Bali, Indonesia"
+ *   mainImage="/bali/card1.jpg"
+ *   galleryImages={["/bali/card1.jpg", "/bali/card2.jpg", "/bali/card3.jpg"]}
+ *   isDarkMode={false}
+ * />
+ *
+ * @returns A fully rendered TravelCard component
+ */
   const router = useRouter();
 
   const handleViewMore = () => {
