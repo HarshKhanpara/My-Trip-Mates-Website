@@ -15,15 +15,6 @@ export default function TravelCard({
   galleryImages,
   isDarkMode = false, // New prop to control theme
 }) {
- * @prop {boolean} isDarkMode - A boolean indicating whether to use dark mode or not
- *
- * @example
- * <TravelCard
- *   destination="Bali, Indonesia"
- *   duration="7th-15th September"
- *   price="190000 per person"
- *   description="Experience the beautiful island of Bali, Indonesia"
- *   mainImage="/bali/card1.jpg"
   const router = useRouter();
 
   const handleViewMore = () => {
