@@ -24,12 +24,6 @@ export default function TravelCard({
  *   price="190000 per person"
  *   description="Experience the beautiful island of Bali, Indonesia"
  *   mainImage="/bali/card1.jpg"
- *   galleryImages={["/bali/card1.jpg", "/bali/card2.jpg", "/bali/card3.jpg"]}
- *   isDarkMode={false}
- * />
- *
- * @returns A fully rendered TravelCard component
- */
   const router = useRouter();
 
   const handleViewMore = () => {
