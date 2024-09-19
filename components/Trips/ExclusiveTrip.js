@@ -19,7 +19,16 @@ export function ExclusiveTrip() {
     <>
       <Fireworks
         ref={ref}
-        options={{ opacity: 0.3, mouse:{click:true} }}
+        options={{
+          opacity: 0.3,
+          mouse: { click: true },
+          delay: {
+            min: 84,
+            max: 84,
+          },
+          speed: 0.2, // Control speed of fireworks
+          explosion: 2, // Adjust explosion speed
+        }}
         style={{
           top: 0,
           left: 0,

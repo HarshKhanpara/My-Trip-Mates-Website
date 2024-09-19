@@ -17,27 +17,31 @@ export default function TravelCard({
   const router = useRouter();
 
   const handleViewMore = () => {
-    router.push('/gallery');
+    router.push("/gallery");
   };
 
   const handleEnquireNow = () => {
     const message = `Hello, I'm interested in the trip to ${destination}. Could you please provide more details about this trip?`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/message/4JNUATXAUKPVN1?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
   };
 
   // Theme-based styles
   const themeStyles = {
-    background: isDarkMode ? 'bg-black' : 'bg-white',
-    text: isDarkMode ? 'text-white' : 'text-black',
-    border: isDarkMode ? 'border-gray-900' : 'border-gray-300',
-    divider: isDarkMode ? 'bg-gray-600' : 'bg-gray-300',
+    background: isDarkMode ? "bg-black" : "bg-white",
+    text: isDarkMode ? "text-white" : "text-black",
+    border: isDarkMode ? "border-gray-900" : "border-gray-300",
+    divider: isDarkMode ? "bg-gray-600" : "bg-gray-300",
   };
 
   return (
-    <div className={`w-full pt-20 pb-11 flex sm:pt-14 ${themeStyles.background} transition-colors duration-200`}>
-      <div className={`w-full flex flex-col lg:flex-row pt-20 p-6 rounded-lg shadow-lg border-2 ${themeStyles.border} ${themeStyles.text}`}>
+    <div
+      className={`w-full pt-20 pb-11 flex sm:pt-14 ${themeStyles.background} transition-colors duration-200`}
+    >
+      <div
+        className={`w-full flex flex-col lg:flex-row pt-20 p-6 rounded-lg shadow-lg border-2 ${themeStyles.border} ${themeStyles.text}`}
+      >
         <div className="relative w-full lg:w-1/2 lg:mb-0 flex md:justify-center md:items-center max-h-[570px] mb-7">
           <div className="relative flex md:justify-center items-start mt-4 lg:mt-0 lg:items-center max-w-[550px] max-h-[550px] w-full h-full">
             <Image
@@ -56,25 +60,51 @@ export default function TravelCard({
           </div>
         </div>
 
-        <div className="lg:hidden text-center mb-6">
-          <h1 className={`text-5xl font-light mb-4 ${themeStyles.text}`} style={{ fontFamily: 'title-light' }}>{destination}</h1>
-        </div>
+        <div className="lg:hidden mb-6">
+          <h1
+            className={`text-5xl font-light mb-4 text-center ${themeStyles.text}`}
+            style={{ fontFamily: "title-light" }}
+          >
+            {destination}
+          </h1>
 
-        <div className={`hidden lg:block h-[450px] w-[4px] ${themeStyles.divider} mx-8`}></div>
+          {/* Badge Below Destination in Mobile View */}
+          {isDarkMode && (
+            <div className="lg:hidden mt-4 w-full bg-red-500 text-white text-center font-semibold px-3 py-1 rounded-full shadow-lg text-sm animate-bounce">
+              🎉 New Year Trip!
+            </div>
+          )}
+</div>
+
+        <div
+          className={`hidden lg:block h-[450px] w-[4px] ${themeStyles.divider} mx-8`}
+        ></div>
 
         <div className="lg:pl-8 w-full lg:w-1/2">
-          <div className="hidden lg:block mb-6">
-            <h1 className={`text-7xl font-light mb-4 ${themeStyles.text}`} style={{ fontFamily: 'title-light' }}>{destination}</h1>
+          <div className="hidden lg:flex lg:items-center mb-6">
+            <h1
+              className={`text-7xl font-light ${themeStyles.text}`}
+              style={{ fontFamily: "title-light" }}
+            >
+              {destination}
+            </h1>
+
+            {/* Badge Next to Destination in Desktop View */}
+            {isDarkMode && (
+              <div className="lg:ml-4 bg-red-500 w-40 text-white text-center font-semibold px-3 py-1 rounded-full shadow-lg text-sm animate-bounce ">
+                🎉 New Year Trip!
+              </div>
+            )}
           </div>
 
           <div className={`md:hidden h-1 mb-4 ${themeStyles.divider}`}></div>
 
           <p className={`mb-6 ${themeStyles.text}`}>{description}</p>
-          <button 
-            className="bg-[#FF6A3D] z-50  text-white font-bold py-3 px-4 rounded hover:bg-[#e55c2c] transition duration-200 w-full md:max-w-36"
+          <button
+            className="relative z-50 bg-[#FF6A3D] text-white font-bold py-3 px-4 rounded hover:bg-[#e55c2c] transition duration-200 w-full md:max-w-36"
             onClick={handleEnquireNow}
           >
-            Enquire Now
+            <span className="z-50">Enquire Now</span>
           </button>
 
           <div className="hidden md:flex mt-8 space-x-4 overflow-x-auto">
@@ -95,8 +125,12 @@ export default function TravelCard({
           </div>
 
           <div className="flex justify-end mt-4">
-            <button 
-              className={`border-2 ${isDarkMode ? 'border-white bg-gray-800 text-white' : 'border-black bg-white text-black'} font-bold py-1 px-2 sm:px-4 text-xs sm:text-base rounded-lg hover:bg-[#FF6A3D] hover:text-white hover:border-none transition duration-200 mr-1 h-[32px] sm:h-[40px] min-w-32 flex items-center justify-center`}
+            <button
+              className={`border-2 ${
+                isDarkMode
+                  ? "border-white bg-gray-800 text-white"
+                  : "border-black bg-white text-black"
+              } font-bold py-1 px-2 sm:px-4 text-xs sm:text-base rounded-lg hover:bg-[#FF6A3D] hover:text-white hover:border-none transition duration-200 mr-1 h-[32px] sm:h-[40px] min-w-32 flex items-center justify-center`}
               onClick={handleViewMore}
             >
               <span className="flex items-center z-50">

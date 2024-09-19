@@ -248,7 +248,7 @@ export const baliTrips = [
   {
     id: 3,
     title: 'Bali Adventure',
-    // isExclusive: 'nyt',
+    isExclusive: 'nyt',
     date: '29th December - 6th January',
     pricing: 'Rs 46,900 per person',
     tripLength: '9 days',
