@@ -14,9 +14,13 @@
     "@heroicons/react": "^1.0.6",
     "@next/third-parties": "^14.2.9",
     "@react-spring/web": "^9.7.4",
+    "@react-three/drei": "^9.112.0",
+    "@react-three/fiber": "^8.17.7",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^11.5.5",
     "heroicons": "^2.1.5",
     "lodash": "^4.17.21",
+    "lucide-react": "^0.441.0",
     "next": "14.2.6",
     "next-themes": "^0.3.0",
     "react": "^18",
@@ -28,7 +32,8 @@
     "react-scroll-parallax": "^3.4.5",
     "react-simple-typewriter": "^5.0.1",
     "react-spinners": "^0.14.1",
-    "swiper": "^11.1.12"
+    "swiper": "^11.1.12",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "postcss": "^8",
