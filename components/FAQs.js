@@ -51,7 +51,7 @@ const FAQ = () => {
     <div className="bg-gray-50 p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mt-7 md:mt-0 sm:pt-4 mx-auto"> {/* Increased max width from max-w-3xl to max-w-4xl */}
         <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center text-gray-900">Frequently Asked Questions</h2>
-        <p className='text-center font-semibold pt-2 pb-7'>Please reach us at support@tripbff.com if you cannot find an answer to your question.</p>
+        <p className='text-center font-semibold pt-2 pb-7'>Please reach us at sales@mytripmates.co if you cannot find an answer to your question.</p>
         <div className="relative mb-6 hidden">
           <input
             type="text"
