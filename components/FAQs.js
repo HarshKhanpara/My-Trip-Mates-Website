@@ -56,7 +56,7 @@ const FAQ = () => {
           <input
             type="text"
             placeholder="Search questions..."
-            className="w-full p-3 pl-10 rounded-lg bg-white shadow-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 ease-in-out"
+            className="w-full p-3 pl-10 rounded-lg bg-white shadow-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 ease-in-out"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
