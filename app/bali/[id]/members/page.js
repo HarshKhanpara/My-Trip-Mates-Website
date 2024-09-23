@@ -9,7 +9,7 @@ import BestTrips from '@/components/Home/BestTrips';
 import TravelStories from '@/components/Home/TravelStories';
 import Footer from '@/components/Footer';
 import { useEffect } from 'react';
-import { getTripByIdAndLocation } from '@/utils/getTrip'; // Adjust the path as needed
+import { getTripByUrlAndLocation } from '@/utils/getTrip';
 
 
 const Trip_Bali = ({params}) => {
@@ -18,7 +18,7 @@ const Trip_Bali = ({params}) => {
   const location = 'bali';
   console.log(id);
   // Convert id to a number (if necessary) and fetch the trip details
-  const trip = id && location ? getTripByIdAndLocation(parseInt(id, 10), location) : null;
+  const trip = id && location ? getTripByUrlAndLocation(id, location) : null;
 
   if (!trip) {
     return <div>Trip not found</div>;
