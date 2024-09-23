@@ -25,19 +25,29 @@ const useOnScreen = (ref, threshold = 0.2) => {
 const UpcomingTrip = () => {
   const router = useRouter();
 
-  const handleCardClick = (loc,id) => {
+  const handleCardClick = (loc, id) => {
     router.push(`/${loc}/${id}`);
   };
 
-
-  // Refs for each section
   const upcomingRef = useRef(null);
   const newYearRef = useRef(null);
   const baliRef = useRef(null);
   const vietnamRef = useRef(null);
   const thailandRef = useRef(null);
 
-  const threshold = window.innerWidth < 640 ? 0.05 : 0.2;
+  const [threshold, setThreshold] = useState(0.2); // Default threshold
+
+  useEffect(() => {
+    // Update threshold based on window width after component is mounted
+    const handleResize = () => {
+      setThreshold(window.innerWidth < 640 ? 0.05 : 0.2);
+    };
+
+    handleResize(); // Call once to set the initial value
+    window.addEventListener('resize', handleResize); // Update on resize
+
+    return () => window.removeEventListener('resize', handleResize); // Cleanup
+  }, []);
 
   const upcomingVisible = useOnScreen(upcomingRef, threshold);
   const newYearVisible = useOnScreen(newYearRef, threshold);
