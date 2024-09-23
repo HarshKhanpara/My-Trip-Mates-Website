@@ -35,18 +35,17 @@ const UpcomingTrip = () => {
   const vietnamRef = useRef(null);
   const thailandRef = useRef(null);
 
-  const [threshold, setThreshold] = useState(0.2); // Default threshold
+  const [threshold, setThreshold] = useState(0.2);
 
   useEffect(() => {
-    // Update threshold based on window width after component is mounted
     const handleResize = () => {
       setThreshold(window.innerWidth < 640 ? 0.05 : 0.2);
     };
 
-    handleResize(); // Call once to set the initial value
-    window.addEventListener('resize', handleResize); // Update on resize
+    handleResize();
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener('resize', handleResize); // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const upcomingVisible = useOnScreen(upcomingRef, threshold);
@@ -55,14 +54,18 @@ const UpcomingTrip = () => {
   const vietnamVisible = useOnScreen(vietnamRef, threshold);
   const thailandVisible = useOnScreen(thailandRef, threshold);
 
-
+  // Use requestAnimationFrame for smoother animation
   const [offset, setOffset] = useState(0);
   
   useEffect(() => {
-    const interval = setInterval(() => {
-      setOffset((prev) => (prev + 1) % (upcomingTripsData.length * 150)); 
-    }, 0.2); 
-    return () => clearInterval(interval);
+    let animationFrameId;
+    const smoothScroll = () => {
+      setOffset((prev) => (prev + 0.5) % (upcomingTripsData.length * 200)); 
+      animationFrameId = requestAnimationFrame(smoothScroll);
+    };
+    
+    smoothScroll(); // Start scrolling
+    return () => cancelAnimationFrame(animationFrameId); // Cleanup
   }, []);
 
   const staggerContainer = {
@@ -101,12 +104,12 @@ const UpcomingTrip = () => {
           <motion.div className="relative overflow-hidden pt-12">
             <motion.div
               className="flex space-x-4" // Add spacing between cards
-              style={{ transform: `translateX(-${offset}px)`, transition: 'transform 0.1s linear' }}
+              style={{ transform: `translateX(-${offset}px)`, transition: 'transform 0.05s linear' }} // Smoother transition
             >
               {upcomingTripsData.map((trip, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)] " // Responsive widths
+                  className="flex-shrink-0 min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]" // Responsive widths
                 >
                   <Card
                     imageUrl={trip.imageUrl}
@@ -116,7 +119,7 @@ const UpcomingTrip = () => {
                     price={trip.price}
                     days={trip.days}
                     nights={trip.nights}
-                    onclick={() => handleCardClick(trip.loc,trip.url)}
+                    onclick={() => handleCardClick(trip.loc, trip.url)}
                     fillingFast={trip.fillingFast}
                   />
                 </motion.div>
