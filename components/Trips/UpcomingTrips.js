@@ -3,8 +3,15 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Card from '../Card';
 import { useRouter } from 'next/navigation';
-import { baliTripsData, newTripsData, thailandTripsData, upcomingTripsData, vietnamTripsData } from '@/constants/cards';
+import {
+  baliTripsData,
+  newTripsData,
+  thailandTripsData,
+  upcomingTripsData,
+  vietnamTripsData,
+} from '@/constants/cards';
 import { motion } from 'framer-motion';
+import { debounce } from 'lodash';
 
 // Intersection observer hook
 const useOnScreen = (ref, threshold = 0.2) => {
@@ -13,7 +20,7 @@ const useOnScreen = (ref, threshold = 0.2) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIntersecting(entry.isIntersecting),
-      { threshold } 
+      { threshold }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -37,11 +44,12 @@ const UpcomingTrip = () => {
 
   const [threshold, setThreshold] = useState(0.2);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setThreshold(window.innerWidth < 640 ? 0.05 : 0.2);
-    };
+  // Debounce the resize event to improve performance
+  const handleResize = debounce(() => {
+    setThreshold(window.innerWidth < 640 ? 0.05 : 0.2);
+  }, 200);
 
+  useEffect(() => {
     handleResize();
     window.addEventListener('resize', handleResize);
 
@@ -56,14 +64,14 @@ const UpcomingTrip = () => {
 
   // Use requestAnimationFrame for smoother animation
   const [offset, setOffset] = useState(0);
-  
+
   useEffect(() => {
     let animationFrameId;
     const smoothScroll = () => {
-      setOffset((prev) => (prev + 0.5) % (upcomingTripsData.length * 200)); 
+      setOffset((prev) => (prev + 0.5) % (upcomingTripsData.length * 200));
       animationFrameId = requestAnimationFrame(smoothScroll);
     };
-    
+
     smoothScroll(); // Start scrolling
     return () => cancelAnimationFrame(animationFrameId); // Cleanup
   }, []);
@@ -103,13 +111,16 @@ const UpcomingTrip = () => {
           </motion.h1>
           <motion.div className="relative overflow-hidden pt-12">
             <motion.div
-              className="flex space-x-4" // Add spacing between cards
-              style={{ transform: `translateX(-${offset}px)`, transition: 'transform 0.05s linear' }} // Smoother transition
+              className="flex space-x-4"
+              style={{
+                transform: `translateX(-${offset}px)`,
+                transition: 'transform 0.05s linear',
+              }}
             >
               {upcomingTripsData.map((trip, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]" // Responsive widths
+                  className="flex-shrink-0 min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
                 >
                   <Card
                     imageUrl={trip.imageUrl}
