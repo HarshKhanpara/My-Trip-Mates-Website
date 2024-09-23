@@ -23,7 +23,7 @@ const Card = ({
       onClick={onclick}
     >
       {/* Image Section */}
-      <div className="relative min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px]">
+      <div className="relative min-h-[450px] md:min-h-[550px] lg:min-h-[600px]">
         <Image src={imageUrl} alt={destination} layout="fill" objectFit="cover" />
 
                     {/* "Filling Fast" Label */}

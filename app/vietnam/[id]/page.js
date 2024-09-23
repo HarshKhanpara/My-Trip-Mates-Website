@@ -6,7 +6,7 @@ import TravelStories from '@/components/Home/TravelStories';
 import Navbar from '@/components/Navbar';
 import TravelCard from '@/components/Trips/TravelCard';
 import Itinerary from '@/components/Trips/TripDetail';
-import { getTripByIdAndLocation } from '@/utils/getTrip';
+import { getTripByUrlAndLocation } from '@/utils/getTrip';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
@@ -18,7 +18,7 @@ const Trip_Vietnam = ({ params }) => {
   console.log(id);
   
   // Convert id to a number (if necessary) and fetch the trip details
-  const trip = id && location ? getTripByIdAndLocation(parseInt(id, 10), location) : null;
+  const trip = id && location ? getTripByUrlAndLocation(id, location) : null;
 
   if (!trip) {
     return <div>Trip not found</div>;

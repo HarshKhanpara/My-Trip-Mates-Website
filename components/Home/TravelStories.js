@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { stories } from '@/constants/blogs';
 import { useRouter } from 'next/navigation';
 
@@ -9,8 +9,36 @@ const TravelStories = ({
   backgroundColor = '#ffffff', // Default white background
   textColor = '#000000', // Default black text
 }) => {
-  const [showAll, setShowAll] = useState(false);
+  const [visibleStories, setVisibleStories] = useState({}); // To track visibility of each story card
+  const storyRefs = useRef([]); // Array of references for each story card
   const router = useRouter();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = entry.target.getAttribute('data-index');
+          if (entry.isIntersecting) {
+            setVisibleStories((prev) => ({ ...prev, [index]: true }));
+          } else {
+            setVisibleStories((prev) => ({ ...prev, [index]: false })); // Reset animation when scrolled out
+          }
+        });
+      },
+      { threshold: 0.2 } 
+    );
+
+    storyRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    // Cleanup observer on unmount
+    return () => {
+      storyRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   return (
     <section className="p-8" style={{ backgroundColor }} id="blog-section">
@@ -26,26 +54,32 @@ const TravelStories = ({
           </p>
         </div>
         <button
-  className="text-sm md:text-base font-semibold py-3 px-4 md:py-2 md:px-4 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out z-50"
-  style={{
-    color: textColor,
-    borderColor: textColor,
-    borderColor: backgroundColor === '#ffffff' ? '#000000' : 'transparent', // Inverse button color
-  }}
-  onClick={() => {
-      router.push('/blogs');  
-  }}
->
-  {'View All Stories'}
-</button>
-
+          className="text-sm md:text-base font-semibold py-3 px-4 md:py-2 md:px-4 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out z-50"
+          style={{
+            color: textColor,
+            borderColor: textColor,
+            borderColor: backgroundColor === '#ffffff' ? '#000000' : 'transparent', // Inverse button color
+          }}
+          onClick={() => {
+            router.push('/blogs');
+          }}
+        >
+          {'View All Stories'}
+        </button>
       </div>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 mx-auto justify-items-center">
-        {stories.slice(0,  3).map((story, index) => (
+        {stories.slice(0, 3).map((story, index) => (
           <div
             key={index}
-            className="shadow-md z-50 rounded-lg overflow-hidden border-[#C4C4C4] border-2 cursor-pointer"
+            data-index={index} 
+            ref={(el) => (storyRefs.current[index] = el)} 
+            className={`shadow-md z-50 rounded-lg overflow-hidden border-[#C4C4C4] border-2 cursor-pointer transition-all duration-700 ease-in-out transform ${
+              visibleStories[index]
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-10'
+            }`}
+            style={{ transitionDelay: `${index * 200}ms` }} 
             onClick={() => router.push(story.link)}
           >
             <Image

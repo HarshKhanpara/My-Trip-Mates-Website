@@ -3,14 +3,14 @@ import { thailandTrips } from "@/constants/thailand";
 import { vietnamTrips } from "@/constants/vietnam";
 
 /**
- * Retrieves trip details by trip ID and location.
- * @param {number} id - The ID of the trip to retrieve.
+ * Retrieves trip details by URL identifier and location.
+ * @param {string} urlId - The URL identifier of the trip (e.g., 'oct').
  * @param {string} location - The location of the trip (e.g., 'Thailand', 'Bali', 'Vietnam').
  * @returns {object|null} - Returns the trip object if found, otherwise null.
  */
-export const getTripByIdAndLocation = (id, location) => {
+export const getTripByUrlAndLocation = (urlId, location) => {
   let trips;
-  
+
   // Select the appropriate trip array based on the location
   switch (location.toLowerCase()) {
     case 'thailand':
@@ -26,9 +26,7 @@ export const getTripByIdAndLocation = (id, location) => {
       return null;
   }
 
-  // Find the trip with the matching id
-  const trip = trips.find(trip => trip.id === id);
+  // Find the trip with the matching url
+  const trip = trips.find(trip => trip.url === urlId) ; 
   return trip || null;
 };
-
-

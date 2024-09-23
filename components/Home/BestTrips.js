@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Parallax } from 'react-parallax';
 import Card from '../Card';
 import { useRouter } from 'next/navigation';
@@ -10,20 +10,44 @@ const BestTrips = ({
   backgroundColor = '#ffffff', // Default white background
   textColor = '#000000', // Default black text
 }) => {
-
   const router = useRouter();
+  const [visibleCards, setVisibleCards] = useState({}); // Track visibility for each card
+  const cardRefs = useRef([]); // Array to hold references to each card
+
   const handleViewMore = () => {
     router.push('/upcoming-trips');
   };
 
-  const handleCardClick = (id, loc) => {
-    router.push(`/${loc}/${id}`);
+  const handleCardClick = (loc,mon) => {
+    router.push(`/${loc}/${mon}`);
   };
 
-  // Determine button styles based on the background color
-  const isLightBackground = backgroundColor === '#ffffff' || backgroundColor === '#fff';
-  const buttonTextColor = isLightBackground ? '#000000' : '#ffffff';
-  const buttonBackgroundColor = isLightBackground ? '#000000' : 'transparent';
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = entry.target.getAttribute('data-index');
+          if (entry.isIntersecting) {
+            setVisibleCards((prev) => ({ ...prev, [index]: true }));
+          } else {
+            setVisibleCards((prev) => ({ ...prev, [index]: false })); // Reset animation when scrolled out of view
+          }
+        });
+      },
+      { threshold: 0.2 } 
+    );
+
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    // Cleanup observer on unmount
+    return () => {
+      cardRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   return (
     <section
@@ -47,9 +71,9 @@ const BestTrips = ({
             <button
               className="text-base md:text-lg font-semibold py-3 px-5 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out"
               style={{
-                color: buttonTextColor,
+                color: textColor === '#fff' ? '#fff' : '#000',
                 borderColor: textColor,
-                borderColor: buttonBackgroundColor,
+                backgroundColor: textColor === '#ffffff' ? '#000000' : 'transparent',
               }}
               onClick={handleViewMore}
             >
@@ -58,18 +82,29 @@ const BestTrips = ({
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {upcomingTripsData.slice(0, 4).map((trip, index) => (
-              <Card
+              <div
                 key={index}
-                imageUrl={trip.imageUrl}
-                destination={trip.destination}
-                location={trip.location}
-                duration={trip.duration}
-                price={trip.price}
-                days={trip.days}
-                nights={trip.nights}
-                onclick={() => handleCardClick(trip.id, trip.loc)}
-                fillingFast={trip.fillingFast}
-              />
+                data-index={index} // Mark each card with a unique index
+                ref={(el) => (cardRefs.current[index] = el)} // Assign ref to each card
+                className={`transition-all duration-700 transform ${
+                  visibleCards[index]
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }} // Staggered effect
+              >
+                <Card
+                  imageUrl={trip.imageUrl}
+                  destination={trip.destination}
+                  location={trip.location}
+                  duration={trip.duration}
+                  price={trip.price}
+                  days={trip.days}
+                  nights={trip.nights}
+                  onclick={() => handleCardClick( trip.loc,trip.url)}
+                  fillingFast={trip.fillingFast}
+                />
+              </div>
             ))}
           </div>
         </div>

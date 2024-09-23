@@ -3,10 +3,11 @@ export const baliTrips = [
     id: 1,
     title: 'Bali Adventure',
     isExclusive: false,
+    url:'nov',
     date: '15th November - 23rd November',
-    pricing: 'Rs 40,900 per person',
+    pricing: 'Rs 36,900 per person',
     tripLength: '9 days',
-    groupSize: '15 person avg',
+    groupSize: '22 person avg',
     description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
     highlights: [
       'Surfing lessons',
@@ -28,7 +29,7 @@ export const baliTrips = [
       'All activities under professional guidance',
     ],
     exclusions: ['Flight tickets', 'Alcoholic beverages'],
-    pricingDetails: ['INR 40,900 + GST(5%) until 9th October', 'INR 46,900 + GST(5%) until spots are available'],
+    pricingDetails: ['INR 36,900 + GST(5%) until 9th October', 'INR 36,900 + GST(5%) until spots are available'],
     groupData: [
       {
         imageSrc: '/bali/1.png',
@@ -137,9 +138,10 @@ export const baliTrips = [
     title: 'Bali Adventure',
     isExclusive: false,
     date: '3rd December - 11th December',
-    pricing: 'Rs 49,900 per person',
+    url:'dec',
+    pricing: 'Rs 42,900 per person',
     tripLength: '8 days',
-    groupSize: '15 person avg',
+    groupSize: '22 person avg',
     description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
     highlights: [
       'Surfing lessons',
@@ -161,7 +163,7 @@ export const baliTrips = [
       'All activities under professional guidance',
     ],
     exclusions: ['Flight tickets', 'Alcoholic beverages'],
-    pricingDetails: ['INR 49,900 + GST(5%) until 3rd November', 'INR 55,900 + GST(5%) until spots are available'],
+    pricingDetails: ['INR 42,900 + GST(5%) until 3rd November', 'INR 42,900 + GST(5%) until spots are available'],
     groupData: [
       {
         imageSrc: '/bali/13.png',
@@ -249,10 +251,11 @@ export const baliTrips = [
     id: 3,
     title: 'Bali Adventure',
     isExclusive: 'nyt',
+    url:'new-year-trip',
     date: '29th December - 6th January',
     pricing: 'Rs 46,900 per person',
     tripLength: '9 days',
-    groupSize: '15 person avg',
+    groupSize: '22 person avg',
     description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
     highlights: [
       'Surfing lessons',
@@ -274,7 +277,7 @@ export const baliTrips = [
       'All activities under professional guidance',
     ],
     exclusions: ['Flight tickets', 'Alcoholic beverages'],
-    pricingDetails: ['INR 46,900 + GST(5%) until 29th November', 'INR 52,900 + GST(5%) until spots are available'],
+    pricingDetails: ['INR 46,900 + GST(5%) until 29th November', 'INR 46,900 + GST(5%) until spots are available'],
     groupData: [
       {
         imageSrc: '/bali/23.png',
