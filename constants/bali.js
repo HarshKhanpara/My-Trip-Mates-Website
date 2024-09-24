@@ -163,7 +163,7 @@ export const baliTrips = [
       'All activities under professional guidance',
     ],
     exclusions: ['Flight tickets', 'Alcoholic beverages'],
-    pricingDetails: ['INR 42,900 + GST(5%) until 3rd November', 'INR 42,900 + GST(5%) until spots are available'],
+    pricingDetails: ['INR 42,900 + GST(5%) until 3rd November', 'INR 46,900 + GST(5%) until spots are available'],
     groupData: [
       {
         imageSrc: '/bali/13.png',
@@ -277,7 +277,7 @@ export const baliTrips = [
       'All activities under professional guidance',
     ],
     exclusions: ['Flight tickets', 'Alcoholic beverages'],
-    pricingDetails: ['INR 46,900 + GST(5%) until 29th November', 'INR 46,900 + GST(5%) until spots are available'],
+    pricingDetails: ['INR 46,900 + GST(5%) until 29th November', 'INR 51,900 + GST(5%) until spots are available'],
     groupData: [
       {
         imageSrc: '/bali/23.png',

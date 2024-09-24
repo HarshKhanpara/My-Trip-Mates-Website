@@ -148,12 +148,14 @@ export const thailandTrips = [
     groupSize: '22 person avg',
     description: `Experience the enchanting beauty of Thailand, where vibrant culture meets breathtaking landscapes. From exploring the bustling streets of Bangkok to relaxing on the pristine beaches of Phuket, this trip promises an unforgettable adventure.`,
     highlights: [
-      'Cultural Tours',
-      'Beach Relaxation',
-      'Local Cuisine Tasting',
-      'Adventure Sports',
-      'Temples and Markets',
-      'Scenic Island Tours',
+      'Island Hopping Tours',
+      'Night Markets',
+      'Full Moon Party',
+      'Samui Exploration',
+      'Snorkelling',
+      'Fun Nightlife',
+      'Beautiful Beaches',
+      'Scenic Viewpoints',
     ],
     inclusions: [
       '6 Nights accommodation in quality hotels',
@@ -243,11 +245,14 @@ export const thailandTrips = [
     groupSize: '22 person avg',
     description: `Join us for a magical experience in Thailand during the festive season. Explore beautiful landscapes, vibrant culture, and indulge in traditional Thai festivities. Enjoy local delicacies and partake in unique celebrations throughout your journey.`,
     highlights: [
-      'Festive Celebrations',
-      'Cultural Workshops',
-      'Scenic Tours',
-      'Local Markets',
-      'Beach Relaxation',
+      'Island Hopping Tours',
+      'Night Markets',
+      'Full Moon Party',
+      'Samui Exploration',
+      'Snorkelling',
+      'Fun Nightlife',
+      'Beautiful Beaches',
+      'Scenic Viewpoints',
     ],
     inclusions: [
       '6 Nights accommodation in quality hotels',
@@ -261,7 +266,7 @@ export const thailandTrips = [
     ],
     pricingDetails: [
       'INR 40,900 + GST(5%) until 1st November',
-      'INR 40,900 + GST(5%) until spots are available',
+      'INR 46,900 + GST(5%) until spots are available',
     ],
     groupData: [
       {
@@ -347,11 +352,14 @@ export const thailandTrips = [
     groupSize: '22 person avg',
     description: `Ring in the New Year in Thailand! Experience the excitement of celebrations, indulge in festive cuisine, and explore the stunning beaches and vibrant nightlife that Thailand has to offer.`,
     highlights: [
-      'New Year Celebrations',
-      'Beach Parties',
-      'Island Hopping',
-      'Local Cuisine Experience',
-      'Cultural Tours',
+      'Island Hopping Tours',
+      'Night Markets',
+      'Full Moon Party',
+      'Samui Exploration',
+      'Snorkelling',
+      'Fun Nightlife',
+      'Beautiful Beaches',
+      'Scenic Viewpoints',
     ],
     inclusions: [
       '6 Nights accommodation in quality hotels',
@@ -365,7 +373,7 @@ export const thailandTrips = [
     ],
     pricingDetails: [
       'INR 40,900 + GST(5%) until 15th November',
-      'INR 40,900 + GST(5%) until spots are available',
+      'INR 46,900 + GST(5%) until spots are available',
     ],
     groupData: [
       {

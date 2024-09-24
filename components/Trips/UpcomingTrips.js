@@ -124,6 +124,12 @@ const UpcomingTrip = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
+
+  const first = {
+    hidden: { opacity: 0.75, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
   return (
     <div className="pt-20 px-4 md:px-8">
       <motion.h1
@@ -136,21 +142,22 @@ const UpcomingTrip = () => {
         EXPLORE OUR TRIPS
       </motion.h1>
 
-      <div className="flex flex-wrap justify-center space-x-2 md:space-x-4 space-y-3 md:spaace-y-0 mt-8 overflow-x-auto">
-        {Object.keys(tripData).map((tab) => (
-          <button
-            key={tab}
-            className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-sm md:text-base whitespace-nowrap transition-colors duration-300 ${
-              activeTab === tab
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 hover:bg-gray-300"
-            }`}
-            onClick={() => handleTabClick(tab)}
-          >
-          {tab === "all" ? "All Trips" : tab.charAt(0).toUpperCase() + tab.slice(1)}
-          </button>
-        ))}
-      </div>
+
+      <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-8">
+  {Object.keys(tripData).map((tab) => (
+    <button
+      key={tab}
+      className={`w-full md:w-auto px-4 py-2 md:px-5 md:py-3 rounded-full text-sm md:text-base transition duration-300 ease-in-out transform ${
+        activeTab === tab
+          ? "bg-blue-600 text-white shadow-lg scale-105"
+          : "bg-gray-200 text-gray-700 hover:bg-gray-300 hover:shadow-md"
+      }`}
+      onClick={() => handleTabClick(tab)}
+    >
+      {tab === "all" ? "All Trips" : tab.charAt(0).toUpperCase() + tab.slice(1)}
+    </button>
+  ))}
+</div>
 
       <div className="relative overflow-hidden pt-12" ref={scrollRef}>
         <motion.div
@@ -164,7 +171,7 @@ const UpcomingTrip = () => {
           {tripData[activeTab].map((trip, index) => (
             <motion.div
               key={index}
-              className="flex-shrink-0 min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
+              className="flex-shrink-0 min-h-[450px] md:min-h-[450px] lg:min-h-[450px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -187,7 +194,7 @@ const UpcomingTrip = () => {
           {tripData[activeTab].map((trip, index) => (
             <motion.div
               key={`clone-${index}`}
-              className="flex-shrink-0 min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
+              className="flex-shrink-0 min-h-[450px] md:min-h-[450px] lg:min-h-[450px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -211,11 +218,12 @@ const UpcomingTrip = () => {
       {newTripsData.length > 0 && (
         <div ref={newYearRef}>
           <motion.h1
-            className="pt-16 text-3xl md:text-5xl font-bold text-center"
+            className="pt-16 lg:pt-0 md:pt-0 text-3xl md:text-5xl font-bold text-center"
             style={{ fontFamily: "title-light" }}
+
             variants={headingVariants}
             initial="hidden"
-            animate={newYearVisible ? "visible" : "hidden"}
+            animate={"visible"}
           >
             NEW YEAR TRIPS
           </motion.h1>
