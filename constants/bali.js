@@ -249,7 +249,7 @@ export const baliTrips = [
   },
   {
     id: 3,
-    title: 'Bali Adventure',
+    title: 'Bali New Year Exclusive',
     isExclusive: 'nyt',
     url:'new-year-trip',
     date: '29th December - 6th January',
@@ -319,6 +319,56 @@ export const baliTrips = [
         name: 'Rohan Singh',
         location: 'Amritsar, Punjab',
       },
+      {
+        imageSrc:'/bali/43.png',
+        name:'Keya Desai',
+        location:'Mumbai, Maharashtra'
+      },
+      {
+        imageSrc:'/bali/44.png',
+        name:'Rishabh Garwal',
+        location:'Pune, Maharashtra'
+      },
+      {
+        imageSrc:'/bali/45.png',
+        name:'Vivaan Patel',
+        location:'Mumbai, Maharashtra'
+      },
+      {
+        imageSrc:'/bali/46.png',
+        name:'Tushar Patel',
+        location:'Mumbai, Maharashtra'
+      },
+      {
+        imageSrc:'/bali/47.png',
+        name:'Eklavya Thakur',
+        location:'Delhi, Maharashtra'
+      },
+      {
+        imageSrc:'/bali/48.png',
+        name:'Riddhima Dubey',
+        location:'Mumbai, Maharashtra'
+      },
+      {
+        imageSrc:'/bali/49.png',
+        name:'Vanya Jamran',
+        location:'Bangalore, Karnataka'
+      },
+      {
+        imageSrc:'/bali/50.png',
+        name:'Seema Nehwal',
+        location:'Mumbai, Maharashtra'
+      },
+      {
+        imageSrc:'/bali/51.png',
+        name:'Asmita Gaikar',
+        location:'Pune, Maharashtra'
+      },
+      {
+        imageSrc:'/bali/52.png',
+        name:'Baahir Singh',
+        location:'Delhi, India'
+      }
     ],
     groupDataTrip: [
       { imageSrc: '/bali/group-1.png' },

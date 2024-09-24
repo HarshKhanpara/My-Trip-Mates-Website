@@ -54,7 +54,7 @@ export const upcomingTripsData = [
     },
     {
       imageUrl: '/bali/card3.jpg',
-      destination: 'Bali Cultural Experience',
+      destination: 'Bali New Year Exclusive',
       location: 'Bali, Indonesia',
       duration: '29th Dec - 6th Jan (9 days)',
       price: '46,900 per person',
@@ -80,7 +80,7 @@ export const upcomingTripsData = [
     },
     {
       imageUrl: '/thailand/card5.jpg',
-      destination: 'Thailand Adventure',
+      destination: 'Thailand NY Getaway',
       location: 'Thailand, Southeast Asia',
       duration: '29th Dec - 5th Jan (7 days)',
       price: '40,900 per person',
@@ -108,7 +108,7 @@ export const upcomingTripsData = [
 export const newTripsData = [
   {
     imageUrl: '/thailand/card5.jpg',
-    destination: 'Thailand Adventure',
+    destination: 'Thailand NY Getaway',
     location: 'Thailand, Southeast Asia',
     duration: '29th Dec - 5th Jan (7 days)',
     price: '40,900 per person',
@@ -121,7 +121,7 @@ export const newTripsData = [
   },
     {
       imageUrl: '/bali/card3.jpg',
-      destination: 'Bali Cultural Experience',
+      destination: 'Bali New Year Exclusive',
       location: 'Bali, Indonesia',
       duration: '29th Dec - 6th Jan (9 days)',
       price: '46,900 per person',
@@ -164,7 +164,7 @@ export const baliTripsData = [
     },
     {
       imageUrl: '/bali/card3.jpg',
-      destination: 'Bali Cultural Experience',
+      destination: 'Bali New Year Exclusive',
       location: 'Bali, Indonesia',
       duration: '29th Dec - 6th Jan (9 days)',
       price: '46,900 per person',
@@ -247,7 +247,7 @@ export const thailandTripsData = [
       destination: 'Thailand Adventure',
       location: 'Thailand, Southeast Asia',
       duration: '12th Dec - 19th Dec (7 days)',
-      price: '35,900 per person',
+      price: '40,900 per person',
       days: 8,
       nights: 7,
       id: 3,
@@ -257,10 +257,10 @@ export const thailandTripsData = [
     },
     {
       imageUrl: '/thailand/card5.jpg',
-      destination: 'Thailand Adventure',
+      destination: 'Thailand NY Getaway',
       location: 'Thailand, Southeast Asia',
       duration: '29th Dec - 5th Jan (7 days)',
-      price: '35,900 per person',
+      price: '40,900 per person',
       days: 8,
       nights: 7,
       id: 4,
