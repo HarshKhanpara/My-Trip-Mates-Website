@@ -199,6 +199,7 @@ const UpcomingTrip = () => {
         {/* Render the original set of trips */}
         {tripData[activeTab].length > 0 ? (
           tripData[activeTab].map((trip, index) => (
+            <>
             <motion.div
               key={index}
               className="flex-shrink-0 min-h-[450px] md:min-h-[450px] lg:min-h-[450px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
@@ -218,7 +219,28 @@ const UpcomingTrip = () => {
                 fillingFast={trip.fillingFast}
               />
             </motion.div>
+            <motion.div
+              key={index}
+              className="flex-shrink-0 min-h-[450px] md:min-h-[450px] lg:min-h-[450px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card
+                imageUrl={trip.imageUrl}
+                destination={trip.destination}
+                location={trip.location}
+                duration={trip.duration}
+                price={trip.price}
+                days={trip.days}
+                nights={trip.nights}
+                onclick={() => handleCardClick(trip.loc, trip.url)}
+                fillingFast={trip.fillingFast}
+              />
+            </motion.div>
+</>
           ))
+          
         ) : (
           <>
           <div className=" w-full text-center">
