@@ -12,7 +12,7 @@ import {
   upcomingTripsData,
   vietnamTripsData,
 } from "@/constants/cards";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 // Intersection observer hook
 const useOnScreen = (ref, threshold = 0.2) => {
@@ -132,13 +132,29 @@ const UpcomingTrip = () => {
   };
 
   const tripComingSoon = () => {
-    toast('Trip coming soon!', {
-      icon: '🚀',
-      position:'bottom-center'
-    },
-  );
-      };
-
+    // Cancel the current animation
+    cancelAnimationFrame(animationId);
+  
+    // Reset offset and set the active tab to "all"
+    setOffset(0);
+    setActiveTab("all");
+  };
+    
+  // Use requestAnimationFrame for smoother animation
+  let animationId;
+  const smoothScroll = () => {
+    setOffset((prev) => (prev + 0.5) % (tripData[activeTab].length * 200));
+    animationId = requestAnimationFrame(smoothScroll);
+  };
+  
+  useEffect(() => {
+    // Start smooth scrolling when the component mounts
+    smoothScroll();
+  
+    // Cleanup: Stop animation when the component unmounts or the active tab changes
+    return () => cancelAnimationFrame(animationId);
+  }, [activeTab]);
+  
 
   return (
   <div className="pt-20 px-4 md:px-8">
@@ -204,7 +220,23 @@ const UpcomingTrip = () => {
             </motion.div>
           ))
         ) : (
-          <p className="text-center text-gray-500 font-bold">No trips available. Check back later</p>
+          <>
+          <div className=" w-full text-center">
+  {/* Message */}
+  <p className="text-gray-600 text-lg font-semibold mb-6 md:mb-10">
+    {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} Trips coming soon.
+    Current trips are sold out.
+  </p>
+
+  {/* Book Now Button */}
+  <button
+    className="mb-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg md:text-xl font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-300 hover:scale-105 hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
+    onClick={tripComingSoon}
+  >
+    Explore More Trips
+  </button>
+</div>
+</>
         )}
       </motion.div>
     </div>
