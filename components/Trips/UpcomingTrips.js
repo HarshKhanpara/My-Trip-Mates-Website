@@ -12,6 +12,7 @@ import {
   upcomingTripsData,
   vietnamTripsData,
 } from "@/constants/cards";
+import { Toaster } from "react-hot-toast";
 
 // Intersection observer hook
 const useOnScreen = (ref, threshold = 0.2) => {
@@ -130,45 +131,58 @@ const UpcomingTrip = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
+  const tripComingSoon = () => {
+    toast('Trip coming soon!', {
+      icon: '🚀',
+      position:'bottom-center'
+    },
+  );
+      };
+
+
   return (
-    <div className="pt-20 px-4 md:px-8">
-      <motion.h1
-        className="pt-16 text-3xl md:text-5xl font-bold text-center"
-        style={{ fontFamily: "title-light" }}
-        variants={headingVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        EXPLORE OUR TRIPS
-      </motion.h1>
-
-
-      <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-8">
-  {Object.keys(tripData).map((tab) => (
-    <button
-      key={tab}
-      className={`w-full md:w-auto px-4 py-2 md:px-5 md:py-3 rounded-full text-sm md:text-base transition duration-300 ease-in-out transform ${
-        activeTab === tab
-          ? "bg-blue-600 text-white shadow-lg scale-105"
-          : "bg-gray-200 text-gray-700 hover:bg-gray-300 hover:shadow-md"
-      }`}
-      onClick={() => handleTabClick(tab)}
+  <div className="pt-20 px-4 md:px-8">
+    <Toaster /> {/* This is where the toast notifications will appear */}
+    
+    <motion.h1
+      className="pt-16 text-3xl md:text-5xl font-bold text-center"
+      style={{ fontFamily: "title-light" }}
+      variants={headingVariants}
+      initial="hidden"
+      animate="visible"
     >
-      {tab === "all" ? "All Trips" : tab.charAt(0).toUpperCase() + tab.slice(1)}
-    </button>
-  ))}
-</div>
+      EXPLORE OUR TRIPS
+    </motion.h1>
 
-      <div className="relative overflow-hidden pt-12" ref={scrollRef}>
-        <motion.div
-          className="flex space-x-4"
-          style={{
-            transform: `translateX(-${offset}px)`,
-            transition: "transform 0.05s linear",
-          }}
+    {/* Tabs to select the category of trips */}
+    <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-8">
+      {Object.keys(tripData).map((tab) => (
+        <button
+          key={tab}
+          className={`w-full md:w-auto px-4 py-2 md:px-5 md:py-3 rounded-full text-sm md:text-base transition duration-300 ease-in-out transform ${
+            activeTab === tab
+              ? "bg-blue-600 text-white shadow-lg scale-105"
+              : "bg-gray-200 text-gray-700 hover:bg-gray-300 hover:shadow-md"
+          }`}
+          onClick={() => handleTabClick(tab)}
         >
-          {/* Render the original set of trips */}
-          {tripData[activeTab].map((trip, index) => (
+          {tab === "all" ? "All Trips" : tab.charAt(0).toUpperCase() + tab.slice(1)}
+        </button>
+      ))}
+    </div>
+
+    {/* Trip Slider */}
+    <div className="relative overflow-hidden pt-12" ref={scrollRef}>
+      <motion.div
+        className="flex space-x-4"
+        style={{
+          transform: `translateX(-${offset}px)`,
+          transition: "transform 0.05s linear",
+        }}
+      >
+        {/* Render the original set of trips */}
+        {tripData[activeTab].length > 0 ? (
+          tripData[activeTab].map((trip, index) => (
             <motion.div
               key={index}
               className="flex-shrink-0 min-h-[450px] md:min-h-[450px] lg:min-h-[450px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
@@ -188,32 +202,12 @@ const UpcomingTrip = () => {
                 fillingFast={trip.fillingFast}
               />
             </motion.div>
-          ))}
-
-          {/* Render a cloned set of trips for continuous scrolling */}
-          {tripData[activeTab].map((trip, index) => (
-            <motion.div
-              key={`clone-${index}`}
-              className="flex-shrink-0 min-h-[450px] md:min-h-[450px] lg:min-h-[450px] w-full lg:w-[calc(25%_-_1rem)] md:w-[calc(33.33%_-_1rem)]"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card
-                imageUrl={trip.imageUrl}
-                destination={trip.destination}
-                location={trip.location}
-                duration={trip.duration}
-                price={trip.price}
-                days={trip.days}
-                nights={trip.nights}
-                onclick={() => handleCardClick(trip.loc, trip.url)}
-                fillingFast={trip.fillingFast}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+          ))
+        ) : (
+          <p className="text-center text-gray-500 font-bold">No trips available. Check back later</p>
+        )}
+      </motion.div>
+    </div>
 
       {newTripsData.length > 0 && (
         <div ref={newYearRef}>
