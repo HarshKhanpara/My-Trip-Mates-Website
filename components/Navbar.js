@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
 import { FaInfoCircle, FaBlog, FaImages, FaStar, FaCalendarAlt, FaPhone, FaTimes, FaBars } from 'react-icons/fa';
+import Image from 'next/image';
 
 
 const Navbar = ({
@@ -140,7 +141,7 @@ const Navbar = ({
           >
             {[
               { label: 'About us', icon: <FaInfoCircle />, action: () => router.push('/about') },
-              { label: 'Blogs', icon: <FaBlog />, action: handleScrollToBlogs },
+              { label: 'Blogs', icon: <Image src="/assets/blog.png" alt="Blog Icon" width={20} height={20} />, action: handleScrollToBlogs },
               { label: 'Gallery', icon: <FaImages />, action: handleGalleryClick },
               { label: 'Reviews', icon: <FaStar />, action: () => router.push('/reviews') },
               { label: 'Upcoming Trips', icon: <FaCalendarAlt />, action: () => router.push('/upcoming-trips') },
@@ -151,7 +152,7 @@ const Navbar = ({
                 style={{ color: dropdownTextColor }}
                 onClick={action}
               >
-                <span style={{ color: textColor }}>{icon}</span>
+                <span style={{ color: '#000' }}>{icon}</span>
                 <span className="ml-2">{label}</span>
               </a>
             ))}
