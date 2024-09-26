@@ -50,7 +50,7 @@ const Card = ({
               "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
           }}
         >
-          <h3 className="font-bold text-2xl md:mb-3 lg:mb-3">{destination}</h3>
+          <h3 className="font-bold text-2xl md:mb-3 lg:mb-3 w-full">{destination}</h3>
           <p className="text-gray-300 mb-2 flex items-center">
             <LocationMarkerIcon className="w-5 h-5 mr-2 sm:w-6 sm:h-6 sm:mr-3 md:w-7 md:h-7 md:mr-3 lg:w-8 lg:h-8 lg:mr-4" />
             {location}

@@ -268,6 +268,5 @@ export const thailandTripsData = [
       loc: 'thailand',
       fillingFast: true,
     },
-
   ];
   

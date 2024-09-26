@@ -442,7 +442,7 @@ export const thailandTrips = [
         location:'Mumbai, Maharashtra'      
       },
       {
-        imageSrc:'/thailand/42.png',
+        imageSrc:'/thailand/23.png',
         name:'Zubin Mishra',
         location:'Pune, Maharashtra'
       },
