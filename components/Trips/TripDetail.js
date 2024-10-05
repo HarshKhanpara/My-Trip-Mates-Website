@@ -121,7 +121,9 @@ export default function Itinerary({
           >Travelers in this trip</h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
 
-          <Loading3D />
+          <Loading3D 
+            loadingMessage="Loading travellers"
+            />
           </div>
           <h1 className='text-2xl md:text-3xl font-bold mb-6'>Recent Trip Gallery</h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto">
