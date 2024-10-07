@@ -177,7 +177,7 @@ export const baliTrips = [
       },
       {
         imageSrc: '/bali/15.png',
-        name: 'Meera Gupta',
+        name: 'Neeraj Gupta',
         location: 'Delhi, India',
       },
       {

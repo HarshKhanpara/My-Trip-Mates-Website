@@ -1,16 +1,36 @@
+"use client";
+
 import Footer from '@/components/Footer';
 import TravelStories from '@/components/Home/TravelStories';
+import Loading3D from '@/components/LoadingScreen';
 import Navbar from '@/components/Navbar';
-import { stories } from '@/constants/blogs';
+import { getABlog } from '@/utils/blogs';
 import Image from 'next/image';
-import { redirect } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const BlogPost = ({ params }) => {
     const { id } = params;
-    const post = stories.find((p) => p.id === parseInt(id));
-    if (!post) {
-        redirect('/not-found');
-    }
+    const [post, setPost] = useState(null);
+
+    useEffect(() => {
+        const fetchTrip = async () => {
+          const post = await getABlog(id);
+          
+          if(post === null) {
+            router.push('/404');
+          }
+          setPost(post);
+        };
+    
+        fetchTrip();
+      }, [id]);
+    
+      if (!post) {
+        return <Loading3D
+            loadingMessage='LOADING YOUR BLOG POST'
+         />; // Show the 3D loading screen while data is loading
+      }
+    
 
     // Split blog content by new lines
     const paragraphs = post.fullBlog.split('\n');

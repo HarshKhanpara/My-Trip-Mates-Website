@@ -5,9 +5,31 @@ import { stories } from '@/constants/blogs'; // Import your stories data
 import { useRouter } from 'next/navigation';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import { useEffect, useState } from 'react';
+import { getAllBlogs } from '@/utils/blogs';
 
 const BlogListing = () => {
   const router = useRouter();
+  const [stories, setStories] = useState([]);
+
+  useEffect(() => {
+    const fetchTrip = async () => {
+      const stories = await getAllBlogs();
+      if(stories === null) {
+        router.push('/404');
+      }
+      setStories(stories);
+    };
+
+    fetchTrip();
+  }, []);
+
+  if (!stories) {
+    return <Loading3D
+    loadingMessage='LOADING YOUR BLOGS'
+     />; // Show the 3D loading screen while data is loading
+  }
+
 
   return (
     <>

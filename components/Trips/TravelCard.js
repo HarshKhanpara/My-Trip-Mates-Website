@@ -40,6 +40,7 @@ export default function TravelCard({
     <div
       className={`w-full pt-20 pb-11 flex sm:pt-14 ${themeStyles.background} transition-colors duration-200`}
     >
+    <Loading3D />
       <div
         className={`w-full flex flex-col lg:flex-row pt-20 p-6 rounded-lg shadow-lg border-2 ${themeStyles.border} ${themeStyles.text}`}
       >
