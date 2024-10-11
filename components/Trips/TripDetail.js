@@ -125,28 +125,35 @@ export default function Itinerary({
             />
           </div> */}
           {/* Right Side - Meet Our Group */}
-        <div className="space-y-8" id='group'>
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center"
-            style={{ fontFamily: 'title-light' }}
-          >Travelers in this trip</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
-            {groupData.map(({ imageSrc, name, location }, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center">
-                <div className="w-36 h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 relative rounded-full overflow-hidden">
-                  <Image
-                    src={imageSrc}
-                    alt={`${name}'s Image`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-full"
-                  />
-                </div>
-                <p className="mt-2 text-sm md:text-base">{name}</p>
-                <p className={`text-xs md:text-sm ${themeStyles.subText}`}>{location}</p>
-              </div>
-            ))}
-          </div> 
+          <div className="space-y-12" id="group">
+  <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center"
+    style={{ fontFamily: 'title-light' }}
+  >
+    Travelers in this trip
+  </h1>
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 mb-8">
+    {groupData.map(({ imageSrc, name, location }, idx) => (
+      <div
+        key={idx}
+        className="flex flex-col items-center text-center transition-transform transform hover:scale-105"
+      >
+        <div className="w-24 h-24 md:w-44 md:h-44 lg:w-48 lg:h-48 relative rounded-full overflow-hidden shadow-lg">
+          <Image
+            src={imageSrc}
+            alt={`${name}'s Image`}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-full"
+            quality={100}
+          />
+        </div>
+        <p className="mt-4 text-base md:text-lg font-semibold">{name}</p>
+        <p className={`text-xs md:text-sm ${themeStyles.subText}`}>{location}</p>
+      </div>
+    ))}
+  </div>
 
+          
           <h1 className='text-2xl md:text-3xl font-bold mb-6'>Recent Trip Gallery</h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto">
             {groupDataTrip.slice(0, 3).map(({ imageSrc }, idx) => (

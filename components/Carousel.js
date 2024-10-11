@@ -59,7 +59,7 @@ const Carousel = () => {
       ></div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-full w-full flex flex-col items-center p-0 pb-7 opacity-100">    
+      <div className="relative p-2 z-10 max-w-full w-full flex flex-col items-center pb-7 opacity-100">    
         <h1 className="text-3xl md:text-5xl font-bold text-black mb-4 mt-8 md:mt-11 text-center"
         style={{fontFamily:'title-light'}}
         >
