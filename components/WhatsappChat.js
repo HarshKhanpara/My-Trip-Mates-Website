@@ -36,10 +36,10 @@ const WhatsAppChat = () => {
       {/* WhatsApp Button */}
       <button
         onClick={toggleChat}
-        className="bg-green-500 hover:bg-green-600 text-white rounded-full p-5 shadow-lg transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50"
+        className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 md:p-5 shadow-lg transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50"
         aria-label="Open WhatsApp Chat"
       >
-        <FaWhatsapp className="text-5xl" />
+        <FaWhatsapp className="text-3xl md:text-4xl" />
       </button>
 
       {/* WhatsApp Chat Box */}
