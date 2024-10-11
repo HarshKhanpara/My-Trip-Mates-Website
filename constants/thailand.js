@@ -173,48 +173,48 @@ export const thailandTrips = [
     ],
     groupData: [
       {
-        imageSrc: '/thailand/13.png',
-        name: 'Nisha Rao',
+        imageSrc: '/31.jpg',
+        name: 'Rohin Bansal',
         location: 'Delhi, India',
       },
       {
-        imageSrc: '/thailand/14.png',
-        name: 'Siddharth Mehta',
+        imageSrc: '/32.jpg',
+        name: 'Neha Bansal',
         location: 'Mumbai, Maharashtra',
       },
       {
-        imageSrc: '/thailand/15.png',
-        name: 'Riya Verma',
+        imageSrc: '/33.jpg',
+        name: 'Vatsal Zaveri',
         location: 'Bangalore, Karnataka',
       },
       {
-        imageSrc: '/thailand/16.png',
-        name: 'Anuj Singh',
+        imageSrc: '/34.jpg',
+        name: 'Shriansh Agrawal',
         location: 'Pune, Maharashtra',
       },
       {
-        imageSrc: '/thailand/17.png',
-        name: 'Vikram Yadav',
+        imageSrc: '/35.jpg',
+        name: 'Harshwardhan',
         location: 'Chennai, Tamil Nadu',
       },
       {
-        imageSrc: '/thailand/18.png',
-        name: 'Neeraj Mehta',
+        imageSrc: '/36.jpg',
+        name: 'Krushi Shah',
         location: 'Delhi, India',
       },
       {
-        imageSrc: '/thailand/25.png',
-        name: 'Aanya Kapoor',
+        imageSrc: '/37.jpg',
+        name: 'Kamal Ahuja',
         location: 'Mumbai, Maharashtra',
       },
       {
-        imageSrc: '/thailand/26.png',
-        name: 'Alok Gupta',
+        imageSrc: '/38.jpg',
+        name: 'Roshni Gupta',
         location: 'Bangalore, Karnataka',
       },
       {
-        imageSrc: '/thailand/31.png',                                         
-        name:'Riya Malhotra',
+        imageSrc: '/39.jpg',                                         
+        name:'Suyash Baldota',
         location:'Mumbai, Maharashtra'
       },
       {
@@ -270,58 +270,58 @@ export const thailandTrips = [
     ],
     groupData: [
       {
-        imageSrc:'/thailand/49.png',
-        name:'Akshara Singh',
+        imageSrc:'/40.jpg',
+        name:'Megha Agarwal',
         location:'Mumbai, Maharashtra'
       },
       {
-        imageSrc:'/thailand/48.png',
-        name:'Rohan Jain',
+        imageSrc:'/41.jpg',
+        name:'Punit Kataria',
         location:'Delhi, India'
       },
       {
-        imageSrc:'/thailand/47.png',
-        name:'Meera Ahuja',
+        imageSrc:'/42.jpg',
+        name:'Kaveri Ahuja',
         location:'Pune, Maharashtra'
       },
       {
-        imageSrc:'/thailand/50.png',
-        name:'Tejas Shah',
+        imageSrc:'/43.jpg',
+        name:'Sakshi Agarwal',
         location:'Mumbai, Maharashtra'
       },
       {
-        imageSrc:'/thailand/51.png',
-        name:'Ananya Kapoor',
+        imageSrc:'/44.jpg',
+        name:'Shubham Kaneria',
         location:'Bangalore, Karnataka'
       },
       {
-        imageSrc:'/thailand/52.png',
-        name:'Mehul Gupta',
+        imageSrc:'/45.jpg',
+        name:'Vardhan Puri',
         location:'Pune, Maharashtra'
       },
       {
-        imageSrc:'/thailand/53.png',
-        name:'Diya Singh',
+        imageSrc:'/46.jpg',
+        name:'Ankit Singh',
         location:'Mumbai, Maharashtra'
       },
       {
-        imageSrc:'/thailand/54.png',
-        name:'Ashneer Malani',
+        imageSrc:'/47.jpg',
+        name:'Jyoti Dubey',
         location:'Bangalore, Karnataka'
       },
       {
-        imageSrc:'/thailand/55.png',
-        name:'Fariha Khan',
+        imageSrc:'/48.jpg',
+        name:'Hardik More',
         location:'Delhi, India'
       },
       {
-        imageSrc:'/thailand/56.png',
-        name:'Rohan Mhala',
+        imageSrc:'/49.jpg',
+        name:'Rajan Shah',
         location:'Mumbai, Maharashtra'
       },
       {
-        imageSrc:'/thailand/59.png',
-        name:'Pranav Ahuja',
+        imageSrc:'/50.jpg',
+        name:'Siddhant Shrivastava',
         location:'Pune, Maharashtra'
       },
       {
