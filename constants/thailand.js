@@ -294,41 +294,7 @@ export const thailandTrips = [
         name:'Shubham Kaneria',
         location:'Bangalore, Karnataka'
       },
-      {
-        imageSrc:'/45.jpg',
-        name:'Vardhan Puri',
-        location:'Pune, Maharashtra'
-      },
-      {
-        imageSrc:'/46.jpg',
-        name:'Ankit Singh',
-        location:'Mumbai, Maharashtra'
-      },
-      {
-        imageSrc:'/47.jpg',
-        name:'Jyoti Dubey',
-        location:'Bangalore, Karnataka'
-      },
-      {
-        imageSrc:'/48.jpg',
-        name:'Hardik More',
-        location:'Delhi, India'
-      },
-      {
-        imageSrc:'/49.jpg',
-        name:'Rajan Shah',
-        location:'Mumbai, Maharashtra'
-      },
-      {
-        imageSrc:'/50.jpg',
-        name:'Siddhant Shrivastava',
-        location:'Pune, Maharashtra'
-      },
-      {
-        imageSrc:'/thailand/58.png',
-        name:'Samaira Bhatia',
-        location:'Mumbai, Maharashtra'
-      },
+
     ],
     groupDataTrip: [
       { imageSrc: '/thailand/group-photo1.png' },
@@ -465,6 +431,21 @@ export const thailandTrips = [
         imageSrc:'/thailand/46.png',
         name:'Rohan Negi',
         location:'Pune, Maharashtra'
+      },
+      {
+        imageSrc:'/45.jpg',
+        name:'Vardhan Puri',
+        location:'Pune, Maharashtra'
+      },
+      {
+        imageSrc:'/46.jpg',
+        name:'Ankit Singh',
+        location:'Mumbai, Maharashtra'
+      },
+      {
+        imageSrc:'/47.jpg',
+        name:'Jyoti Dubey',
+        location:'Bangalore, Karnataka'
       },
     ],
     groupDataTrip: [

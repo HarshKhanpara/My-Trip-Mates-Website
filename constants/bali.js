@@ -368,7 +368,27 @@ export const baliTrips = [
         imageSrc:'/bali/52.png',
         name:'Baahir Singh',
         location:'Delhi, India'
-      }
+      },
+      {
+        imageSrc:'/48.jpg',
+        name:'Hardik More',
+        location:'Delhi, India'
+      },
+      {
+        imageSrc:'/49.jpg',
+        name:'Rajan Shah',
+        location:'Mumbai, Maharashtra'
+      },
+      {
+        imageSrc:'/50.jpg',
+        name:'Siddhant Shrivastava',
+        location:'Pune, Maharashtra'
+      },
+      {
+        imageSrc:'/thailand/58.png',
+        name:'Samaira Bhatia',
+        location:'Mumbai, Maharashtra'
+      },
     ],
     groupDataTrip: [
       { imageSrc: '/bali/group-1.png' },

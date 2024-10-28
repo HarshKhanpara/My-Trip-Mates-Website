@@ -1,111 +1,75 @@
 export const upcomingTripsData = [
-    {
-      imageUrl: '/bali/card1.jpg',
-      destination: 'Bali Beach Escape',
-      location: 'Bali, Indonesia',
-      duration: '15th Nov - 23rd Nov (8 days)',
-      price: '36,900 per person',
-      days: 9,
-      nights: 8,
-      id: 1,
-      url:'nov',
-      loc: 'bali',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/thailand/card1.jpg',
-      destination: 'Thailand Beach Bliss',
-      location: 'Thailand, Southeast Asia',
-      duration: '15th Oct - 22th Oct (7 days)',
-      price: '35,900 per person',
-      days: 8,
-      nights: 7,
-      id: 1,
-      url:'oct',
-      loc: 'thailand',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/bali/card2.jpg',
-      destination: 'Bali Adventure',
-      location: 'Bali, Indonesia',
-      duration: '3rd Dec - 11th Dec (8 days)',
-      url:'dec',
-      price: '42,900 per person',
-      days: 9,
-      nights: 8,
-      id: 2,
-      url:'dec',
-      loc: 'bali',
-      fillingFast: false,
-    },
-    {
-      imageUrl: '/thailand/card3.jpg',
-      destination: 'Thailand Adventure',
-      location: 'Thailand, Southeast Asia',
-      duration: '12th Nov - 19th November (7 days)',
-      price: '40,900 per person',
-      days: 8,
-      nights: 7,
-      id: 2,
-      url:'nov1',
-      loc: 'thailand',
-      fillingFast: false,
-    },
-    {
-      imageUrl: '/bali/card3.jpg',
-      destination: 'Bali New Year Exclusive',
-      location: 'Bali, Indonesia',
-      duration: '29th Dec - 6th Jan (9 days)',
-      price: '46,900 per person',
-      days: 9,
-      nights: 8,
-      id: 3,
-      url:'new-year-trip',
-      loc: 'bali',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/thailand/card4.jpg',
-      destination: 'Thailand Adventure',
-      location: 'Thailand, Southeast Asia',
-      duration: '12th Dec - 19th Dec (7 days)',
-      price: '40,900 per person',
-      days: 8,
-      nights: 7,
-      id: 3,
-      url:'dec',
-      loc: 'thailand',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/thailand/card5.jpg',
-      destination: 'Thailand NY Getaway',
-      location: 'Thailand, Southeast Asia',
-      duration: '29th Dec - 5th Jan (7 days)',
-      price: '40,900 per person',
-      days: 8,
-      nights: 7,
-      id: 4,
-      url:'new-year-trip',
-      loc: 'thailand',
-      fillingFast: true,
-    },
-
-    // {
-    //   imageUrl: '/vietnam/card3.jpg',
-    //   destination: 'Vietnam Cultural Journey',
-    //   location: 'Vietnam, Southeast Asia',
-    //   duration: '5th Nov - 11th Nov (7 days)',
-    //   price: '305000 per person',
-    //   days: 7,
-    //   nights: 6,
-    //   id: 3,
-    //   loc: 'vietnam',
-    // },
-  ];
-  
-export const newTripsData = [
+  {
+    imageUrl: '/bali/card1.jpg',
+    destination: 'Bali Beach Escape',
+    location: 'Bali, Indonesia',
+    duration: '15th Nov - 23rd Nov (8 days)',
+    price: '36,900 per person',
+    days: 9,
+    nights: 8,
+    id: 1,
+    url: 'nov',
+    loc: 'bali',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: true      // Mark as sold out
+  },
+  {
+    imageUrl: '/thailand/card3.jpg',
+    destination: 'Thailand Adventure',
+    location: 'Thailand, Southeast Asia',
+    duration: '12th Nov - 19th November (7 days)',
+    price: '40,900 per person',
+    days: 8,
+    nights: 7,
+    id: 2,
+    url: 'nov1',
+    loc: 'thailand',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: true      // Mark as sold out
+  },
+  {
+    imageUrl: '/bali/card2.jpg',
+    destination: 'Bali Adventure',
+    location: 'Bali, Indonesia',
+    duration: '3rd Dec - 11th Dec (8 days)',
+    url: 'dec',
+    price: '42,900 per person',
+    days: 9,
+    nights: 8,
+    id: 2,
+    url: 'dec',
+    loc: 'bali',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: true      // Mark as sold out
+  },
+  {
+    imageUrl: '/thailand/card4.jpg',
+    destination: 'Thailand Adventure',
+    location: 'Thailand, Southeast Asia',
+    duration: '12th Dec - 19th Dec (7 days)',
+    price: '40,900 per person',
+    days: 8,
+    nights: 7,
+    id: 3,
+    url: 'dec',
+    loc: 'thailand',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: true      // Mark as sold out
+  },
+  {
+    imageUrl: '/bali/card3.jpg',
+    destination: 'Bali New Year Exclusive',
+    location: 'Bali, Indonesia',
+    duration: '29th Dec - 6th Jan (9 days)',
+    price: '46,900 per person',
+    days: 9,
+    nights: 8,
+    id: 3,
+    url: 'new-year-trip',
+    loc: 'bali',
+    fillingFast: true,   // New Year trip, filling fast
+    isSoldOut: false     // Not sold out
+  },
   {
     imageUrl: '/thailand/card5.jpg',
     destination: 'Thailand NY Getaway',
@@ -114,159 +78,135 @@ export const newTripsData = [
     price: '40,900 per person',
     days: 8,
     nights: 7,
-    id: 5,
-    url:'new-year-trip',
+    id: 4,
+    url: 'new-year-trip',
     loc: 'thailand',
-    fillingFast: true,
-  },
-    {
-      imageUrl: '/bali/card3.jpg',
-      destination: 'Bali New Year Exclusive',
-      location: 'Bali, Indonesia',
-      duration: '29th Dec - 6th Jan (9 days)',
-      price: '46,900 per person',
-      days: 9,
-      nights: 8,
-      id: 3,
-      url:'new-year-trip',
-      loc: 'bali',
-      fillingFast:true,
-    },
-  ];
-  
-  // Data for Bali trips
+    fillingFast: true,   // New Year trip, filling fast
+    isSoldOut: false     // Not sold out
+  }
+];
+
+export const newTripsData = [
+{
+  imageUrl: '/thailand/card5.jpg',
+  destination: 'Thailand NY Getaway',
+  location: 'Thailand, Southeast Asia',
+  duration: '29th Dec - 5th Jan (7 days)',
+  price: '40,900 per person',
+  days: 8,
+  nights: 7,
+  id: 5,
+  url: 'new-year-trip',
+  loc: 'thailand',
+  fillingFast: true,  // New Year trip, filling fast
+  isSoldOut: false    // Not sold out
+},
+{
+  imageUrl: '/bali/card3.jpg',
+  destination: 'Bali New Year Exclusive',
+  location: 'Bali, Indonesia',
+  duration: '29th Dec - 6th Jan (9 days)',
+  price: '46,900 per person',
+  days: 9,
+  nights: 8,
+  id: 3,
+  url: 'new-year-trip',
+  loc: 'bali',
+  fillingFast: true,  // New Year trip, filling fast
+  isSoldOut: false    // Not sold out
+}
+];
+
 export const baliTripsData = [
-    {
-      imageUrl: '/bali/card1.jpg',
-      destination: 'Bali Beach Escape',
-      location: 'Bali, Indonesia',
-      duration: '15th Nov - 23rd Nov (7 days)',
-      price: '36,900 per person',
-      days: 9,
-      nights: 8,
-      id: 1,
-      url:'nov',
-      loc: 'bali',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/bali/card2.jpg',
-      destination: 'Bali Adventure',
-      location: 'Bali, Indonesia',
-      duration: '3rd Dec - 11th Dec (7 days)',
-      price: '42,900 per person',
-      days: 9,
-      nights: 8,
-      id: 2,
-      url:'dec',
-      loc: 'bali',
-      fillingFast: false,
-    },
-    {
-      imageUrl: '/bali/card3.jpg',
-      destination: 'Bali New Year Exclusive',
-      location: 'Bali, Indonesia',
-      duration: '29th Dec - 6th Jan (9 days)',
-      price: '46,900 per person',
-      days: 9,
-      nights: 8,
-      id: 3,
-      url:'new-year-trip',
-      loc: 'bali',
-      fillingFast: true,
-    },
-  ];
-  
-  // Data for Vietnam trips
+  {
+    imageUrl: '/bali/card1.jpg',
+    destination: 'Bali Beach Escape',
+    location: 'Bali, Indonesia',
+    duration: '15th Nov - 23rd Nov (7 days)',
+    price: '36,900 per person',
+    days: 9,
+    nights: 8,
+    id: 1,
+    url: 'nov',
+    loc: 'bali',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: true      // Mark as sold out
+  },
+  {
+    imageUrl: '/bali/card2.jpg',
+    destination: 'Bali Adventure',
+    location: 'Bali, Indonesia',
+    duration: '3rd Dec - 11th Dec (7 days)',
+    price: '42,900 per person',
+    days: 9,
+    nights: 8,
+    id: 2,
+    url: 'dec',
+    loc: 'bali',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: true      // Mark as sold out
+  },
+  {
+    imageUrl: '/bali/card3.jpg',
+    destination: 'Bali New Year Exclusive',
+    location: 'Bali, Indonesia',
+    duration: '29th Dec - 6th Jan (9 days)',
+    price: '46,900 per person',
+    days: 9,
+    nights: 8,
+    id: 3,
+    url: 'new-year-trip',
+    loc: 'bali',
+    fillingFast: true,   // New Year trip, filling fast
+    isSoldOut: false     // Not sold out
+  }
+];
+
 export const vietnamTripsData = [
-    // {
-    //   imageUrl: '/vietnam/card1.jpg',
-    //   destination: 'Vietnam Beach Relaxation',
-    //   location: 'Vietnam, Southeast Asia',
-    //   duration: '15th Oct - 21st Oct (7 days)',
-    //   price: '290000 per person',
-    //   days: 7,
-    //   nights: 6,
-    //   id: 1,
-    //   loc: 'vietnam',
-    // },
-    // {
-    //   imageUrl: '/vietnam/card2.jpg',
-    //   destination: 'Vietnam Adventure Tour',
-    //   location: 'Vietnam, Southeast Asia',
-    //   duration: '25th Oct - 31st Oct (7 days)',
-    //   price: '310000 per person',
-    //   days: 7,
-    //   nights: 6,
-    //   id: 2,
-    //   loc: 'vietnam',
-    // },
-    // {
-    //   imageUrl: '/vietnam/card3.jpg',
-    //   destination: 'Vietnam Cultural Journey',
-    //   location: 'Vietnam, Southeast Asia',
-    //   duration: '5th Nov - 11th Nov (7 days)',
-    //   price: '305000 per person',
-    //   days: 7,
-    //   nights: 6,
-    //   id: 3,
-    //   loc: 'vietnam',
-    // },
-  ];
-  
-  // Data for Thailand trips
+// Vietnam trips are commented out or not available
+];
+
 export const thailandTripsData = [
-    {
-      imageUrl: '/thailand/card1.jpg',
-      destination: 'Thailand Beach Bliss',
-      location: 'Thailand, Southeast Asia',
-      duration: '15th Oct - 22th Oct (7 days)',
-      price: '35,900 per person',
-      days: 8,
-      nights: 7,
-      id: 1,
-      url:'oct',
-      loc: 'thailand',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/thailand/card3.jpg',
-      destination: 'Thailand Adventure',
-      location: 'Thailand, Southeast Asia',
-      duration: '12th Nov - 19th November (7 days)',
-      price: '35,900 per person',
-      days: 8,
-      nights: 7,
-      id: 2,
-      url:'nov1',
-      loc: 'thailand',
-      fillingFast: false,
-    },
-    {
-      imageUrl: '/thailand/card4.jpg',
-      destination: 'Thailand Adventure',
-      location: 'Thailand, Southeast Asia',
-      duration: '12th Dec - 19th Dec (7 days)',
-      price: '40,900 per person',
-      days: 8,
-      nights: 7,
-      id: 3,
-      url:'dec',
-      loc: 'thailand',
-      fillingFast: true,
-    },
-    {
-      imageUrl: '/thailand/card5.jpg',
-      destination: 'Thailand NY Getaway',
-      location: 'Thailand, Southeast Asia',
-      duration: '29th Dec - 5th Jan (7 days)',
-      price: '40,900 per person',
-      days: 8,
-      nights: 7,
-      id: 4,
-      url:'new-year-trip',
-      loc: 'thailand',
-      fillingFast: true,
-    },
-  ];
-  
+  {
+    imageUrl: '/thailand/card3.jpg',
+    destination: 'Thailand Adventure',
+    location: 'Thailand, Southeast Asia',
+    duration: '12th Nov - 19th November (7 days)',
+    price: '35,900 per person',
+    days: 8,
+    nights: 7,
+    id: 2,
+    url: 'nov1',
+    loc: 'thailand',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: true      // Mark as sold out
+  },
+  {
+    imageUrl: '/thailand/card4.jpg',
+    destination: 'Thailand Adventure',
+    location: 'Thailand, Southeast Asia',
+    duration: '12th Dec - 19th Dec (7 days)',
+    price: '40,900 per person',
+    days: 8,
+    nights: 7,
+    id: 3,
+    url: 'dec',
+    loc: 'thailand',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: true      // Mark as sold out
+  },
+  {
+    imageUrl: '/thailand/card5.jpg',
+    destination: 'Thailand NY Getaway',
+    location: 'Thailand, Southeast Asia',
+    duration: '29th Dec - 5th Jan (7 days)',
+    price: '40,900 per person',
+    days: 8,
+    nights: 7,
+    id: 4,
+    url: 'new-year-trip',
+    loc: 'thailand',
+    fillingFast: true,   // New Year trip, filling fast
+    isSoldOut: false     // Not sold out
+  }
+];
