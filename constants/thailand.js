@@ -313,7 +313,7 @@ export const thailandTrips = [
     isExclusive: 'nyt',
     url:'new-year-trip',
     date: '29th December - 5th January',
-    pricing: 'INR 40,900 per person',
+    pricing: 'INR 46,900 per person',
     tripLength: '7 days',
     groupSize: '22 person avg',
     description: `Ring in the New Year in Thailand! Experience the excitement of celebrations, indulge in festive cuisine, and explore the stunning beaches and vibrant nightlife that Thailand has to offer.`,
@@ -338,14 +338,14 @@ export const thailandTrips = [
       'Personal expenses',
     ],
     pricingDetails: [
-      'INR 40,900 + GST(5%) until 15th November',
+      'INR 36,900 + GST(5%) until 8th November',
       'INR 46,900 + GST(5%) until spots are available',
     ],
     groupData: [
       {
         imageSrc: '/thailand/27.png',
         name: 'Anita Kumar',
-        location: 'Delhi, India',
+        location: 'Bhubaneswar, India',
       },
       {
         imageSrc: '/thailand/28.png',
@@ -408,9 +408,9 @@ export const thailandTrips = [
         location:'Mumbai, Maharashtra'      
       },
       {
-        imageSrc:'/thailand/23.png',
-        name:'Zubin Mishra',
-        location:'Pune, Maharashtra'
+        imageSrc:'/thailand/sandipn.jpeg',
+        name:'Rishi Kumar',
+        location:'Bhubaneswar, India'
       },
       {
         imageSrc:'/thailand/43.png',
@@ -445,7 +445,7 @@ export const thailandTrips = [
       {
         imageSrc:'/47.jpg',
         name:'Jyoti Dubey',
-        location:'Bangalore, Karnataka'
+        location:'Bhubaneswar, India'
       },
     ],
     groupDataTrip: [
