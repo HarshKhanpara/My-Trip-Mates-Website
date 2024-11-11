@@ -312,7 +312,7 @@ export const thailandTrips = [
     title: 'Thailand NY Getaway',
     isExclusive: 'nyt',
     url:'new-year-trip',
-    date: '29th December - 5th January',
+    date: '28th December - 4th January',
     pricing: 'INR 46,900 per person',
     tripLength: '7 days',
     groupSize: '22 person avg',
