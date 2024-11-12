@@ -15,6 +15,21 @@ export const upcomingTripsData = [
     isNewTrip:true
   },
   {
+    imageUrl: '/vietnam/card3.jpg',
+    destination: 'Vietnam Adventure',
+    location: 'Vietnam, Southeast Asia',
+    duration: '11th Jan - 18th Jan (7 days)',
+    price: '35,900 per person',
+    days: 8,
+    nights: 7,
+    id: 2,
+    url: 'jan',
+    loc: 'vietnam',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: false,      // Mark as sold out
+    isNewTrip: true
+  },
+  {
     imageUrl: '/thailand/card3.jpg',
     destination: 'Thailand Adventure',
     location: 'Thailand, Southeast Asia',
@@ -76,7 +91,7 @@ export const upcomingTripsData = [
     imageUrl: '/thailand/card5.jpg',
     destination: 'Thailand NY Getaway',
     location: 'Thailand, Southeast Asia',
-    duration: '29th Dec - 5th Jan (7 days)',
+    duration: '29th Dec - 4th Jan (7 days)',
     price: '40,900 per person',
     days: 8,
     nights: 7,
@@ -93,7 +108,7 @@ export const newTripsData = [
   imageUrl: '/thailand/card5.jpg',
   destination: 'Thailand NYE Getaway',
   location: 'Thailand, Southeast Asia',
-  duration: '28th Dec - 4th Jan (8 days)',
+  duration: '29th Dec -4th Jan (7 days)',
   price: '40,900 per person',
   days: 8,
   nights: 7,
@@ -166,6 +181,21 @@ export const baliTripsData = [
 ];
 
 export const vietnamTripsData = [
+  {
+    imageUrl: '/vietnam/card3.jpg',
+    destination: 'Vietnam Adventure',
+    location: 'Vietnam, Southeast Asia',
+    duration: '11th Jan - 18th Jan (7 days)',
+    price: '35,900 per person',
+    days: 8,
+    nights: 7,
+    id: 2,
+    url: 'jan',
+    loc: 'vietnam',
+    fillingFast: false,  // Not New Year, not filling fast
+    isSoldOut: false,      // Mark as sold out
+    isNewTrip: true
+  },
 // Vietnam trips are commented out or not available
 ];
 
