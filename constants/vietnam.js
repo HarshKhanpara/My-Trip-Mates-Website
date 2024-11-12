@@ -29,8 +29,7 @@ export const vietnamTrips = [
         'Personal expenses',
       ],
       pricingDetails: [
-        'INR 36,900 + GST(5%) until 9th December',
-        'INR 41,000 + GST(5%) until spots are available',
+        'INR 51,000 + GST(5%) until spots are available',
       ],
       groupData : [
         {

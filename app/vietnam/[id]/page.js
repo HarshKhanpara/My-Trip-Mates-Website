@@ -39,7 +39,7 @@ const Trip_Vietnam = ({ params }) => {
         duration={trip.tripLength}
         price={trip.pricing} // Assuming the first pricing detail is used
         description={trip.description}
-        mainImage="/bali/bali-trip.png" // Adjust as needed
+        mainImage="/vietnam/vietnam-trip.png" // Adjust as needed
         galleryImages={trip.galleryImages.map(item => item.imageSrc)}
         bgColor="#fff"
         textColor="text-black"
