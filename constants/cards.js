@@ -62,7 +62,7 @@ export const upcomingTripsData = [
     imageUrl: '/bali/card3.jpg',
     destination: 'Bali New Year Exclusive',
     location: 'Bali, Indonesia',
-    duration: '29th Dec - 6th Jan (9 days)',
+    duration: '28th Dec - 5th Jan (9 days)',
     price: '46,900 per person',
     days: 9,
     nights: 8,
@@ -91,9 +91,9 @@ export const upcomingTripsData = [
 export const newTripsData = [
 {
   imageUrl: '/thailand/card5.jpg',
-  destination: 'Thailand NY Getaway',
+  destination: 'Thailand NYE Getaway',
   location: 'Thailand, Southeast Asia',
-  duration: '29th Dec - 5th Jan (7 days)',
+  duration: '28th Dec - 4th Jan (8 days)',
   price: '40,900 per person',
   days: 8,
   nights: 7,
