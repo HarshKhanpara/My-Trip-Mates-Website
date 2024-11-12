@@ -104,6 +104,7 @@ const BestTrips = ({
                   onclick={() => handleCardClick( trip.loc,trip.url)}
                   fillingFast={trip.fillingFast}
                   isSoldOut={trip.isSoldOut}
+                  isNewTrip={trip.isNewTrip}
                 />
               </div>
             ))}

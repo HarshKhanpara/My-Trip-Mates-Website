@@ -175,6 +175,7 @@ const UpcomingTrip = () => {
                     onclick={() => handleCardClick(trip.loc, trip.url)}
                     fillingFast={trip.fillingFast}
                     isSoldOut={trip.isSoldOut}
+                    isNewTrip={trip.isNewTrip}
                   />
                 </motion.div>
               ))
@@ -236,6 +237,7 @@ const UpcomingTrip = () => {
               onclick={() => handleCardClick(trip.loc, trip.url)}
               fillingFast={trip.fillingFast}
               isSoldOut={trip.isSoldOut}
+              isNewTrip={trip.isNewTrip}
             />
           </motion.div>
         ))}

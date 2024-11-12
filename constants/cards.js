@@ -3,29 +3,31 @@ export const upcomingTripsData = [
     imageUrl: '/bali/card1.jpg',
     destination: 'Bali Beach Escape',
     location: 'Bali, Indonesia',
-    duration: '15th Nov - 23rd Nov (8 days)',
+    duration: '11th Jan - 19th Jan (9 days)',
     price: '36,900 per person',
     days: 9,
     nights: 8,
     id: 1,
-    url: 'nov',
+    url: 'jan',
     loc: 'bali',
     fillingFast: false,  // Not New Year, not filling fast
-    isSoldOut: true      // Mark as sold out
+    isSoldOut: false,      // Mark as sold out
+    isNewTrip:true
   },
   {
     imageUrl: '/thailand/card3.jpg',
     destination: 'Thailand Adventure',
     location: 'Thailand, Southeast Asia',
-    duration: '12th Nov - 19th November (7 days)',
+    duration: '11th Jan - 18th Jan (7 days)',
     price: '40,900 per person',
     days: 8,
     nights: 7,
     id: 2,
-    url: 'nov1',
+    url: 'jan',
     loc: 'thailand',
     fillingFast: false,  // Not New Year, not filling fast
-    isSoldOut: true      // Mark as sold out
+    isSoldOut: false,      // Mark as sold out
+    isNewTrip:true
   },
   {
     imageUrl: '/bali/card2.jpg',
@@ -122,15 +124,16 @@ export const baliTripsData = [
     imageUrl: '/bali/card1.jpg',
     destination: 'Bali Beach Escape',
     location: 'Bali, Indonesia',
-    duration: '15th Nov - 23rd Nov (7 days)',
+    duration: '11th Jan - 19th Jan (7 days)',
     price: '36,900 per person',
     days: 9,
     nights: 8,
     id: 1,
-    url: 'nov',
+    url: 'jan',
     loc: 'bali',
     fillingFast: false,  // Not New Year, not filling fast
-    isSoldOut: true      // Mark as sold out
+    isSoldOut: false  ,    // Mark as sold out,
+    isNewTrip: true,
   },
   {
     imageUrl: '/bali/card2.jpg',
@@ -171,15 +174,16 @@ export const thailandTripsData = [
     imageUrl: '/thailand/card3.jpg',
     destination: 'Thailand Adventure',
     location: 'Thailand, Southeast Asia',
-    duration: '12th Nov - 19th November (7 days)',
+    duration: '11th Jan - 18th Jan (7 days)',
     price: '35,900 per person',
     days: 8,
     nights: 7,
     id: 2,
-    url: 'nov1',
+    url: 'jan',
     loc: 'thailand',
     fillingFast: false,  // Not New Year, not filling fast
-    isSoldOut: true      // Mark as sold out
+    isSoldOut: false,      // Mark as sold out
+    isNewTrip: true
   },
   {
     imageUrl: '/thailand/card4.jpg',

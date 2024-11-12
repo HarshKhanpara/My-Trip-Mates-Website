@@ -20,6 +20,7 @@ const Card = ({
   nights = 3,
   fillingFast = true,
   isSoldOut = false,
+  isNewTrip = false,                    
   onclick = () => {},
 }) => {
   return (
@@ -40,6 +41,13 @@ const Card = ({
             {isSoldOut && (
           <div className="absolute top-3 right-3 bg-gradient-to-r from-red-400 to-red-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-3 py-2 rounded-md z-10 shadow-lg animate-pulse">
             Sold Out!
+          </div>
+        )}
+
+                {/* "Filling Fast" Label */}
+                {isNewTrip && (
+          <div className="absolute top-3 right-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-3 py-2 rounded-md z-10 shadow-lg animate-pulse">
+            New Trip!
           </div>
         )}
 

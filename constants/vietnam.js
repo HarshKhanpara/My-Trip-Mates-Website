@@ -34,14 +34,14 @@ export const vietnamTrips = [
       ],
       groupData : [
         {
-          imageSrc: '/vietnam/1.png',
-          name: 'Sanya Verma',  // Girl
-          location: 'Pune, Maharashtra',
+          imageSrc: '/39.jpg',                                         
+          name:'Suyash Baldota',
+          location:'Mumbai, Maharashtra'
         },
         {
-          imageSrc: '/vietnam/2.png',
-          name: 'Isha Malhotra',  // Girl
-          location: 'Mumbai, Maharashtra',
+          imageSrc: '/thailand/32.png',
+          name:'Aarav Singh',
+          location:'Pune, Maharashtra'
         },
         {
           imageSrc: '/vietnam/3.png',

@@ -4,7 +4,7 @@ export const thailandTrips = [
     title: 'Thailand Adventure',
     isExclusive: false,
     url:'oct',
-    date: '15th October - 22nd October',
+    date: '11th January - 18nd January',
     pricing: 'INR 35,900 per person',
     tripLength: '8 days',
     groupSize: '22 person avg',
@@ -141,8 +141,8 @@ export const thailandTrips = [
     id: 2,
     title: 'Thailand Escape',
     isExclusive: false,
-    url:'nov1',
-    date: '12th November - 19th November',
+    url:'jan',
+    date: '11th January - 18nd January',
     pricing: 'INR 35,900 per person',
     tripLength: '7 days',
     groupSize: '22 person avg',
@@ -212,16 +212,6 @@ export const thailandTrips = [
         name: 'Roshni Gupta',
         location: 'Bangalore, Karnataka',
       },
-      {
-        imageSrc: '/39.jpg',                                         
-        name:'Suyash Baldota',
-        location:'Mumbai, Maharashtra'
-      },
-      {
-        imageSrc: '/thailand/32.png',
-        name:'Aarav Singh',
-        location:'Pune, Maharashtra'
-      }
     ],
     groupDataTrip: [
       { imageSrc: '/thailand/group-photo1.png' },
@@ -294,7 +284,21 @@ export const thailandTrips = [
         name:'Shubham Kaneria',
         location:'Bangalore, Karnataka'
       },
-
+      {
+        imageSrc:'/thailand/39.png',
+        name:'Sara Verma',
+        location:'Pune, Maharashtra'
+      },
+      {
+        imageSrc:'/thailand/40.png',
+        name:'Mihir Deshmukh',
+        location:'Pune, Maharashtra'
+      },
+      {
+        imageSrc:'/thailand/41.png',
+        name:'Ananya Chatterjee',
+        location:'Mumbai, Maharashtra'      
+      },
     ],
     groupDataTrip: [
       { imageSrc: '/thailand/group-photo1.png' },
@@ -391,21 +395,6 @@ export const thailandTrips = [
         imageSrc:'/thailand/38.png',
         name:'Manav Singh',
         location:'Delhi, India'
-      },
-      {
-        imageSrc:'/thailand/39.png',
-        name:'Sara Verma',
-        location:'Pune, Maharashtra'
-      },
-      {
-        imageSrc:'/thailand/40.png',
-        name:'Mihir Deshmukh',
-        location:'Pune, Maharashtra'
-      },
-      {
-        imageSrc:'/thailand/41.png',
-        name:'Ananya Chatterjee',
-        location:'Mumbai, Maharashtra'      
       },
       {
         imageSrc:'/thailand/sandipn.jpeg',
