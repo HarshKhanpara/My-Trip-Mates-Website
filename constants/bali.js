@@ -252,7 +252,7 @@ export const baliTrips = [
     title: 'Bali New Year Exclusive',
     isExclusive: 'nyt',
     url:'new-year-trip',
-    date: '29th December - 6th January',
+    date: '28th December - 4th January',
     pricing: 'Rs 46,900 per person',
     tripLength: '9 days',
     groupSize: '22 person avg',
