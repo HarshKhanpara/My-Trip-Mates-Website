@@ -29,9 +29,8 @@ export const vietnamTrips = [
         'Personal expenses',
       ],
       pricingDetails: [
-        'INR 47,000 + GST(5%) until 9th July',
-        'INR 49,000 + GST(5%) until 30th July',
-        'INR 51,000 + GST(5%) until spots are available',
+        'INR 36,900 + GST(5%) until 9th December',
+        'INR 41,000 + GST(5%) until spots are available',
       ],
       groupData : [
         {
@@ -124,6 +123,11 @@ export const vietnamTrips = [
         { imageSrc:"/vietnam/group-photo1.png" },
         { imageSrc:  "/vietnam/group-photo2.png" },
         { imageSrc:    "/vietnam/group-photo3.png"},
+      ],
+      galleryImages: [
+        { imageSrc: '/vietnam/gallery-photo1.png' },
+        { imageSrc: '/vietnam/gallery-photo2.png' },
+        { imageSrc: '/vietnam/gallery-photo3.png' },
       ],
     },
     // {
