@@ -4,24 +4,28 @@ export const vietnamTrips = [
       url:'jan',
       title: 'Vietnam Exploration',
       date: '11th January - 18th January',
-      pricing: 'INR 60,000 per person',
-      tripLength: '9 days',
-      groupSize: '15 person avg',
-      description: `Vietnam, in Southeast Asia, features a range of landscapes including beaches, rice paddies, and mountains. Hanoi, the capital, is known for its historic charm, while Ho Chi Minh City is a bustling metropolis. The country is renowned for its delicious cuisine, such as pho and banh mi, and natural attractions like Ha Long Bay and the Mekong Delta. Vietnam also offers rich cultural experiences with its historic temples, vibrant markets, and traditional festivals.`,
+      pricing: 'INR 54,000 per person',
+      tripLength: '8 days',
+      groupSize: '22 people avg',
+      description: `This trip covers all highlights of Vietnam - from the hustle and bustle of Ho Chi Minh City to the culturally rich Hoi An, the beautiful Halong Bay to the capital city Hanoi. It contains a lot of adrenaline-pumping experiences and lets you experience mouth-watering Vietnamese cuisine.`,
       highlights: [
-        'Surfing lessons',
-        'Beach Clubs',
-        'Gili Islands',
-        'Partying',
-        'Cultural tours',
-        'Temple visits',
+    "Cu Chi Tunnels + Fire AK47s",
+    "Hoi An Ancient Town + Basket Boats",
+    "Marble Mountains",
+    "War Remnants Museum",
+    "Cruise in Halong Bay",
+    "Night Markets",
+    "Kayaking, Caving",
+    "Ba Na Hills, Cable Car",
+    "Basket Boats",
+    "Vietnamese Cuisine"
       ],
       inclusions: [
-        '8 Nights accommodation in quality 3/4-star hotels',
-        'Experienced Trip Manager',
-        '11 meals - Vegetarian and non-vegetarian options available',
-        'Transportation and Boat tickets in Bali',
-        'Daily excursions and guided tours',
+        "7 Nights accommodation in quality 3/4-star hotels",
+    "Internal Flight Tickets",
+    "8 meals - Vegetarian and non-vegetarian food options available",
+    "Lots of Experiences",
+    "Trip Manager"
       ],
       exclusions: [
         'Flight tickets',
@@ -29,7 +33,9 @@ export const vietnamTrips = [
         'Personal expenses',
       ],
       pricingDetails: [
-        'INR 51,000 + GST(5%) until spots are available',
+        "INR 54,000 + GST(5%) until 8th November",
+    "INR 56,000 + GST(5%) until 29th November",
+    "INR 58,000 + GST(5%) until spots are available"
       ],
       groupData : [
         {
