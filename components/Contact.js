@@ -54,7 +54,7 @@ export default function Contact() {
       <div className="flex flex-col py-10 px-4" id="contact-section">
         <div className="relative flex flex-col md:mx-10 items-center justify-center md:flex-row-reverse bg-gradient-to-b from-[#577597] to-[#060848] text-white rounded-2xl shadow-xl md:space-x-6 ">
           {/* Map Section */}
-          <div className="relative -top-10 md:-top-36 md:w-1/2 md:m-5 flex flex-col items-center rounded-3xl">
+          <div className="relative -top-10 md:-top-44 md:w-1/2 md:m-5 flex flex-col items-center rounded-3xl">
             <div className="w-full bg-white rounded-md shadow-md">
               <div className="hidden md:block">
                 <iframe
