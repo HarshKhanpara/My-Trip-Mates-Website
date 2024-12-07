@@ -16,6 +16,7 @@
     "@react-spring/web": "^9.7.4",
     "@react-three/drei": "^9.112.0",
     "@react-three/fiber": "^8.17.7",
+    "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.5.5",
     "heroicons": "^2.1.5",
@@ -35,6 +36,7 @@
     "react-spinners": "^0.14.1",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.12",
+    "tailwind-merge": "^2.5.5",
     "three": "^0.168.0"
   },
   "devDependencies": {
