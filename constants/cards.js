@@ -48,7 +48,7 @@ export const upcomingTripsData = [
     imageUrl: '/bali/card2.jpg',
     destination: 'Bali Adventure',
     location: 'Bali, Indonesia',
-    duration: '3rd Dec - 11th Dec (8 days)',
+    duration: '31st Jan - 8th Feb (9 days)',
     url: 'dec',
     price: '42,900 per person',
     days: 9,
@@ -57,7 +57,6 @@ export const upcomingTripsData = [
     url: 'dec',
     loc: 'bali',
     fillingFast: false,  // Not New Year, not filling fast
-    isSoldOut: true      // Mark as sold out
   },
   {
     imageUrl: '/thailand/card4.jpg',
@@ -154,15 +153,14 @@ export const baliTripsData = [
     imageUrl: '/bali/card2.jpg',
     destination: 'Bali Adventure',
     location: 'Bali, Indonesia',
-    duration: '3rd Dec - 11th Dec (7 days)',
-    price: '42,900 per person',
+    duration: '31st Jan - 8th Feb (9 days)',
+    price: '49,000 per person',
     days: 9,
     nights: 8,
     id: 2,
     url: 'dec',
     loc: 'bali',
-    fillingFast: false,  // Not New Year, not filling fast
-    isSoldOut: true      // Mark as sold out
+    fillingFast: false,  
   },
   {
     imageUrl: '/bali/card3.jpg',

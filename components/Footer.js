@@ -1,10 +1,15 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Footer = ({
   backgroundColor = "#ffffff", // Default to white background
   textColor = "#000000", // Default to black text
 }) => {
+
+  const router = useRouter();
   return (
     <footer
       className="py-8"
@@ -131,8 +136,8 @@ const Footer = ({
         <div className="mt-10 text-gray-600 text-sm text-center border-t pt-6">
           <p>© 2024 My Trip Mates. All Rights Reserved.</p>
           <p>
-            <a href="#" className="hover:underline">Terms and Conditions</a> |{" "}
-            <a href="#" className="hover:underline">Privacy Policy</a>
+            <a onClick={()=>router.push("/terms-and-conditions")} className="hover:underline cursor-pointer" >Terms and Conditions</a> |{" "}
+            <a onClick={()=>router.push("/privacy-policy")} className="hover:underline cursor-pointer">Privacy Policy</a>
           </p>
         </div>
       </div>

@@ -100,10 +100,10 @@ const Hero = () => {
       >
         <div className="relative hidden md:block p-2 bg-gradient-to-br from-[#FACC15] to-[#FFA500] rounded-xl shadow-lg hover:scale-105 transition-transform">
           <Image
-            src="/sunset-destination.jpg"
-            alt="Beach Sunset"
-            width={400}
-            height={300}
+            src="/hero.jpg"
+            alt="Your next destination awaits"
+            width={600}
+            height={500}
             className="rounded-xl"
           />
           <div className="absolute md:m-auto bottom-0 text-white text-sm md:text-base px-3 py-2 w-full text-center">
@@ -112,8 +112,8 @@ const Hero = () => {
         </div>
         <div className="relative md:hidden mb-64 p-2 bg-gradient-to-br from-[#FACC15] to-[#FFA500] rounded-xl shadow-lg hover:scale-105 transition-transform">
           <Image
-            src="/sunset-destination.jpg"
-            alt="Beach Sunset"
+            src="/hero.jpg"
+            alt="Your next destination awaits"
             width={250}
             height={250}
             className="rounded-xl"
@@ -128,7 +128,7 @@ const Hero = () => {
       {/* Text Content */}
       <div className="relative z-10 w-full lg:w-1/2 px-6 lg:px-16 flex flex-col items-center lg:items-start justify-center text-center lg:text-left space-y-6 order-1 lg:order-2">
         <motion.h1
-          className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight"
+          className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight min-h-[120px] md:min-h-[250px]"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -151,7 +151,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-sm md:text-lg lg:text-2xl text-gray-200"
+          className="text-sm md:text-lg lg:text-2xl text-gray-200 mt-14"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 1 }}
@@ -175,7 +175,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <ScrollIndicator />
+      {/* <ScrollIndicator /> */}
     </section>
   );
 };

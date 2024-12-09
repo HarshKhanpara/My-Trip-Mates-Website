@@ -6,6 +6,9 @@ import {
   LocationMarkerIcon,
   ClockIcon,
   TagIcon,
+  ExclamationTriangle, 
+  TrendingUpIcon,
+  StarIcon               
 } from "@heroicons/react/outline";
 import { animated } from "@react-spring/web";
 
@@ -38,25 +41,30 @@ const Card = ({
 
     {/* "New Trip", "Filling Fast", or "Sold Out" Labels */}
     {isSoldOut && (
-      <div className="absolute top-3 left-3 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+      <div className="absolute  bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 inline">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+</svg>
         Sold Out!
       </div>
     )}
     {isNewTrip && (
       <div className="absolute top-3 left-3 bg-yellow-500 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+      <StarIcon className="w-5 h-5 mr-2 inline" />
         New Trip!
       </div>
     )}
     {fillingFast && !isSoldOut && !isNewTrip && (
       <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+      <TrendingUpIcon className="w-5 h-5 mr-2 inline" />
         Filling Fast
       </div>
     )}
 
     <animated.div
-      className="absolute bottom-5 left-5 right-5 flex flex-col justify-center text-white"
+      className="absolute w-full bottom-0 flex flex-col justify-center text-white"
     >
-      <div className="bg-[#3D3838] p-6 bg-opacity-60 w-5/6 rounded-md shadow-inner shadow-gray-900">
+      <div className="bg-[#3D3838] p-6 bg-opacity-60 w-full bottom-0 rounded-md shadow-inner shadow-gray-900">
         <h3 className="font-extrabold text-2xl mb-4">{destination}</h3>
         <p className="text-white mb-2 flex items-center">
           <LocationMarkerIcon className="w-5 h-5 mr-2" />

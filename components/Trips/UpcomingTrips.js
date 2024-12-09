@@ -70,6 +70,7 @@ const UpcomingTrip = () => {
     thailand: thailandTripsData,
     vietnam: vietnamTripsData,
     new: newTripsData,
+    finland: []
   };
 
   // Smooth scrolling logic with hover pause

@@ -85,7 +85,7 @@ const TravelStories = ({
                 className="object-cover"
                 layout="fill"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black opacity-80 rounded-lg rounded-t-lg text-white">
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black opacity-80 rounded-xl text-white">
                 <div className="flex justify-between text-sm mb-2">
                   <span>{story.location}</span>
                   <span className="flex items-center space-x-1">
