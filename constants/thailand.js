@@ -3,9 +3,9 @@ export const thailandTrips = [
     id: 1,
     title: 'Thailand Adventure',
     isExclusive: false,
-    url:'oct',
-    date: '11th January - 18nd January',
-    pricing: 'INR 35,900 per person',
+    url:'dec-jan',
+    date: '28th December - 4th January',
+    pricing: 'INR 66,000 per person',
     tripLength: '8 days',
     groupSize: '22 person avg',
     description: `Thailand, located in Southeast Asia, is celebrated for its stunning beaches, rich cultural heritage, and lively cities. Thailand's diverse landscapes include tropical islands, lush jungles, and mountainous regions. The country is also famous for its delicious cuisine, such as pad Thai and green curry, and its colorful festivals like Songkran (Thai New Year) and Loy Krathong. Thailand's friendly locals and unique blend of tradition and modernity make it a popular travel destination.`,
@@ -31,8 +31,9 @@ export const thailandTrips = [
       'Airport transfers',
     ],
     pricingDetails: [
-      'INR 35,900 + GST(5%) until 15th September',
-      'INR 35,900 + GST(5%) until spots are available',
+      'INR 61,000 + GST(5%) until 10th October',
+      'INR 63,500 + GST(5%) until 28th October',
+      'INR 66,000 + GST(5%) until spots are available',
     ],
     groupData: [
       {
@@ -143,7 +144,7 @@ export const thailandTrips = [
     isExclusive: false,
     url:'jan',
     date: '11th January - 18nd January',
-    pricing: 'INR 35,900 per person',
+    pricing: 'INR 55,000 per person',
     tripLength: '7 days',
     groupSize: '22 person avg',
     description: `Experience the enchanting beauty of Thailand, where vibrant culture meets breathtaking landscapes. From exploring the bustling streets of Bangkok to relaxing on the pristine beaches of Phuket, this trip promises an unforgettable adventure.`,
@@ -168,8 +169,9 @@ export const thailandTrips = [
       'Personal expenses',
     ],
     pricingDetails: [
-      'INR 35,900 + GST(5%) until 1st October',
-      'INR 35,900 + GST(5%) until spots are available',
+      'INR 51,000 + GST(5%) until 8th November',
+      'INR 53,000 + GST(5%) until 29th November',
+      'INR 55,000 + GST(5%) until spots are available',
     ],
     groupData: [
       {
@@ -228,10 +230,10 @@ export const thailandTrips = [
     id: 3,
     title: 'Thailand Festivities',
     isExclusive: false,
-    url:'dec',
-    date: '12th December - 19th December',
-    pricing: 'INR 40,900 per person',
-    tripLength: '7 days',
+    url:'feb',
+    date: '9th February - 16th February',
+    pricing: 'INR 56,000 per person',
+    tripLength: '8 days',
     groupSize: '22 person avg',
     description: `Join us for a magical experience in Thailand during the festive season. Explore beautiful landscapes, vibrant culture, and indulge in traditional Thai festivities. Enjoy local delicacies and partake in unique celebrations throughout your journey.`,
     highlights: [
@@ -255,8 +257,9 @@ export const thailandTrips = [
       'Personal expenses',
     ],
     pricingDetails: [
-      'INR 40,900 + GST(5%) until 1st November',
-      'INR 46,900 + GST(5%) until spots are available',
+      'INR 51,000 + GST(5%) until 26th November',
+      'INR 53,000 + GST(5%) until 17th December',
+      'INR 56,000 + GST(5%) until spots are available',
     ],
     groupData: [
       {
@@ -313,12 +316,11 @@ export const thailandTrips = [
   },
   {
     id: 4,
-    title: 'Thailand NY Getaway',
-    isExclusive: 'nyt',
-    url:'new-year-trip',
-    date: '28th December - 4th January',
-    pricing: 'INR 46,900 per person',
-    tripLength: '7 days',
+    title: 'Thailand Full Moon',
+    url:'mar',
+    date: '10th March - 17th March',
+    pricing: 'INR 56,000 per person',
+    tripLength: '8 days',
     groupSize: '22 person avg',
     description: `Ring in the New Year in Thailand! Experience the excitement of celebrations, indulge in festive cuisine, and explore the stunning beaches and vibrant nightlife that Thailand has to offer.`,
     highlights: [
@@ -342,8 +344,9 @@ export const thailandTrips = [
       'Personal expenses',
     ],
     pricingDetails: [
-      'INR 36,900 + GST(5%) until 8th November',
-      'INR 46,900 + GST(5%) until spots are available',
+      'INR 51,000 + GST(5%) until 18th December',
+      'INR 53,000 + GST(5%) until 27th January',
+      'INR 56,000 + GST(5%) until spots are available',
     ],
     groupData: [
       {

@@ -57,27 +57,28 @@ export default function Contact() {
           <div className="relative -top-10 md:-top-44 md:w-1/2 md:m-5 flex flex-col items-center rounded-3xl">
             <div className="w-full bg-white rounded-md shadow-md">
               <div className="hidden md:block">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.3560177875315!2d72.82436657596601!3d19.048078382150752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c941e018661f%3A0x646d98d3b6a4fcb!2sMy%20Trip%20Mates!5e0!3m2!1sen!2sin!4v1725559084202!5m2!1sen!2sin"
-                  width="100%"
-                  height="400px"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-md"
-                ></iframe>
+              <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.3560177875315!2d72.82436657596601!3d19.048078382150752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c941e018661f%3A0x646d98d3b6a4fcb!2sMy%20Trip%20Mates!5e0!3m2!1sen!2sin!4v1725559084202!5m2!1sen!2sin"
+        className="w-full h-[450px] border-0 rounded-3xl shadow-lg"
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Location Map"
+      />
               </div>
               <div className="md:hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.3560177875315!2d72.82436657596601!3d19.048078382150752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c941e018661f%3A0x646d98d3b6a4fcb!2sMy%20Trip%20Mates!5e0!3m2!1sen!2sin!4v1725559084202!5m2!1sen!2sin"
+                  style={{
+                    border: 0,
+                    borderRadius: "20px",
+                  }}
                   width="100%"
                   height="300px"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-md"
+                  className="transition-transform transform hover:scale-105"
                 ></iframe>
               </div>
             </div>
@@ -118,42 +119,42 @@ export default function Contact() {
               every journey unforgettable!
             </p>
             <form onSubmit={handleSubmit} className="md:w-[411px]">
-            <div className="space-y-4">
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Full Name*"
-                className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <input
-                type="text"
-                name="contact"
-                value={formData.contact}
-                onChange={handleChange}
-                placeholder="Your Contact*"
-                className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Your Email*"
-                className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Your Message (Optional)"
-                className="block w-full mb-7 p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                rows={4}
-              ></textarea>
+              <div className="space-y-4">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Full Name*"
+                  className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <input
+                  type="text"
+                  name="contact"
+                  value={formData.contact}
+                  onChange={handleChange}
+                  placeholder="Your Contact*"
+                  className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email*"
+                  className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your Message (Optional)"
+                  className="block w-full mb-7 p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  rows={4}
+                ></textarea>
               </div>
               <button
                 type="submit"

@@ -1,6 +1,7 @@
 import { baliTrips } from "@/constants/bali";
 import { thailandTrips } from "@/constants/thailand";
 import { vietnamTrips } from "@/constants/vietnam";
+import {finlandTrips} from "@/constants/finland";
 
 /**
  * Retrieves trip details by URL identifier and location.
@@ -21,6 +22,9 @@ export const getTripByUrlAndLocation = (urlId, location) => {
       break;
     case 'vietnam':
       trips = vietnamTrips;
+      break;
+    case 'finland':
+      trips = finlandTrips;
       break;
     default:
       return null;

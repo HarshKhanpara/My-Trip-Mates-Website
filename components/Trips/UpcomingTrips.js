@@ -7,6 +7,7 @@ import { debounce } from "lodash";
 import { motion } from "framer-motion";
 import {
   baliTripsData,
+  finlandTripsData,
   newTripsData,
   thailandTripsData,
   upcomingTripsData,
@@ -44,6 +45,7 @@ const UpcomingTrip = () => {
   const baliRef = useRef(null);
   const vietnamRef = useRef(null);
   const thailandRef = useRef(null);
+  const finlandRef = useRef(null);
 
 
   const handleResize = debounce(() => {
@@ -62,6 +64,7 @@ const UpcomingTrip = () => {
     ...baliTripsData,
     ...thailandTripsData,
     ...vietnamTripsData,
+    ...finlandTripsData
   ];
 
   const tripData = {
@@ -69,8 +72,7 @@ const UpcomingTrip = () => {
     bali: baliTripsData,
     thailand: thailandTripsData,
     vietnam: vietnamTripsData,
-    new: newTripsData,
-    finland: []
+    finland: finlandTripsData
   };
 
   // Smooth scrolling logic with hover pause
@@ -199,7 +201,7 @@ const UpcomingTrip = () => {
       )}
 
 {/* Static Grid for Bali, Thailand, Vietnam Tabs */}
-{["bali", "thailand", "vietnam", "new"].includes(activeTab) && (
+{["bali", "thailand", "vietnam", "new", "finland"].includes(activeTab) && (
   <div
     ref={
       activeTab === "bali"
@@ -208,7 +210,9 @@ const UpcomingTrip = () => {
         ? thailandRef
         : activeTab === "vietnam"
         ? vietnamRef
-        : newYearRef
+        : activeTab === "new"
+        ? newYearRef
+        : finlandRef
     }
   >
     {tripData[activeTab].length > 0 && (
