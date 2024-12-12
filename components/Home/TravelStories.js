@@ -42,8 +42,6 @@ const TravelStories = ({
 
   return (
     <section className="p-8" style={{ backgroundColor }} id="blog-section">
-      {/* Blurred background */}
-
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
         <div className="text-center md:text-left mb-4 md:mb-0">
           <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4" style={{ color: textColor }}>
@@ -54,56 +52,57 @@ const TravelStories = ({
           </p>
         </div>
         <button
-          className="text-sm md:text-base font-semibold py-3 px-4 md:py-2 md:px-4 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out z-50"
+          className="text-sm md:text-base font-semibold py-3 px-4 md:py-2 md:px-4 rounded-md border hover:bg-opacity-90 transition duration-300 ease-in-out"
           style={{
             color: textColor,
             borderColor: textColor,
-            borderColor: backgroundColor === '#ffffff' ? '#000000' : 'transparent', // Inverse button color
+            backgroundColor: 'transparent',
           }}
-          onClick={() => {
-            router.push('/blogs');
-          }}
+          onClick={() => router.push('/blogs')}
         >
-          {'View All Stories'}
+          View All Stories
         </button>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 mx-auto justify-items-center">
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 ">
         {stories.slice(0, 3).map((story, index) => (
           <div
             key={index}
-            data-index={index} 
-            ref={(el) => (storyRefs.current[index] = el)} 
-            className={`shadow-md z-50 rounded-lg overflow-hidden border-[#C4C4C4] border-2 cursor-pointer transition-all duration-700 ease-in-out transform ${
-              visibleStories[index]
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-10'
+            data-index={index}
+            ref={(el) => (storyRefs.current[index] = el)}
+            className={`rounded-xl overflow-hidden cursor-pointer transition-all duration-700 ease-in-out transform border hover:scale-95 ${
+              visibleStories[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            } ${
+              index === 0 ? 'lg:col-span-2 lg:h-[600px]' : '' // Make the first story span two columns on larger screens
             }`}
-            style={{ transitionDelay: `${index * 200}ms` }} 
+            style={{ transitionDelay: `${index * 150}ms` }}
             onClick={() => router.push(story.link)}
           >
-            <Image
-              src={story.image}
-              alt={story.title}
-              className="w-full h-48 object-cover"
-              width={490}
-              height={304520}
-            />
-            <div className="p-6">
-              <div className="flex justify-between items-center text-sm mb-4" style={{ color: textColor }}>
-                <span>{story.location}</span>
-                <span>{story.date}</span>
-                <span>{story.readTime}</span>
+            <div className={`relative w-full ${index === 0 ? 'h-[600px]' : 'h-[509px]'}`}>
+              <Image
+                src={story.image}
+                alt={story.title}
+                className="object-cover"
+                layout="fill"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black opacity-80 rounded-xl text-white">
+                <div className="flex justify-between text-sm mb-2">
+                  <span>{story.location}</span>
+                  <span className="flex items-center space-x-1">
+                    <span>{story.date}</span>
+                    <span className='text-2xl leading-none'>•</span>
+                    <span>{story.readTime}</span>
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold mb-2">{story.title}</h3>
+                <p className="text-sm mb-4">{story.description}</p>
+                <a
+                  href={story.link}
+                  className="text-sm font-semibold text-blue-400 hover:text-blue-300"
+                >
+                  Read Full Post ↗
+                </a>
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2" style={{ color: textColor }}>
-                {story.title}
-              </h3>
-              <p className="text-sm md:text-base mb-4" style={{ color: textColor }}>
-                {story.description}
-              </p>
-              <a href={story.link} className="text-blue-500 hover:underline text-sm">
-                Read More
-              </a>
             </div>
           </div>
         ))}

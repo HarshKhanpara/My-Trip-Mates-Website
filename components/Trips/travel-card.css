@@ -1,0 +1,35 @@
+.aurora-title {
+  background: linear-gradient(
+    90deg,
+    #ff6a3d,
+    #ff3caa,
+    #803cff,
+    #3cafff,
+    #2b22a5,
+    #031b69
+  );
+  background-size: 400% 400%; /* Increase gradient movement range */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wavy-aurora 6s ease-in-out infinite; /* Removed blur-effect animation */
+  font-weight: bold; /* Make the text bolder for added prominence */
+  letter-spacing: 0.5px; /* Slightly increase letter-spacing for better clarity */
+}
+
+@keyframes wavy-aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 75%; /* Add more movement to the gradient */
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 75% 25%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

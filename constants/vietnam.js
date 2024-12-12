@@ -1,13 +1,13 @@
 export const vietnamTrips = [
     {
       id: 1,
-      url:'jan',
+      url:'feb',
       title: 'Vietnam Exploration',
-      date: '11th January - 18th January',
-      pricing: 'INR 54,000 per person',
-      tripLength: '8 days',
-      groupSize: '22 people avg',
-      description: `This trip covers all highlights of Vietnam - from the hustle and bustle of Ho Chi Minh City to the culturally rich Hoi An, the beautiful Halong Bay to the capital city Hanoi. It contains a lot of adrenaline-pumping experiences and lets you experience mouth-watering Vietnamese cuisine.`,
+      date: '2nd February - 9th February',
+      pricing: 'INR 58,000 per person',
+      tripLength: '9 days',
+      groupSize: '15 person avg',
+      description: `Vietnam, in Southeast Asia, features a range of landscapes including beaches, rice paddies, and mountains. Hanoi, the capital, is known for its historic charm, while Ho Chi Minh City is a bustling metropolis. The country is renowned for its delicious cuisine, such as pho and banh mi, and natural attractions like Ha Long Bay and the Mekong Delta. Vietnam also offers rich cultural experiences with its historic temples, vibrant markets, and traditional festivals.`,
       highlights: [
     "Cu Chi Tunnels + Fire AK47s",
     "Hoi An Ancient Town + Basket Boats",
@@ -33,9 +33,9 @@ export const vietnamTrips = [
         'Personal expenses',
       ],
       pricingDetails: [
-        "INR 54,000 + GST(5%) until 8th November",
-    "INR 56,000 + GST(5%) until 29th November",
-    "INR 58,000 + GST(5%) until spots are available"
+        'INR 54,000 + GST(5%) until 9th December',
+        'INR 56,000 + GST(5%) until 24th December',
+        'INR 58,000 + GST(5%) until spots are available',
       ],
       groupData : [
         {
@@ -135,193 +135,42 @@ export const vietnamTrips = [
         { imageSrc: '/vietnam/gallery-photo3.png' },
       ],
     },
-    // {
-    //   id: 2,
-    //   title: 'Vietnam Cultural Journey',
-    //   date: '10th-18th October',
-    //   pricing: 'INR 55,000 per person',
-    //   tripLength: '9 days',
-    //   groupSize: '20 person avg',
-    //   description: `Vietnam, in Southeast Asia, features a range of landscapes including beaches, rice paddies, and mountains. Hanoi, the capital, is known for its historic charm, while Ho Chi Minh City is a bustling metropolis. The country is renowned for its delicious cuisine, such as pho and banh mi, and natural attractions like Ha Long Bay and the Mekong Delta. Vietnam also offers rich cultural experiences with its historic temples, vibrant markets, and traditional festivals.`,
-    //   highlights: [
-    //     'Temple visits',
-    //     'Local markets',
-    //     'Traditional dances',
-    //     'Balinese massage',
-    //   ],
-    //   inclusions: [
-    //     '8 Nights accommodation in boutique hotels',
-    //     'Daily excursions and guided tours',
-    //   ],
-    //   exclusions: [
-    //     'Flight tickets',
-    //     'Personal expenses',
-    //   ],
-    //   pricingDetails: [
-    //     'INR 55,000 + GST(5%) until 1st October',
-    //     'INR 57,000 + GST(5%) until spots are available',
-    //   ],
-    //   groupData: [
-    //     {
-    //       imageSrc: '/vietnam/1.png',
-    //       name: 'Sanya Verma',  // Girl
-    //       location: 'Pune, Maharashtra',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/2.png',
-    //       name: 'Isha Malhotra',  // Girl
-    //       location: 'Mumbai, Maharashtra',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/3.png',
-    //       name: 'Meera Kapoor',  // Girl
-    //       location: 'Delhi, India',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/4.png',
-    //       name: 'Aman Sharma',  // Boy
-    //       location: 'Bangalore, Karnataka',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/5.png',
-    //       name: 'Rahul Sethi',  // Boy
-    //       location: 'Chennai, Tamil Nadu',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/6.png',
-    //       name: 'Dev Patel',  // Boy
-    //       location: 'Kochi, Kerala',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/7.png',
-    //       name: 'Manish Rathi',  // Boy
-    //       location: 'Ahmedabad, Gujarat',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/8.png',
-    //       name: 'Nisha Desai',  // Girl
-    //       location: 'Amritsar, Punjab',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/9.png',
-    //       name: 'Raj Mehta',  // Boy
-    //       location: 'Surat, Gujarat',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/10.png',
-    //       name: 'Siddharth Rao',  // Boy
-    //       location: 'Hyderabad, Telangana',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/11.png',
-    //       name: 'Anita Jain',  // Girl
-    //       location: 'Jaipur, Rajasthan',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/12.png',
-    //       name: 'Vivek Singh',  // Boy
-    //       location: 'Lucknow, Uttar Pradesh',
-    //     },
-    //   ],
-    //   groupDataTrip:[
-    //     { imageSrc:"/vietnam/group-photo1.png" },
-    //     { imageSrc:  "/vietnam/group-photo2.png" },
-    //     { imageSrc:    "/vietnam/group-photo3.png"},
-    //   ],
-    // },
-    // {
-    //   id: 3,
-    //   title: 'Vietnam Adventure & Wellness',
-    //   date: '1st-10th November',
-    //   pricing: 'Rs 50000 per person',
-    //   tripLength: '10 days',
-    //   groupSize: '12 person avg',
-    //   description: `Vietnam, in Southeast Asia, features a range of landscapes including beaches, rice paddies, and mountains. Hanoi, the capital, is known for its historic charm, while Ho Chi Minh City is a bustling metropolis. The country is renowned for its delicious cuisine, such as pho and banh mi, and natural attractions like Ha Long Bay and the Mekong Delta. Vietnam also offers rich cultural experiences with its historic temples, vibrant markets, and traditional festivals.`,
-    //   highlights: [
-    //     'Yoga sessions',
-    //     'Hiking',
-    //     'Waterfall visits',
-    //     'Cultural tours',
-    //   ],
-    //   inclusions: [
-    //     '9 Nights accommodation in luxury resorts',
-    //     'Experienced Trip Manager',
-    //   ],
-    //   exclusions: [
-    //     'Flight tickets',
-    //     'Personal expenses',
-    //   ],
-    //   pricingDetails: [
-    //     'INR 60,000 + GST(5%) until 20th October',
-    //     'INR 62,000 + GST(5%) until spots are available',
-    //   ],
-    //   groupData: [
-    //     {
-    //       imageSrc: '/vietnam/1.png',
-    //       name: 'Sanya Verma',  // Girl
-    //       location: 'Pune, Maharashtra',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/2.png',
-    //       name: 'Isha Malhotra',  // Girl
-    //       location: 'Mumbai, Maharashtra',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/3.png',
-    //       name: 'Meera Kapoor',  // Girl
-    //       location: 'Delhi, India',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/4.png',
-    //       name: 'Aman Sharma',  // Boy
-    //       location: 'Bangalore, Karnataka',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/5.png',
-    //       name: 'Rahul Sethi',  // Boy
-    //       location: 'Chennai, Tamil Nadu',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/6.png',
-    //       name: 'Dev Patel',  // Boy
-    //       location: 'Kochi, Kerala',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/7.png',
-    //       name: 'Manish Rathi',  // Boy
-    //       location: 'Ahmedabad, Gujarat',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/8.png',
-    //       name: 'Nisha Desai',  // Girl
-    //       location: 'Amritsar, Punjab',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/9.png',
-    //       name: 'Raj Mehta',  // Boy
-    //       location: 'Surat, Gujarat',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/10.png',
-    //       name: 'Siddharth Rao',  // Boy
-    //       location: 'Hyderabad, Telangana',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/11.png',
-    //       name: 'Anita Jain',  // Girl
-    //       location: 'Jaipur, Rajasthan',
-    //     },
-    //     {
-    //       imageSrc: '/vietnam/12.png',
-    //       name: 'Vivek Singh',  // Boy
-    //       location: 'Lucknow, Uttar Pradesh',
-    //     },
-    //   ],
-    //   groupDataTrip: [
-    //     { imageSrc:"/vietnam/group-photo1.png" },
-    //     { imageSrc:  "/vietnam/group-photo2.png" },
-    //     { imageSrc:    "/vietnam/group-photo3.png"},
-    //   ],
-   // },
+    {
+      id:2,
+      url: 'dec',
+      title: 'Vietnam Winter Special',
+      date: '29th December - 5th January',
+      pricing: 'INR 50,000 per person',
+      tripLength: '8 days',
+      groupSize: '15 person avg',
+      description: `Experience the magic of Vietnam's winter with this special tour. Explore stunning landscapes, historic cities, and rich cultural heritage as you journey through one of Southeast Asia's most captivating countries.`,
+      highlights: [
+        'Ha Long Bay cruise',
+        'Temple visits',
+        'Traditional Vietnamese cuisine',
+        'Cultural performances',
+        'Hiking in scenic landscapes',
+      ],
+      inclusions: [
+        '7 Nights accommodation in 3/4-star hotels',
+        'Professional tour guide',
+        'Daily meals - Vegetarian and non-vegetarian options',
+        'Local transportation',
+      ],
+      exclusions: ['Flight tickets', 'Alcoholic beverages', 'Personal expenses'],
+      pricingDetails: ['INR 58,000 + GST(5%) until spots are available'],
+      groupData: [],
+      groupDataTrip: [
+        { imageSrc: '/vietnam/group-photo1.png' },
+        { imageSrc: '/vietnam/group-photo2.png' },
+        { imageSrc: '/vietnam/group-photo3.png' },
+      ],
+      galleryImages: [
+        { imageSrc: '/vietnam/gallery-photo1.png' },
+        { imageSrc: '/vietnam/gallery-photo2.png' },
+        { imageSrc: '/vietnam/gallery-photo3.png' },
+      ],
+    },
+  
   ];
   

@@ -1,4 +1,3 @@
-// components/Card.js
 "use client";
 
 import Image from "next/image";
@@ -7,6 +6,9 @@ import {
   LocationMarkerIcon,
   ClockIcon,
   TagIcon,
+  ExclamationTriangle, 
+  TrendingUpIcon,
+  StarIcon               
 } from "@heroicons/react/outline";
 import { animated } from "@react-spring/web";
 
@@ -20,73 +22,70 @@ const Card = ({
   nights = 3,
   fillingFast = true,
   isSoldOut = false,
-  isNewTrip = false,                    
+  isNewTrip = false,
   onclick = () => {},
 }) => {
   return (
+<animated.div
+  className="shadow-2xl rounded-lg overflow-hidden relative cursor-pointer transition-transform hover:scale-90 hover:shadow-2xl"
+  onClick={onclick}
+>
+  {/* Image Section */}
+  <div className="relative min-h-[642px] min-w-[490px]">
+    <Image
+      src={imageUrl}
+      alt={destination}
+      layout="fill"
+      objectFit="cover"
+    />
+
+    {/* "New Trip", "Filling Fast", or "Sold Out" Labels */}
+    {isSoldOut && (
+      <div className="absolutetop-3 left-3 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 inline">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+</svg>
+        Sold Out!
+      </div>
+    )}
+    {isNewTrip && (
+      <div className="absolute top-3 left-3 bg-yellow-500 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+      <StarIcon className="w-5 h-5 mr-2 inline" />
+        New Trip!
+      </div>
+    )}
+    {fillingFast && !isSoldOut && !isNewTrip && (
+      <div className="absolute top-3 left-3 bg-green-500 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+      <TrendingUpIcon className="w-5 h-5 mr-2 inline" />
+        Filling Fast
+      </div>
+    )}
+
     <animated.div
-      className="shadow-lg rounded-lg overflow-hidden mb-5 relative sm:mb-6 md:mb-8 lg:mb-10 cursor-pointer"
-      onClick={onclick}
+      className="absolute w-full bottom-0 flex flex-col justify-center text-white"
     >
-      {/* Image Section */}
-      <div className="relative min-h-[450px] md:min-h-[550px] lg:min-h-[450px]">
-        <Image
-          src={imageUrl}
-          alt={destination}
-          layout="fill"
-          objectFit="cover"
-        />
-
-        {/* "Filling Fast" Label */}
-            {isSoldOut && (
-          <div className="absolute top-3 right-3 bg-gradient-to-r from-red-400 to-red-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-3 py-2 rounded-md z-10 shadow-lg animate-pulse">
-            Sold Out!
-          </div>
-        )}
-
-                {/* "Filling Fast" Label */}
-                {isNewTrip && (
-          <div className="absolute top-3 right-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-3 py-2 rounded-md z-10 shadow-lg animate-pulse">
-            New Trip!
-          </div>
-        )}
-
-
-        {/* "Filling Fast" Label */}
-        {fillingFast && (
-          <div className="absolute top-3 right-3 bg-gradient-to-r from-green-400 to-green-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold px-3 py-2 rounded-md z-10 shadow-lg animate-pulse">
-            Filling Fast
-          </div>
-        )}
-
-        {/* Overlay Text */}
-        <animated.div
-          className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black to-transparent text-white sm:p-5 md:p-6 lg:p-8 z-0"
-          style={{
-            transition:
-              "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
-          }}
-        >
-          <h3 className="font-bold text-2xl md:mb-3 lg:mb-3 w-full">{destination}</h3>
-          <p className="text-gray-300 mb-2 flex items-center">
-            <LocationMarkerIcon className="w-5 h-5 mr-2 sm:w-6 sm:h-6 sm:mr-3 md:w-7 md:h-7 md:mr-3 lg:w-8 lg:h-8 lg:mr-4" />
-            {location}
-          </p>
-          <p className="text-gray-300 mb-2 flex items-center">
-            <CalendarIcon className="w-5 h-5 mr-2 sm:w-6 sm:h-6 sm:mr-3 md:w-7 md:h-7 md:mr-3 lg:w-8 lg:h-8 lg:mr-4" />
-            {duration}
-          </p>
-          <p className="text-gray-300 mb-2 flex items-center sm:mb-1 md:mb-1 lg:mb-1">
-            <ClockIcon className="w-5 h-5 mr-2 sm:w-6 sm:h-6 sm:mr-3 md:w-7 md:h-7 md:mr-3 lg:w-8 lg:h-8 lg:mr-4" />
-            {days} days, {nights} nights
-          </p>
-          <p className="font-bold mt-2 flex items-center sm:mt-1 md:mt-1 lg:mt-1">
-            <TagIcon className="w-5 h-5 mr-2 sm:w-6 sm:h-6 sm:mr-3 md:w-7 md:h-7 md:mr-3 lg:w-8 lg:h-8 lg:mr-4" />
-            &#x20B9; {price}
-          </p>
-        </animated.div>
+      <div className="bg-[#3D3838] p-6 bg-opacity-60 w-full bottom-0 rounded-md shadow-inner shadow-gray-900">
+        <h3 className="font-extrabold text-2xl mb-4">{destination}</h3>
+        <p className="text-white mb-2 flex items-center">
+          <LocationMarkerIcon className="w-5 h-5 mr-2" />
+          {location}
+        </p>
+        <p className="text-white mb-2 flex items-center">
+          <CalendarIcon className="w-5 h-5 mr-2" />
+          {duration}
+        </p>
+        <p className="text-white mb-2 flex items-center">
+          <ClockIcon className="w-5 h-5 mr-2" />
+          {days} days, {nights} nights
+        </p>
+        <p className="font-bold text-lg flex items-center">
+          <TagIcon className="w-5 h-5 mr-2" />
+          &#x20B9; {price}
+        </p>
       </div>
     </animated.div>
+  </div>
+</animated.div>
   );
 };
 

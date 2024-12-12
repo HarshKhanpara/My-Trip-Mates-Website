@@ -4,6 +4,8 @@ import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import Slideshow from "../SlideShow";
 import { useRouter } from "next/navigation";
+import Scene from "../Scene";
+import './travel-card.css';
 
 
 export default function TravelCard({
@@ -14,6 +16,7 @@ export default function TravelCard({
   mainImage,
   galleryImages,
   isDarkMode = false, // New prop to control theme
+  isFinland = false
 }) {
   const router = useRouter();
 
@@ -28,6 +31,8 @@ export default function TravelCard({
     window.open(whatsappUrl, "_blank");
   };
 
+
+
   // Theme-based styles
   const themeStyles = {
     background: isDarkMode ? "bg-black" : "bg-white",
@@ -36,14 +41,16 @@ export default function TravelCard({
     divider: isDarkMode ? "bg-gray-600" : "bg-gray-300",
   };
 
+  
   return (
+    <>
     <div
       className={`w-full pt-20 pb-11 flex sm:pt-14 ${themeStyles.background} transition-colors duration-200`}
     >
       <div
         className={`w-full flex flex-col lg:flex-row pt-20 p-6 rounded-lg shadow-lg border-2 ${themeStyles.border} ${themeStyles.text}`}
       >
-        <div className="relative w-full lg:w-1/2 lg:mb-0 flex md:justify-center md:items-center max-h-[570px] mb-7">
+        <div className="relative w-full lg:w-1/2 lg:mb-7 flex md:justify-center md:items-center max-h-[570px] mb-7">
           <div className="relative flex md:justify-center items-start mt-4 lg:mt-0 lg:items-center max-w-[550px] max-h-[550px] w-full h-full">
             <Image
               src={mainImage}
@@ -63,7 +70,7 @@ export default function TravelCard({
 
         <div className="lg:hidden mb-6">
           <h1
-            className={`text-5xl font-light mb-4 text-center ${themeStyles.text}`}
+            className={`text-5xl aurora-title font-light mb-4 text-center ${themeStyles.text}`}
             style={{ fontFamily: "title-light" }}
           >
             {destination}
@@ -84,7 +91,7 @@ export default function TravelCard({
         <div className="lg:pl-8 w-full lg:w-1/2">
           <div className="hidden lg:flex lg:items-center mb-6">
             <h1
-              className={`text-7xl font-light ${themeStyles.text}`}
+              className={`text-7xl font-light z-10 mb-2 aurora-title ${themeStyles.text}`}
               style={{ fontFamily: "title-light" }}
             >
               {destination}
@@ -98,7 +105,7 @@ export default function TravelCard({
             )}
           </div>
 
-          <div className={`md:hidden h-1 mb-4 ${themeStyles.divider}`}></div>
+          <div className={`md:hidden z-10 h-1 mb-4 bg-white`}></div>
 
           <p className={`mb-6 ${themeStyles.text}`}>{description}</p>
           <button
@@ -143,5 +150,6 @@ export default function TravelCard({
         </div>
       </div>
     </div>
+    </>
   );
 }

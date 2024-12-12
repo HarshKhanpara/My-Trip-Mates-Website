@@ -6,7 +6,7 @@ import { FaWhatsapp, FaTimes } from 'react-icons/fa';
 const WhatsAppChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
 
   const toggleChat = () => {
     setIsOpen(!isOpen);

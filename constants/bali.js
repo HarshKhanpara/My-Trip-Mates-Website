@@ -4,8 +4,8 @@ export const baliTrips = [
     title: 'Bali Adventure',
     isExclusive: false,
     url:'jan',
-    date: '11th January - 19th January',
-    pricing: 'Rs 36,900 per person',
+    date: '10th January - 18th January',
+    pricing: 'Rs 51,000 per person',
     tripLength: '9 days',
     groupSize: '22 person avg',
     description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
@@ -29,7 +29,11 @@ export const baliTrips = [
       'All activities under professional guidance',
     ],
     exclusions: ['Flight tickets', 'Alcoholic beverages'],
-    pricingDetails: ['INR 36,900 + GST(5%) until 9th October', 'INR 36,900 + GST(5%) until spots are available'],
+    pricingDetails: [
+      'INR 47,000 + GST(5%) until 7th November', 
+      'INR 49,000 + GST(5%) until 27th November',
+      'INR 51,000 + GST(5%) until spots are available'
+    ],
     groupData: [
       {
         imageSrc: '/1.jpg',
@@ -137,10 +141,10 @@ export const baliTrips = [
     id: 2,
     title: 'Bali Adventure',
     isExclusive: false,
-    date: '3rd December - 11th December',
-    url:'dec',
-    pricing: 'Rs 42,900 per person',
-    tripLength: '8 days',
+    date: '31st January - 8th February (9 days)',
+    url:'jan-feb',
+    pricing: 'Rs 51,000 per person',
+    tripLength: '9 days',
     groupSize: '22 person avg',
     description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
     highlights: [
@@ -163,7 +167,11 @@ export const baliTrips = [
       'All activities under professional guidance',
     ],
     exclusions: ['Flight tickets', 'Alcoholic beverages'],
-    pricingDetails: ['INR 42,900 + GST(5%) until 3rd November', 'INR 46,900 + GST(5%) until spots are available'],
+    pricingDetails: [
+      'INR 47,000 + GST(5%) until 9th December', 
+      'INR 49,000 + GST(5%) until 26th December',
+      'INR 51,000 + GST(5%) until spots are available'
+    ],
     groupData: [
       {
         imageSrc: '/11.jpg',
@@ -249,11 +257,10 @@ export const baliTrips = [
   },
   {
     id: 3,
-    title: 'Bali New Year Exclusive',
-    isExclusive: 'nyt',
-    url:'new-year-trip',
-    date: '28th December - 4th January',
-    pricing: 'Rs 46,900 per person',
+    title: 'Bali Beach Escape',
+    url:'feb-mar',
+    date: '21st February - 1st March (9 days)',
+    pricing: 'Rs 51,000 per person',
     tripLength: '9 days',
     groupSize: '22 person avg',
     description: `Bali, an Indonesian island in Southeast Asia, is renowned for its stunning landscapes, which include picturesque beaches, lush rice terraces, and volcanic mountains. The island is a top travel destination known for its vibrant culture, rich arts scene, and traditional Hindu temples. Popular tourist areas like Ubud and Seminyak offer a mix of cultural experiences, from traditional dance performances to local markets. Bali is also famous for its surf spots, luxury resorts, and wellness retreats.`,
@@ -277,7 +284,11 @@ export const baliTrips = [
       'All activities under professional guidance',
     ],
     exclusions: ['Flight tickets', 'Alcoholic beverages'],
-    pricingDetails: ['INR 46,900 + GST(5%) until 29th November', 'INR 51,900 + GST(5%) until spots are available'],
+    pricingDetails: [
+      'INR 47,000 + GST(5%) until 26th December', 
+      'INR 49,000 + GST(5%) until 21st January',
+      'INR 51,000 + GST(5%) until spots are available'
+    ],
     groupData: [
       {
         imageSrc: '/21.jpg',
