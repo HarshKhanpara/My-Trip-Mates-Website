@@ -65,7 +65,7 @@ const Card = ({
       className="absolute w-full bottom-0 flex flex-col justify-center text-white"
     >
       <div className="bg-[#3D3838] p-6 bg-opacity-60 w-full bottom-0 rounded-md shadow-inner shadow-gray-900">
-        <h3 className="font-extrabold text-2xl mb-4">{destination}</h3>
+        <h3 className="font-extrabold text-2xl mb-4 text-ellipsis">{destination}</h3>
         <p className="text-white mb-2 flex items-center">
           <LocationMarkerIcon className="w-5 h-5 mr-2" />
           {location}
