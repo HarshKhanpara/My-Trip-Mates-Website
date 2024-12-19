@@ -166,10 +166,15 @@ const Hero = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
         >
-          <button className="px-6 py-3 bg-[#FACC15] text-[#1E3A8A] font-semibold rounded-lg shadow-md hover:scale-105 transition-transform">
-            Get Started
+          <button className="px-6 py-3 bg-[#FACC15] text-[#1E3A8A] font-semibold rounded-lg shadow-md hover:scale-105 transition-transform"
+          onClick={() => router.push('/upcoming-trips')}
+          >
+            Upcoming Trips
           </button>
-          <button className="px-6 py-3 bg-transparent border border-[#FACC15] text-[#FACC15] font-semibold rounded-lg shadow-md hover:bg-[#FACC15]/20 transition">
+          <button className="px-6 py-3 bg-transparent border border-[#FACC15] text-[#FACC15] font-semibold rounded-lg shadow-md hover:bg-[#FACC15]/20 transition"
+          //Scroll to our story id on click
+          onClick={() => window.scrollTo({ top: document.getElementById('our-story').offsetTop, behavior: 'smooth' })}
+          >
             Learn More
           </button>
         </motion.div>

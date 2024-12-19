@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function OurStory() {
   return (
-    <section className="bg-white px-6 py-12">
+    <section className="bg-white px-6 py-12" id="our-story">
       <div className="md:flex md:items-start md:justify-between">
         {/* IMAGE GRID */}
         <div className="md:grid hidden grid-cols-2 md:w-2/3 md:grid-cols-3 gap-8 items-start">
