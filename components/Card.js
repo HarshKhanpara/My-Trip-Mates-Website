@@ -27,11 +27,11 @@ const Card = ({
 }) => {
   return (
 <animated.div
-  className="shadow-2xl rounded-lg overflow-hidden relative cursor-pointer transition-transform hover:scale-90 hover:shadow-2xl"
+  className="shadow-2xl rounded-xl overflow-hidden relative cursor-pointer transition-transform hover:scale-90 hover:shadow-2xl"
   onClick={onclick}
 >
   {/* Image Section */}
-  <div className="relative min-h-[642px] min-w-[490px]">
+  <div className="relative min-h-[490px] min-w-[642px]">
     <Image
       src={imageUrl}
       alt={destination}

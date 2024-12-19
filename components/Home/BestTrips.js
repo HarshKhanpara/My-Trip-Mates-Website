@@ -51,7 +51,7 @@ const BestTrips = ({
 
   return (
     <section
-      className="py-4 sm:py-8 md:py-12 sm:min-h-screen w-full md:min-h-56 z-20 "
+      className="py-4 md:mt-40 sm:py-8 md:py-12 sm:min-h-screen w-full md:min-h-56 z-20 "
       style={{ backgroundColor }} // Apply configurable background color
     >
       <Parallax blur={{ min: -15, max: 15 }} strength={300}>

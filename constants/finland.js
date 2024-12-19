@@ -39,7 +39,7 @@ export const finlandTrips = [
     {
       id: 14,
       url: 'mar',
-      title: 'Finland Northern Lights',
+      title: 'Finland Winter Adventure',
       date: '7th March - 15th March',
       pricing: 'INR 1,28,000 per person',
       tripLength: '8 days',

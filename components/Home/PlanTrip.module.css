@@ -1,0 +1,45 @@
+/* For 13-inch screens (approx. 1280px wide) */
+@media (min-width: 1280px) and (max-width: 1366px) {
+    .container {
+      top: 58%;
+      left: 6%;
+      width:800px;
+      height: 700px;
+    
+    }
+  }
+  
+  /* For 14-inch screens (approx. 1440px wide) */
+  @media (min-width: 1367px) and (max-width: 1440px) {
+    .container {
+      top: 58%;
+      left: 10%;
+      width:800px;
+      height: 700px;
+
+    }
+  }
+  
+  /* For 15-inch screens (approx. 1536px wide) */
+  @media (min-width: 1441px) and (max-width: 1536px) {
+    .container {
+      top: 58%;
+      left: 16%;
+      width:800px;
+      height: 700px;
+
+    }
+  }
+  
+  /* For 16-inch screens (approx. 1600px wide) */
+  @media (min-width: 1537px) and (max-width: 1600px) {
+    .container {
+      top: 58%;
+      left: 21%;
+      width:800px;
+      height: 700px;
+
+    }
+  }
+  
+  

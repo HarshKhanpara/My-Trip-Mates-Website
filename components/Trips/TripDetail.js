@@ -158,14 +158,14 @@ export default function Itinerary({
             {groupDataTrip.slice(0, 3).map(({ imageSrc }, idx) => (
               <div
                 key={idx}
-                className="w-[250px] h-[250px] relative mb-4 sm:mb-0 mx-auto"
+                className="w-[250px] h-[250px] relative mb-4 sm:mb-0 mx-auto roundex-xl"
               >
                 <Image
                   src={imageSrc}
                   alt={`Group Photo ${idx + 1}`}
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-lg"
+                  className="rounded-xl"
                 />
               </div>
             ))}

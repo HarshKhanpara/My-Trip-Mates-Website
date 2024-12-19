@@ -15,7 +15,7 @@ const Footer = ({
       className="py-8"
       style={{ backgroundColor }} // Apply configurable background color
     >
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mt-32 md:mt-0 mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
           {/* Logo and Social Media */}
           <div className="col-span-1">
@@ -24,8 +24,16 @@ const Footer = ({
               alt="My Trip Mates Logo"
               width={344}
               height={100}
-              className="mb-4"
+              className="mb-4 hidden md:block"
             />
+            <Image
+              src="/logo.jpg" // Replace with the path to your logo
+              alt="My Trip Mates Logo"
+              width={150}
+              height={50}
+              className="mb-4 block md:hidden"
+            />
+
             <div className="flex space-x-4">
               <a href="https://twitter.com" target="_blank" rel="noreferrer">
                 <Image

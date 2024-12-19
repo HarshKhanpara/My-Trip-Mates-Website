@@ -91,7 +91,7 @@ export default function TravelCard({
         <div className="lg:pl-8 w-full lg:w-1/2">
           <div className="hidden lg:flex lg:items-center mb-6">
             <h1
-              className={`text-7xl font-light z-10 mb-2 aurora-title ${themeStyles.text}`}
+              className={`text-5xl font-light z-10 mb-2 aurora-title ${themeStyles.text}`}
               style={{ fontFamily: "title-light" }}
             >
               {destination}
@@ -121,7 +121,7 @@ export default function TravelCard({
                 key={index}
                 src={img}
                 alt={`${destination} Gallery ${index + 1}`}
-                className="rounded-lg object-cover h-[300px] w-[300px] overflow-x-hidden"
+                className="rounded-xl object-cover h-[300px] w-[300px] overflow-x-hidden"
                 width={300}
                 height={300}
               />

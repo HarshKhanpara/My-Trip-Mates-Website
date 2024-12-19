@@ -47,12 +47,12 @@ export default function Contact() {
 
   return (
     <>
-      <h2 className="text-6xl font-extrabold mb-14 text-center mt-7 ">
+      <h2 className="text-3xl pl-5 pr-5 md:pl-0 md:pr-0 py-0 md:px-0 md:text-5xl font-extrabold mb-24 text-center mt-16">
         GET YOUR ITINERARY
       </h2>
 
       <div className="flex flex-col py-10 px-4" id="contact-section">
-        <div className="relative flex flex-col md:mx-10 items-center justify-center md:flex-row-reverse bg-gradient-to-b from-[#577597] to-[#060848] text-white rounded-2xl shadow-xl md:space-x-6 ">
+        <div className="relative flex flex-col md:mx-8 items-center justify-center md:flex-row-reverse bg-gradient-to-b from-[#577597] to-[#060848] text-white rounded-2xl shadow-xl md:space-x-6 ">
           {/* Map Section */}
           <div className="relative -top-10 md:-top-44 md:w-1/2 md:m-5 flex flex-col items-center rounded-3xl">
             <div className="w-full bg-white rounded-md shadow-md">
@@ -126,7 +126,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Full Name*"
-                  className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="block w-full p-3 text-black bg-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
                 <input
@@ -135,7 +135,7 @@ export default function Contact() {
                   value={formData.contact}
                   onChange={handleChange}
                   placeholder="Your Contact*"
-                  className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="block w-full p-3 text-black bg-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
                 <input
@@ -144,7 +144,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email*"
-                  className="block w-full p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="block w-full p-3 text-black bg-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
                 <textarea
@@ -152,7 +152,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Your Message (Optional)"
-                  className="block w-full mb-7 p-3 text-black bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="block w-full mb-7 p-3 text-black bg-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                   rows={4}
                 ></textarea>
               </div>
