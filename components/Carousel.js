@@ -36,7 +36,7 @@ const Carousel = () => {
   const spaceBetween = viewportWidth < 640 ? 15 : 30;
 
   return (
-    <div className="relative w-full mb-7 md:h-screen flex items-center justify-center bg-pink-100" id="target-section">
+    <div className="relative w-full mb-7 md:h-screen flex items-center justify-center " id="target-section">
       {/* Background Blur */}
       <div className="absolute inset-0 z-0 bg-pink-400/60 blur-[100px]" style={{ opacity: 0.6 }}></div>
 

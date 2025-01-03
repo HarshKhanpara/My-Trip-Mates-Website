@@ -1,4 +1,18 @@
 /* For 13-inch screens (approx. 1280px wide) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .container {
+    top: 58%;
+    left: 4%;
+    width:670px;
+    height: 700px;
+  
+  }
+}
+
+
+
+
+/* For 13-inch screens (approx. 1280px wide) */
 @media (min-width: 1280px) and (max-width: 1366px) {
     .container {
       top: 58%;

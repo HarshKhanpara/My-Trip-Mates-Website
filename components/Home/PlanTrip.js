@@ -68,7 +68,7 @@ export default function PlanTrip() {
         <div className="w-full md:w-2/6 h-[40vh] md:h-full relative bg-white md:bg-[#385C85] ">
           {/* Background Image */}
           <div
-            className={`${styles.container} absolute w-[300px] h-[400px] md:w-[500px] md:h-[600px] lg:w-[900px] lg:h-[800px] top-[285%] md:top-[58%] left-[50%] md:left-[25%] lg:top-[58%] lg:left-[25%] transform -translate-x-1/2 -translate-y-1/2`}
+            className={`${styles.container} mt-10 md:mt-0  absolute w-[300px] h-[400px] md:w-[500px] md:h-[600px] lg:w-[900px] lg:h-[800px] top-[285%] md:top-[58%] left-[50%] md:left-[25%] lg:top-[58%] lg:left-[25%] transform -translate-x-1/2 -translate-y-1/2`}
           >
             <Image
               src="/calendar.png"

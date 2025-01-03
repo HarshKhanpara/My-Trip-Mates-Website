@@ -12,32 +12,6 @@ const Hero = () => {
   const [currentImage, setCurrentImage] = useState("/banner1.png");
   const images = ["/banner1.png", "/banner2.png", "/banner3.png"];
 
-  // Track mouse position for dynamic effects
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
-
-      const sparkle = {
-        id: Math.random(),
-        x: e.clientX,
-        y: e.clientY,
-        size: Math.random() * 12 + 6,
-        duration: Math.random() * 0.8 + 0.5,
-      };
-      setSparkles((prev) => [...prev, sparkle]);
-
-      setTimeout(() => {
-        setSparkles((prev) => prev.filter((s) => s.id !== sparkle.id));
-      }, 1200);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
   // Rotate background images
   useEffect(() => {
     const imageInterval = setInterval(() => {
