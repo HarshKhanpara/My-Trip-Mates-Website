@@ -1,6 +1,5 @@
 // pages/index.js
 import Carousel from "@/components/Carousel";
-import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQs";
 import Footer from "@/components/Footer";
 import BestTrips from "@/components/Home/BestTrips";
@@ -27,7 +26,6 @@ export default function Home() {
         <BestTrips />
         <FeaturedGallery />
         <TravelStories />
-        <Contact />
         {/* <ComingSoon /> */}
         <FAQ />
         <BlogLayout />
