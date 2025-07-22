@@ -10,7 +10,6 @@ import CommitmentSection from "@/components/Home/Commitments";
 import FeaturedGallery from "@/components/Home/FeaturedGallery";
 import Hero from "@/components/Home/Hero";
 import OurStory from "@/components/Home/OurStory";
-import PlanTrip from "@/components/Home/PlanTrip";
 import QuoteSection from "@/components/Home/QuateSection";
 import TravelStories from "@/components/Home/TravelStories";
 import Navbar from "@/components/Navbar";
@@ -33,7 +32,6 @@ export default function Home() {
         <FAQ />
         <BlogLayout />
         <CommitmentSection />
-        <PlanTrip />
         <QuoteSection />
         <Footer />
       {/* </GlobalBackground> */}
