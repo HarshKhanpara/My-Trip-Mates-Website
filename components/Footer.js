@@ -109,8 +109,8 @@ const Footer = ({
         className="mr-2"
       />
       Email:{" "}
-      <a href="mailto:mytripmates.co" className="hover:underline ml-1">
-        mytripmates.co
+      <a href="mailto:sales@mytripmates.co" className="hover:underline ml-1">
+        sales@mytripmates.co
       </a>
     </li>
     <li className="flex items-center">
@@ -122,8 +122,8 @@ const Footer = ({
         className="mr-2"
       />
       Phone:{" "}
-      <a href="tel:+1234567890" className="hover:underline ml-1">
-        1234567890
+      <a href="tel:+91-9356614841" className="hover:underline ml-1">
+        +91-9356614841
       </a>
     </li>
     <li className="flex items-center">
@@ -134,7 +134,7 @@ const Footer = ({
         height={16}
         className="mr-2"
       />
-      Address: Mumbai, India
+      Address: We Work Office no.21A Floor 2 G Block BKC Bandra, Mumbai, India
     </li>
   </ul>
 </div>
@@ -142,7 +142,7 @@ const Footer = ({
 
         {/* Footer Bottom */}
         <div className="mt-10 text-gray-600 text-sm text-center border-t pt-6">
-          <p>© 2024 My Trip Mates. All Rights Reserved.</p>
+          <p>© 2025 My Trip Mates. All Rights Reserved.</p>
           <p>
             <a onClick={()=>router.push("/terms-and-conditions")} className="hover:underline cursor-pointer" >Terms and Conditions</a> |{" "}
             <a onClick={()=>router.push("/privacy-policy")} className="hover:underline cursor-pointer">Privacy Policy</a>
